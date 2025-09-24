@@ -1,5 +1,25 @@
 @extends('client.core.client')
 @section('content')
+   <div class="banner-inner position-relative">
+      <div class="max-width m-auto">
+         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block">{{$blogInner->title}}</h1>
+         <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4">Confira uma área repleta de informações sobre o universo digital. Aqui escrevermos sobre tecnologia e tudo  feito pra quem vive — ou quer viver — o digital de verdade.</p>
+         <ol class="breadcrumb mt-4 align-items-center">
+            <li class="breadcrumb-item">
+               <a href="{{route('index')}}">
+                  <i class="fas fa-home me-2"></i>Home
+               </a>
+            </li>
+            <li class="breadcrumb-item blog">
+               <a href="{{route('blog')}}">
+                  <i class="fas fa-newspaper me-2"></i>Blog WHI
+               </a>
+            </li>
+            <li class="breadcrumb-item active">{{$blogInner->title}}</li>			               			
+         </ol>
+      </div>
+   </div>
+   
     @include('client.includes.announcement') 
     <!-- News With Sidebar Start -->
     <div class="container-fluid mb-5 blog-inn mt-4">
@@ -13,9 +33,9 @@
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3">
                         <article>
-                            <h1 class="mb-3 title-blue montserrat-bold font-32 text-uppercase">{{$blogInner->title}}</h1>
+                            <h1 class="mb-3 title-blue rethink-sans-bold font-32 text-uppercase">{{$blogInner->title}}</h1>
                             <div class="mb-3 d-flex justify-content-start align-items-center gap-1 flex-wrap">
-                                <span class="badge background-red montserrat-semiBold font-12 text-uppercase py-2 px-2 me-2">{{$blogInner->category->title}}</span>
+                                <span class="badge background-red rethink-sans-semiBold font-12 text-uppercase py-2 px-2 me-2">{{$blogInner->category->title}}</span>
                                 <p class="text-color mb-0 montserrat-regular font-15">{{$dataFormatada}}</p>
                             </div>
                             <img class="border img-fluid w-100 rounded-3 image-inner d-flex justify-content-center align-items-center"
@@ -25,7 +45,8 @@
                             <div class="py-4">
                                 <div class="barra-de-progresso mt-2 d-flex align-items-center gap-2">
                                     <i id="audioIcon" class="fa fa-play d-flex justify-content-center align-items-center dark-background rounded-5 font-12" onclick="togglePlayPause()"></i>
-                                    <span id="audioStatus" class="text-muted montserrat-semiBold font-12"></span>
+                                    
+                                    <span id="audioStatus" class="text-muted rethink-sans-semiBold font-12"></span>
 
                                     <div id="progressContainer" class="progressContainer flex-grow-1">
                                         <div id="progressBar" class="background-red" style="width:0%;"></div>
@@ -34,7 +55,7 @@
                                     <!-- Controlador de velocidade -->
                                     <div class="d-flex gap-1 align-items-center">
                                         <button id="decreaseSpeed" class="btn-voz d-flex justify-content-center align-items-center btn btn-sm btn-outline-secondary">-</button>
-                                        <span id="speedLabel" class="text-muted montserrat-semiBold font-12 ms-1 me-1">1x</span>
+                                        <span id="speedLabel" class="text-muted rethink-sans-semiBold font-12 ms-1 me-1">1x</span>
                                         <button id="increaseSpeed" class="btn-voz d-flex justify-content-center align-items-center btn btn-sm btn-outline-secondary">+</button>
                                     </div>
 
@@ -45,14 +66,14 @@
                                     </div>
                                 </div>
 
-                                <div class="text-blog-inner montserrat-medium font-16 mt-4 text-audio">
+                                <div class="text-p montserrat-medium font-16 mt-4 text-audio">
                                     {!! $blogInner->text !!}
                                 </div>                                
                             </div>                        
                         </article>
 
                         <div class="d-flex justify-content-between align-items-center">
-                            <a href="{{route('blog')}}" class="montserrat-semiBold font-16 d-flex justify-content-between align-items-center gap-2 background-red py-2 px-3 text-white rounded-3">
+                            <a href="{{route('blog')}}" class="rethink-sans-semiBold font-16 d-flex justify-content-between align-items-center gap-2 background-red py-2 px-3 text-white rounded-3">
                                 <svg width="15" height="15" viewBox="0 0 17 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                                     <path fill-rule="evenodd" clip-rule="evenodd" d="M14.1926 2.20441L2.32113 10.6069C2.05923 10.7927 2.05923 11.2059 2.32113 11.3917L14.1926 19.7941C14.4739 19.9924 14.8716 19.8011 14.8716 19.4017V2.59536C14.8716 2.19742 14.4725 2.00613 14.1926 2.20441ZM1.09904 8.87649L12.9705 0.474006C14.6832 -0.737844 17 0.519764 17 2.59681V19.4032C17 21.4803 14.6831 22.7378 12.9705 21.526L1.09904 13.1221C-0.365655 12.085 -0.367038 9.91502 1.09904 8.87649Z" fill="white"/>
                                 </svg>
@@ -60,7 +81,7 @@
                             </a>
 
                             <div class="position-relative d-flex justify-content-center align-items-end flex-column">
-                                <button id="shareBtn" class="montserrat-semiBold font-16 d-flex justify-content-around align-items-center btn background-red py-2 px-3 text-white rounded-3">
+                                <button id="shareBtn" class="rethink-sans-semiBold font-16 d-flex justify-content-around align-items-center btn background-red py-2 px-3 text-white rounded-3">
                                     <svg class="me-2" width="18" height="20" viewBox="0 0 24 26" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M4.28845 8.58841C1.92459 8.58841 0 10.5692 0 13.002C0 15.4348 1.92459 17.4155 4.28845 17.4155C5.68567 17.4155 6.92779 16.7195 7.70969 15.6506L15.6837 20.0897C15.5186 20.5571 15.4231 21.0603 15.4231 21.5864C15.4231 24.0193 17.3477 26 19.7115 26C22.0754 26 24 24.0193 24 21.5864C24 19.1536 22.0754 17.1729 19.7115 17.1729C18.3143 17.1729 17.0722 17.8689 16.2903 18.9378L8.31633 14.4987C8.48136 14.0313 8.57691 13.5281 8.57691 12.9982C8.57691 12.4682 8.47516 11.9356 8.3002 11.4554L16.2033 6.94346C16.9789 8.08134 18.262 8.82714 19.71 8.82714C22.0739 8.82714 23.9985 6.84639 23.9985 4.41357C23.9985 1.98074 22.0739 0 19.71 0C17.3462 0 15.4216 1.98074 15.4216 4.41357C15.4216 4.88736 15.4973 5.34584 15.6313 5.77367L7.67731 10.3151C6.89306 9.26915 5.66339 8.58848 4.28466 8.58848L4.28845 8.58841ZM19.7148 18.4846C21.3788 18.4846 22.7326 19.8779 22.7326 21.5905C22.7326 23.303 21.3788 24.6963 19.7148 24.6963C18.0508 24.6963 16.697 23.303 16.697 21.5905C16.697 21.0605 16.8273 20.5611 17.0556 20.1231C17.0556 20.1231 17.0594 20.1167 17.0618 20.1167C17.0618 20.1129 17.0618 20.1065 17.068 20.1039C17.583 19.1397 18.5732 18.4859 19.7136 18.4859L19.7148 18.4846ZM19.7148 1.30799C21.3788 1.30799 22.7326 2.70127 22.7326 4.41383C22.7326 6.12639 21.3788 7.51967 19.7148 7.51967C18.0508 7.51967 16.697 6.12639 16.697 4.41383C16.697 2.70127 18.0508 1.30799 19.7148 1.30799ZM4.28845 16.1081C2.62444 16.1081 1.27065 14.7149 1.27065 13.0023C1.27065 11.2897 2.62444 9.89646 4.28845 9.89646C5.95247 9.89646 7.30626 11.2897 7.30626 13.0023C7.30626 13.5348 7.17596 14.0355 6.94393 14.4735C6.94393 14.4735 6.94393 14.4773 6.94021 14.4799C6.94021 14.4799 6.94021 14.4863 6.93648 14.4863C6.42524 15.4504 5.42758 16.1081 4.28724 16.1081L4.28845 16.1081Z" fill="white"/>
                                     </svg>
@@ -68,9 +89,9 @@
                                 </button>
                                 <div id="socialLinks" class="socialLinks mt-2 opacity-0">
                                     <div class="d-flex gap-2">
-                                        <a href="https://api.whatsapp.com/send?text={{ urlencode($blogInner->title . ' ' . url()->current()) }}" target="_blank" class="rounded-circle btn btn-sm bg-whatsapp"><i class="fab fa-whatsapp text-white"></i></a>    
-                                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($blogInner->title) }}" target="_blank" class="rounded-circle btn btn-sm btn-twiter"><i class="fab fa-x-twitter text-white"></i></a>
-                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank" class="rounded-circle btn btn-facebook btn-sm"><i class="fab fa-facebook-f text-white"></i></a>
+                                        <a href="https://api.whatsapp.com/send?text={{ urlencode($blogInner->title . ' ' . url()->current()) }}" target="_blank" class="d-flex justify-content-center align-items-center p-0 btn btn-sm bg-whatsapp"><i class="fab fa-whatsapp text-white"></i></a>    
+                                        <a href="https://twitter.com/intent/tweet?url={{ urlencode(url()->current()) }}&text={{ urlencode($blogInner->title) }}" target="_blank" class="d-flex justify-content-center align-items-center p-0 btn btn-sm btn-twiter"><i class="fab fa-x-twitter text-white"></i></a>
+                                        <a href="https://www.facebook.com/sharer/sharer.php?u={{ urlencode(url()->current()) }}" target="_blank" class="d-flex justify-content-center align-items-center p-0 btn btn-facebook btn-sm"><i class="fab fa-facebook-f text-white"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -80,11 +101,11 @@
                     <!-- News Detail End -->
 
                     <!-- Comment Form Start -->
-                    <div class="mb-0 mt-5">
-                        <div class="section-title mb-0 rounded-top-left">
-                            <h4 class="m-0 text-uppercase montserrat-bold font-25 title-blue">Deixe um comentário</h4>
+                    <div class="mb-0 mt-5 border p-4">
+                        <div class="section-title mb-0">
+                            <h4 class="m-0 text-uppercase rethink-sans-bold font-25 title-blue">Deixe um comentário</h4>
                         </div>
-                        <div class="bg-white border border-top-0 p-4">
+                        <div class="bg-white">
                             <form id="commentForm">
                                 @csrf
                                 <input type="hidden" name="blog_id" value="{{ $blogInner->id }}">
@@ -94,7 +115,7 @@
                                     <textarea id="message" name="comment" required cols="30" rows="5" class="form-control montserrat-regular font-15"></textarea>
                                 </div>
                                                                 
-                                <div class="mb-0">
+                                <div class="mb-0 text-end">
                                     <button type="submit" class="btn background-red rounded-3 montserrat-medium text-white font-15">Comentar</button>
                                 </div>
                             </form>
@@ -106,8 +127,8 @@
                     <!-- Comment List Start -->
                     @if (isset($blogInner->comments) && $blogInner->comments->count() > 0)                        
                         <div class="mb-3 mt-3 comments">
-                            <div class="section-title mb-0 title-blue rounded-top-left">
-                                <h4 class="m-0 text-uppercase montserrat-bold font-25 title-blue">{{$blogInner->comments->count()}} Comentários</h4>
+                            <div class="section-title mb-0 title-blue">
+                                <h4 class="m-0 text-uppercase rethink-sans-bold font-25 title-blue">{{$blogInner->comments->count()}} Comentários</h4>
                             </div>
                             <div class="bg-white border border-top-0 p-4 comment-scroll">
                                 @foreach ($blogInner->comments as $comment)
@@ -125,7 +146,7 @@
                                                     class="img-fluid mr-3 mt-1 rounded-circle"
                                                     style="width: 50px; height: 50px; object-fit: cover;">
                                                 <div class="d-flex flex-column col-10 comment">
-                                                    <h6 class="title-blue montserrat-bold font-15 mb-0">{{ $client->name }}</h6>
+                                                    <h6 class="title-blue rethink-sans-bold font-15 mb-0">{{ $client->name }}</h6>
                                                     <small class="title-blue mb-0 montserrat-regular font-12">
                                                         {{ $dataFormatada }}
                                                     </small>
@@ -159,34 +180,14 @@
                             }
                         }
                     </style>
-                     <!-- Tags Start -->
-                      <div class="mb-3">
-                          <div class="section-title mb-0 rounded-top-left cat-mt">
-                              <h4 class="m-0 text-uppercase montserrat-bold font-22 title-blue">CATEGORIAS</h4>
-                          </div>
-                          <div class="bg-white border border-top-0 p-3">
-                              <div class="d-flex flex-wrap m-n1">
-                                  @foreach ($blogCategories as $category)
-                                    <li class="nav-link">
-                                        <a href="{{ route('blog', ['category' => $category->slug]) }}#news"
-                                        class="btn btn-sm btn-outline-secondary montserrat-semiBold font-14 m-1
-                                        {{ (request()->routeIs('blog-inner') && isset($blogInner) && $blogInner->category->id === $category->id) ? 'active background-red' : '' }}">
-                                            {{ $category->title }}
-                                        </a>
-                                    </li>
-                                @endforeach
-                              </div>
-                          </div>
-                      </div>
-                      <!-- Tags End -->
    
                       @if ($blogRelacionados)                        
                         <!-- Popular News Start -->
-                        <div class="mb-3">
-                            <div class="section-title mb-0 rounded-top-left">
-                                <h4 class="m-0 text-uppercase montserrat-bold font-22 title-blue">Relacionados</h4>
+                        <div class="mb-3 border p-3">
+                            <div class="section-title mb-0">
+                                <h4 class="m-0 text-uppercase rethink-sans-bold font-22 title-blue">Relacionados</h4>
                             </div>
-                            <div class="bg-white border border-top-0 p-3">
+                            <div class="bg-white py-3">
                                 @foreach($blogRelacionados as $relacionado)    
                                     @php
                                         \Carbon\Carbon::setLocale('pt_BR');
@@ -199,11 +200,11 @@
                                             alt="{{ $relacionado->title ? $blogInner->title : 'Sem imagem'}}">
                                             <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                                                 <div class="mb-2 d-flex justify-content-start align-items-center gap-1 flex-wrap">
-                                                    <span class="badge badge-primary montserrat-semiBold font-10 text-uppercase py-1 px-2 mr-2 background-red">{{$relacionado->category->title}}</span>
+                                                    <span class="badge badge-primary rethink-sans-semiBold font-10 text-uppercase py-1 px-2 mr-2 background-red">{{$relacionado->category->title}}</span>
                                                     <p class="text-color mb-0 montserrat-regular font-12">{{$dataFormatada}}</p>
                                                 </div>
-                                                <a href="{{route('blog-inner', ['slug' => $relacionado->slug])}}" class="underline">
-                                                    <h3 class="h6 m-0 text-uppercase montserrat-bold font-14 title-blue">{{$relacionado->title}}</h3>
+                                                <a href="{{route('blog-inner', ['slug' => $relacionado->slug])}}" class="underline w-100">
+                                                    <h3 class="h6 m-0 text-uppercase rethink-sans-bold font-14 title-blue">{{$relacionado->title}}</h3>
                                                 </a>
                                             </div>
                                         </div>
@@ -214,10 +215,31 @@
                         <!-- Popular News End -->
                       @endif
    
+                     <!-- Tags Start -->
+                      <div class="mb-3 border p-3">
+                          <div class="section-title mb-0 cat-mt">
+                              <h4 class="m-0 text-uppercase rethink-sans-bold font-22 title-blue">CATEGORIAS</h4>
+                          </div>
+                          <div class="bg-white py-3">
+                              <div class="d-flex flex-wrap m-n1">
+                                  @foreach ($blogCategories as $category)
+                                    <li class="nav-link">
+                                        <a href="{{ route('blog', ['category' => $category->slug]) }}#news"
+                                        class="btn btn-sm btn-outline-secondary rethink-sans-semiBold font-14 m-1
+                                        {{ (request()->routeIs('blog-inner') && isset($blogInner) && $blogInner->category->id === $category->id) ? 'active background-red' : '' }}">
+                                            {{ $category->title }}
+                                        </a>
+                                    </li>
+                                @endforeach
+                              </div>
+                          </div>
+                      </div>
+                      <!-- Tags End -->
+
                       <!-- Newsletter Start -->
-                      <div class="mb-3">
-                          <div class="section-title mb-0 rounded-top-left">
-                              <h4 class="m-0 text-uppercase montserrat-bold font-22 title-blue">Newsletter</h4>
+                      <div class="mb-3 border p-3">
+                          <div class="section-title mb-0">
+                              <h4 class="m-0 text-uppercase rethink-sans-bold font-22 title-blue">Newsletter</h4>
                           </div>
                           @include('client.includes.newsletter')
                       </div>
@@ -313,8 +335,181 @@
                 }
             });
         });
-    </script>
 
+        //Script de audio do blog
+        document.addEventListener('DOMContentLoaded', function() {
+            let isPaused = false;
+            let isReading = false;
+            let progressInterval;
+            let estimatedDuration = 0;
+            let progressPercentage = 0;
+            let synth = window.speechSynthesis;
+            let currentBlockIndex = 0;
+            let utterance;
+            let textBlocks = [];
+            let rate = 1; 
+            let volume = 1; 
+
+            const icon = document.getElementById('audioIcon');
+            const progressBar = document.getElementById('progressBar');
+            const statusText = document.getElementById('audioStatus');
+            const speedLabel = document.getElementById('speedLabel');
+            const increaseSpeedBtn = document.getElementById('increaseSpeed');
+            const decreaseSpeedBtn = document.getElementById('decreaseSpeed');
+
+            // Volume
+            const volumeSlider = document.getElementById('volumeSlider');
+
+            window.addEventListener('beforeunload', function() {
+                if (synth) synth.cancel();
+            });
+
+            function splitTextIntoBlocks(text, wordsPerBlock = 100) {
+                const words = text.split(/\s+/);
+                let blocks = [];
+                for (let i = 0; i < words.length; i += wordsPerBlock) {
+                    blocks.push(words.slice(i, i + wordsPerBlock).join(' '));
+                }
+                return blocks;
+            }
+
+            function updateProgressBar(duration) {
+                const intervalTime = 100;
+                const totalTicks = duration / intervalTime;
+                let currentTick = progressPercentage / 100 * totalTicks;
+
+                clearInterval(progressInterval);
+                progressInterval = setInterval(() => {
+                    if (currentTick >= totalTicks || isPaused) {
+                        clearInterval(progressInterval);
+                    } else {
+                        currentTick++;
+                        progressPercentage = (currentTick / totalTicks) * 100;
+                        progressBar.style.width = progressPercentage + '%';
+                    }
+                }, intervalTime);
+            }
+
+            async function speakBlock(block) {
+                if (!('speechSynthesis' in window)) {
+                    alert('Seu navegador não suporta texto para fala.');
+                    return;
+                }
+
+                statusText.innerText = "Carregando áudio...";
+                icon.classList.add('fa-spin');
+
+                await new Promise(resolve => {
+                    const voices = synth.getVoices();
+                    if (voices.length === 0) {
+                        synth.onvoiceschanged = resolve;
+                    } else {
+                        resolve();
+                    }
+                });
+
+                icon.classList.remove('fa-spin');
+                statusText.innerText = "Lendo...";
+
+                utterance = new SpeechSynthesisUtterance(block);
+                const voices = synth.getVoices();
+                utterance.voice = voices.find(v => v.name === 'Google português do Brasil') || voices[0];
+                utterance.lang = 'pt-BR';
+                utterance.rate = rate; 
+                utterance.volume = volume; // aplica volume
+
+                utterance.onend = function() {
+                    currentBlockIndex++;
+                    if (currentBlockIndex < textBlocks.length && !isPaused) {
+                        speakBlock(textBlocks[currentBlockIndex]);
+                    } else {
+                        isReading = false;
+                        isPaused = false;
+                        icon.classList.remove('fa-pause');
+                        icon.classList.add('fa-play');
+                        clearInterval(progressInterval);
+                        progressBar.style.width = '100%';
+                        statusText.innerText = "Clique para ouvir";
+                    }
+                };
+
+                synth.speak(utterance);
+                isReading = true;
+                updateProgressBar(estimatedDuration / textBlocks.length);
+            }
+
+            function readAllTextByClass(className) {
+                if (synth) synth.cancel();
+
+                const elements = document.getElementsByClassName(className);
+                let fullText = '';
+                for (let i = 0; i < elements.length; i++) {
+                    fullText += elements[i].innerText || elements[i].textContent;
+                    fullText += ' ';
+                }
+
+                const wordCount = fullText.split(/\s+/).length;
+                estimatedDuration = (wordCount / 150) * 60 * 1000;
+
+                textBlocks = splitTextIntoBlocks(fullText, 200);
+                currentBlockIndex = 0;
+
+                speakBlock(textBlocks[currentBlockIndex]);
+            }
+
+            window.togglePlayPause = function() {
+                if (isReading && !isPaused) {
+                    synth.pause();
+                    isPaused = true;
+                    icon.classList.remove('fa-pause');
+                    icon.classList.add('fa-play');
+                    statusText.innerText = "Pausado";
+                } else if (isPaused) {
+                    synth.resume();
+                    isPaused = false;
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-pause');
+                    statusText.innerText = "Lendo...";
+                    updateProgressBar(estimatedDuration * (1 - progressPercentage / 100));
+                } else if (!isReading) {
+                    readAllTextByClass('text-audio');
+                    icon.classList.remove('fa-play');
+                    icon.classList.add('fa-pause');
+                    statusText.innerText = "Carregando áudio...";
+                }
+            };
+
+            // Controles de velocidade
+            increaseSpeedBtn.addEventListener('click', () => {
+                rate = Math.min(rate + 0.1, 3); 
+                speedLabel.innerText = rate.toFixed(1) + 'x';
+                if (isReading) {
+                    synth.cancel();
+                    speakBlock(textBlocks[currentBlockIndex]);
+                }
+            });
+
+            decreaseSpeedBtn.addEventListener('click', () => {
+                rate = Math.max(rate - 0.1, 0.5); 
+                speedLabel.innerText = rate.toFixed(1) + 'x';
+                if (isReading) {
+                    synth.cancel();
+                    speakBlock(textBlocks[currentBlockIndex]);
+                }
+            });
+
+            // Controle de volume via slider
+            volumeSlider.addEventListener('input', () => {
+                volume = parseFloat(volumeSlider.value);
+                if (isReading) {
+                    synth.cancel();
+                    speakBlock(textBlocks[currentBlockIndex]);
+                }
+            });
+
+        });
+    </script>
+    
     <style>
         #cke_notifications_area_message {
             display: none !important;

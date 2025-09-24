@@ -852,4 +852,316 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
         </div>
     </div>
 </section> 
+
+{{-- <section class="py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center mb-5">
+      <div class="col-lg-4">
+        <h2 class="fw-bold mb-3">Acesse o nosso <span class="text-primary">Blog</span></h2>
+        <p class="text-muted">
+          Aqui escrevemos sobre tecnologia e tudo feito pra quem vive ou quer viver o digital de verdade.
+        </p>
+        <a href="#" class="btn btn-lg btn-warning fw-bold px-4 py-2 shadow-sm">
+          Conhecer <i class="bi bi-arrow-right"></i>
+        </a>
+      </div>
+      <div class="col-lg-8">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+              <img src="https://via.placeholder.com/400x250.png?text=SEO" class="card-img-top" alt="SEO">
+              <div class="card-body">
+                <h6 class="fw-bold">Como o SEO te ajuda a vender mais?</h6>
+                <p class="text-muted small">
+                  Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
+                  Spoiler: não é mágica, é estratégia!
+                </p>
+                <a href="#" class="stretched-link text-decoration-none fw-semibold text-primary">Ler mais →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+              <img src="https://via.placeholder.com/400x250.png?text=SEO" class="card-img-top" alt="SEO">
+              <div class="card-body">
+                <h6 class="fw-bold">Como o SEO te ajuda a vender mais?</h6>
+                <p class="text-muted small">
+                  Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
+                  Spoiler: não é mágica, é estratégia!
+                </p>
+                <a href="#" class="stretched-link text-decoration-none fw-semibold text-primary">Ler mais →</a>
+              </div>
+            </div>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-md-4">
+            <div class="card h-100 border-0 shadow-sm hover-card">
+              <img src="https://via.placeholder.com/400x250.png?text=SEO" class="card-img-top" alt="SEO">
+              <div class="card-body">
+                <h6 class="fw-bold">Como o SEO te ajuda a vender mais?</h6>
+                <p class="text-muted small">
+                  Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
+                  Spoiler: não é mágica, é estratégia!
+                </p>
+                <a href="#" class="stretched-link text-decoration-none fw-semibold text-primary">Ler mais →</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section> --}}
+    <section class="py-5 blog-section">
+        <div class="container position-relative">
+            <div class="row align-items-center mb-5">
+                <div class="col-lg-4">
+                    <div class="section-title">
+                        <h2 class="font-50 rethink-sans-bold title-blog-home">Acesse o nosso <span>Blog</span></h2>
+                        <p class="text-color rethink-sans-regular font-16">
+                            Aqui escrevemos sobre tecnologia e tudo feito para quem vive ou quer viver o digital de verdade.
+                            Conteúdo atualizado semanalmente com as últimas tendências e insights do mercado.
+                        </p>
+                        <a href="#" class="btn btn-primary-custom">
+                            Conhecer o Blog <i class="bi bi-arrow-right"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-8">
+                    <div class="row g-4">
+                        <!-- Card 1 -->
+                        <div class="col-md-4">
+                            <div class="blog-card">
+                                <div class="card-img-container">
+                                    <span class="card-category">SEO</span>
+                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SEO">
+                                </div>
+                                <div class="card-body-custom">
+                                    <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">Como o SEO te ajuda a vender mais?</h5>
+                                    <p class="text-color rethink-sans-regular font-16">
+                                        Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
+                                        Spoiler: não é mágica, é estratégia!
+                                    </p>
+                                    <a href="#" class="read-more">
+                                        Ler mais <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="col-md-4">
+                            <div class="blog-card">
+                                <div class="card-img-container">
+                                    <span class="card-category">Marketing</span>
+                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Marketing Digital">
+                                </div>
+                                <div class="card-body-custom">
+                                    <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">Estratégias de Marketing Digital para 2023</h5>
+                                    <p class="text-color rethink-sans-regular font-16">
+                                        Conheça as tendências que estão dominando o mercado e como adaptar sua estratégia 
+                                        para alcançar melhores resultados este ano.
+                                    </p>
+                                    <a href="#" class="read-more">
+                                        Ler mais <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="col-md-4">
+                            <div class="blog-card">
+                                <div class="card-img-container">
+                                    <span class="card-category">Tecnologia</span>
+                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Tecnologia">
+                                </div>
+                                <div class="card-body-custom">
+                                    <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">Inteligência Artificial no Dia a Dia</h5>
+                                    <p class="text-color rethink-sans-regular font-16">
+                                        Como a IA está transformando negócios e como você pode implementar soluções 
+                                        inteligentes para otimizar seus processos.
+                                    </p>
+                                    <a href="#" class="read-more">
+                                        Ler mais <i class="bi bi-arrow-right"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+        <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3a0ca3;
+            --accent-color: #FF7A1D;
+            --light-bg: #f8f9fa;
+            --dark-text: #212529;
+            --transition: all 0.3s ease;
+        }
+        
+        .blog-section {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-section::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -10%;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(67, 97, 238, 0.1) 0%, rgba(67, 97, 238, 0) 70%);
+            border-radius: 50%;
+            z-index: 0;
+        }
+        
+        .section-title {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .section-title h2 {
+            margin-bottom: 1rem;
+            background: linear-gradient(90deg, #10131C, #FF7A1D);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-title p {
+            margin-bottom: 2rem;
+        }
+        
+        .btn-primary-custom {
+            background: linear-gradient(90deg, #10131C, #FF7A1D);
+            border: none;
+            border-radius: 50px;
+            padding: 12px 30px;
+            font-weight: 600;
+            color: white;
+            transition: var(--transition);
+            box-shadow: 0 4px 15px rgba(255, 122, 29, 0.3);
+        }
+        
+        .btn-primary-custom:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 20px rgba(255, 122, 29, 0.3);
+            color: white;
+        }
+        
+        .blog-card {
+            border: none;
+            border-radius: 15px;
+            overflow: hidden;
+            transition: var(--transition);
+            height: 100%;
+            background: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            position: relative;
+            z-index: 1;
+        }
+        
+        .blog-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .card-img-container {
+            position: relative;
+            overflow: hidden;
+            height: 200px;
+        }
+        
+        .blog-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+        
+        .blog-card:hover img {
+            transform: scale(1.05);
+        }
+        
+        .card-category {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            background: var(--accent-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 8px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            z-index: 2;
+        }
+        
+        .card-body-custom {
+            padding: 1.5rem;
+        }
+        
+        .blog-card h5 {
+            line-height: 1.4;
+            margin-bottom: 0.75rem;
+            color: var(--dark-text);
+        }
+        
+        .blog-card p {
+            line-height: 1.5;
+            margin-bottom: 1rem;
+        }
+        
+        .read-more {
+            display: inline-flex;
+            align-items: center;
+            font-weight: 600;
+            color: #FF7A1D;
+            text-decoration: none;
+            transition: var(--transition);
+        }
+        
+        .read-more i {
+            margin-left: 5px;
+            transition: var(--transition);
+        }
+        
+        .read-more:hover {
+            color: #FF7A1D;
+        }
+        
+        .read-more:hover i {
+            transform: translateX(5px);
+        }
+        .hover-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .hover-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+        
+        /* Responsividade */
+        @media (max-width: 992px) {
+            .section-title {
+                text-align: center;
+                margin-bottom: 2rem;
+            }
+            
+            .section-title h2 {
+                font-size: 2rem;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .blog-card {
+                margin-bottom: 1.5rem;
+            }
+        }
+    </style>
 @endsection
