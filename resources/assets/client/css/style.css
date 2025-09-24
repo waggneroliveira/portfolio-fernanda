@@ -168,6 +168,13 @@ body {
     --emphasis-color: #FF7A1D;
     scroll-behavior: smooth
 }
+#stars-container img {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 15 / 15;
+    object-fit: cover;
+    display: block;
+}
 .green-color{
     background-color: var(--social-links-background-color);
 }

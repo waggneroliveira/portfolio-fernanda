@@ -382,7 +382,7 @@ Fale com a gente!
                 </div>
                 <div class="count-star d-flex flex-column justify-content-center align-items-start col-12 gap-3">
                     <div class="d-flex justify-content-center align-items-center gap-3">
-                        <div id=stars-container class="d-flex justify-content-center align-content-center"></div>
+                        <div id="stars-container" class="d-flex justify-content-center align-content-center"></div>
                         <p class="mb-0 rethink-sans-semiBold">4.9 (5.0)</p>
                     </div>
                     <p class="mb-0 rethink-sans-semiBold">Qualidade garantida.</p>
@@ -390,6 +390,17 @@ Fale com a gente!
             </div>
         </div>
     </div>
+    <script>
+        //rating
+        let u = document.getElementById("stars-container");
+        for (let i = 0; i < 5; i++) { 
+            let e = document.createElement("img");
+            e.src = "build/client/images/star.svg"; 
+            e.alt = "Estrela Rating";
+            e.title = "Estrela Rating";
+            u.appendChild(e);
+        }
+    </script>
     <div class="portfolio-bottom-details-slider swiper init-swiper" data-aos=fade-right data-aos-delay=350>
         <script type=application/json class=swiper-config>
             {
