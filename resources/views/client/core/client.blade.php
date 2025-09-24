@@ -128,11 +128,11 @@
         @yield('content') 
     </main>
 
-    <footer id=footer class="footer position-relative dark-background" data-aos=fade-up data-aos-delay=150>
+    <footer id=footer class="footer position-relative dark-background" data-aos="fade-up" data-aos-delay="150">
         <div class="container py-5">
             <div class="sitemap mt-2 mb-5 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-3 justify-content-between align-items-center">
-                <div class=logo>
-                    <img src="{{asset('build/client/images/logo-footer.svg')}}" alt="WHI - Web de Alta Inovação" title="WHI - Web de Alta Inovação" loading=lazy>
+                <div class="logo logo-footer">
+                    <img src="{{asset('build/client/images/logo.png')}}" alt="WHI - Web de Alta Inovação" title="WHI - Web de Alta Inovação" loading=lazy>
                 </div>
                 <ul class="list-unstyled text-center">
                     <li class="rethink-sans-semiBold mb-2"><a href=#transformed>Quem Somos</a></li>
