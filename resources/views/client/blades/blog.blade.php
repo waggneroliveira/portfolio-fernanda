@@ -45,9 +45,9 @@
 <section class="blog mb-5">
    <div class="banner-inner position-relative">
       <div class="max-width m-auto">
-         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block">Blog WHI</h1>
-         <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4">Confira uma área repleta de informações sobre o universo digital. Aqui escrevermos sobre tecnologia e tudo  feito pra quem vive — ou quer viver — o digital de verdade.</p>
-         <ol class="breadcrumb mt-4 align-items-center">
+         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block" data-aos="fade-right" data-aos-delay="100">Blog WHI</h1>
+         <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4" data-aos="fade-right" data-aos-delay="300">Confira uma área repleta de informações sobre o universo digital. Aqui escrevermos sobre tecnologia e tudo  feito pra quem vive — ou quer viver — o digital de verdade.</p>
+         <ol class="breadcrumb mt-4 align-items-center" data-aos="fade-right" data-aos-delay="500">
             <li class="breadcrumb-item">
                <a href="{{route('index')}}">
                   <i class="fas fa-home me-2"></i>Home
@@ -66,7 +66,7 @@
 
          <div class="row">
             
-            <div class="col-lg-12 mb-4" data-aos="fade-right" data-aos-delay="100">
+            <div class="col-lg-12 mb-4" data-aos="fade-up" data-aos-delay="750">
                @if ($blogAll->count())                     
                   <div class="mb-5 rounded-top-left">
                      <h3 class="m-0 text-uppercase rethink-sans-bold font-22 title-blue">Notícias</h3>

@@ -2,9 +2,9 @@
 @section('content')
    <div class="banner-inner position-relative">
       <div class="max-width m-auto">
-         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block">{{$blogInner->title}}</h1>
-         <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4">Confira uma área repleta de informações sobre o universo digital. Aqui escrevermos sobre tecnologia e tudo  feito pra quem vive — ou quer viver — o digital de verdade.</p>
-         <ol class="breadcrumb mt-4 align-items-center">
+         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block" data-aos="fade-right" data-aos-delay="100">{{$blogInner->title}}</h1>
+         <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4" data-aos="fade-right" data-aos-delay="300">Confira uma área repleta de informações sobre o universo digital. Aqui escrevermos sobre tecnologia e tudo  feito pra quem vive — ou quer viver — o digital de verdade.</p>
+         <ol class="breadcrumb mt-4 align-items-center" data-aos="fade-right" data-aos-delay="500">
             <li class="breadcrumb-item">
                <a href="{{route('index')}}">
                   <i class="fas fa-home me-2"></i>Home
@@ -23,9 +23,9 @@
     @include('client.includes.announcement') 
     <!-- News With Sidebar Start -->
     <div class="container-fluid mb-5 blog-inn mt-4">
-        <div class="container">
+        <div class="max-width m-auto">
             <div class="row">
-                <div class="col-lg-8">
+                <div class="col-lg-8" data-aos="fade-right" data-aos-delay="750">
                     @php
                         \Carbon\Carbon::setLocale('pt_BR');
                         $dataFormatada = \Carbon\Carbon::parse($blogInner->date)->translatedFormat('d \d\e F \d\e Y');
@@ -166,7 +166,7 @@
                     <!-- Comment List End -->
                 </div>                
 
-                <div class="col-lg-4" data-aos=fade-left data-aos-delay=150>
+                <div class="col-lg-4" data-aos="fade-left" data-aos-delay="750">
                   <aside>
                     <style>
                         @media (max-width: 576px) {
@@ -196,7 +196,7 @@
                                     <article>
                                         <div class="d-flex align-items-center bg-white mb-3 overflow-hidden" style="height: 110px;">
                                             <img loading="lazy" class="img-fluid"
-                                            src="{{ $relacionado->path_image_thumbnail_thumbnail ? asset('storage/'.$relacionado->path_image_thumbnail_thumbnail) : 'https://placehold.co/600x400?text=Sem+imagem&font=montserrat' }}"
+                                            src="{{ $relacionado->path_image_thumbnail ? asset('storage/'.$relacionado->path_image_thumbnail) : 'https://placehold.co/600x400?text=Sem+imagem&font=montserrat' }}"
                                             alt="{{ $relacionado->title ? $blogInner->title : 'Sem imagem'}}">
                                             <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                                                 <div class="mb-2 d-flex justify-content-start align-items-center gap-1 flex-wrap">

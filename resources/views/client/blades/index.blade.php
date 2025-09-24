@@ -372,9 +372,9 @@ Fale com a gente!
         </div>
         <div class="rating w-100-md">
             <div class="col-7 width-md m-auto d-flex justify-content-center align-items-baseline flex-column h-100 gap-2" data-aos=fade-down data-aos-delay=450>
-                <span class="fa fa-star rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Criatividade</span>
-                <span class="fa fa-star rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Modernidade</span>
-                <span class="fa fa-star rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Satisfação</span>
+                <span class="rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Criatividade</span>
+                <span class="rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Modernidade</span>
+                <span class="rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Satisfação</span>
                 <div class="clients d-flex flex-wrap mt-3">
                     <div class=client-img>
                         <img src="{{asset('build/client/images/client-group.png')}}" alt="Logo de clientes" title="Logo de clientes" class=w-100 loading=lazy>
@@ -536,48 +536,6 @@ Fale com a gente!
     </div>
     <img src="{{asset('build/client/images/firula-transformed.webp')}}" alt=firula-transformed title=firula-transformed class="position-absolute bottom-0 w-auto img-fluid d-none d-md-block" data-aos=fade-up data-aos-delay=200 loading=lazy>
 </section>
-<section id=perfect-choice class="perfect-choice py-5 grey-medium-background" data-aos=fade data-aos-delay=350>
-    <div class="max-width m-auto d-flex flex-column flex-md-row justify-content-between align-items-center py-4">
-        <div class="content-lef col-12 col-md-4 text-center text-md-end">
-            <h2 class=rethink-sans-semiBold> <span>WHI</span>, a escolha perfeita para empresas que precisam:</h2>
-            <div class="position-relative d-flex justify-content-center flex-column align-items-center">
-                <img src="{{asset('build/client/images/robot-hand.png')}}" alt="Mão de robô com lâmpada" title="Mão de robô com lâmpada" class="w-100 robot-lamp m-auto me-md-5 d-none d-md-block" loading=lazy>
-                <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
-Fale com a gente!
-<i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
-</a>
-            </div>
-        </div>
-        <div class="content-right col-12 col-md-7 mt-4 mt-md-0">
-            <div class="d-flex justify-content-center align-content-center flex-wrap gap-4 px-3">
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
-                        <h3 class="mt-2 rethink-sans-bold">Transformar a Imagem da Sua Marca</h3>
-                        <p class="text mt-2">Criamos uma identidade visual que conecta com seu público e mostra o que é o seu negócio.</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
-                        <h3 class="mt-2 rethink-sans-bold">Impulsionar o Crescimento Digital</h3>
-                        <p class="text mt-2">Alcance mais pessoas, te colocamos no digital, com estratégias que atraem novos clientes e fazem sua empresa crescer.</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
-                        <h3 class="mt-2 rethink-sans-bold">Maximizar Suas Vendas Online</h3>
-                        <p class="text mt-2">A gente cria a melhor experiência de compra online, expandindo sua operação e conquistando novos mercados para você.</p>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-center align-items-center">
-                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
-                        <h3 class="mt-2 rethink-sans-bold">Fortalecer a Conexão com Seu Público</h3>
-                        <p class="text mt-2"> Construir uma relação com o marketing digital que transforma seguidores em clientes da sua marca.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 <section id=trust-whi class="trust-whi position-relative py-5 trust-whi-background">
     <img src="{{asset('build/client/images/hand.png')}}" alt="image of hand" title="image of hand" class="position-absolute top-0 hand" data-aos=fade-left data-aos-delay=950 loading=lazy>
     <div class="max-width m-auto d-flex flex-column flex-md-row justify-content-end align-items-center text-center text-md-start py-5" data-aos=zoom-in data-aos-delay=150>
@@ -586,9 +544,9 @@ Fale com a gente!
         </h2>
         <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-center mt-3 mt-md-0">
             <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
-Fale com a gente!
-<i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
-</a>
+            Fale com a gente!
+            <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
+            </a>
         </div>
     </div>
     <div class="max-width-project m-auto" data-aos=zoom-in data-aos-delay=150>
@@ -685,6 +643,49 @@ Fale com a gente!
         </div>
     </div>
 </section>
+<section id=perfect-choice class="perfect-choice py-5 grey-medium-background" data-aos=fade data-aos-delay=350>
+    <div class="max-width m-auto d-flex flex-column flex-md-row justify-content-between align-items-center py-4">
+        <div class="content-lef col-12 col-md-4 text-center text-md-end">
+            <h2 class=rethink-sans-semiBold> <span>WHI</span>, a escolha perfeita para empresas que precisam:</h2>
+            <div class="position-relative d-flex justify-content-center flex-column align-items-center">
+                <img src="{{asset('build/client/images/robot-hand.png')}}" alt="Mão de robô com lâmpada" title="Mão de robô com lâmpada" class="w-100 robot-lamp m-auto me-md-5 d-none d-md-block" loading=lazy>
+                <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
+                Fale com a gente!
+                <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
+                </a>
+            </div>
+        </div>
+        <div class="content-right col-12 col-md-7 mt-4 mt-md-0">
+            <div class="d-flex justify-content-center align-content-center flex-wrap gap-4 px-3">
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
+                        <h3 class="mt-2 rethink-sans-bold">Transformar a Imagem da Sua Marca</h3>
+                        <p class="text mt-2">Criamos uma identidade visual que conecta com seu público e mostra o que é o seu negócio.</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
+                        <h3 class="mt-2 rethink-sans-bold">Impulsionar o Crescimento Digital</h3>
+                        <p class="text mt-2">Alcance mais pessoas, te colocamos no digital, com estratégias que atraem novos clientes e fazem sua empresa crescer.</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
+                        <h3 class="mt-2 rethink-sans-bold">Maximizar Suas Vendas Online</h3>
+                        <p class="text mt-2">A gente cria a melhor experiência de compra online, expandindo sua operação e conquistando novos mercados para você.</p>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-center align-items-center">
+                    <div class="perfect-choice-list-item bg-white p-3 rounded-4 w-100">
+                        <h3 class="mt-2 rethink-sans-bold">Fortalecer a Conexão com Seu Público</h3>
+                        <p class="text mt-2"> Construir uma relação com o marketing digital que transforma seguidores em clientes da sua marca.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="agenda" class="agenda container-fluid position-relative pb-4" data-aos="zoom-in" data-aos-delay="150">
     <svg class="left-1 position-absolute" width="45" height="120" viewBox="0 0 57 151" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M-20.8206 101.907C-19.0253 103.042 -17.7047 104.767 -17.1447 106.707L-10.4647 129.024C-10.1429 130.006 -10.0252 131.021 -10.1183 132.009C-10.2115 132.998 -10.5137 133.939 -11.0072 134.778C-11.5006 135.617 -12.1753 136.336 -12.9915 136.894C-13.8077 137.451 -14.7489 137.836 -15.7596 138.025C-16.7702 138.213 -17.8299 138.203 -18.8761 137.993C-19.9224 137.783 -20.934 137.379 -21.8514 136.803C-22.7688 136.228 -23.5734 135.493 -24.2177 134.643C-24.8621 133.792 -25.3332 132.843 -25.6032 131.851L-32.2608 109.499C-32.7011 108.029 -32.6828 106.508 -32.2084 105.131C-31.734 103.754 -30.8249 102.584 -29.5972 101.769C-28.3695 100.954 -26.8789 100.532 -25.3156 100.557C-23.7524 100.581 -22.1875 101.051 -20.8206 101.907Z" fill="url(#paint0_linear_551_356)"/>
@@ -852,147 +853,50 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
         </div>
     </div>
 </section> 
-
-{{-- <section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center mb-5">
-      <div class="col-lg-4">
-        <h2 class="fw-bold mb-3">Acesse o nosso <span class="text-primary">Blog</span></h2>
-        <p class="text-muted">
-          Aqui escrevemos sobre tecnologia e tudo feito pra quem vive ou quer viver o digital de verdade.
-        </p>
-        <a href="#" class="btn btn-lg btn-warning fw-bold px-4 py-2 shadow-sm">
-          Conhecer <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-      <div class="col-lg-8">
-        <div class="row g-4">
-          <!-- Card 1 -->
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-              <img src="https://via.placeholder.com/400x250.png?text=SEO" class="card-img-top" alt="SEO">
-              <div class="card-body">
-                <h6 class="fw-bold">Como o SEO te ajuda a vender mais?</h6>
-                <p class="text-muted small">
-                  Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
-                  Spoiler: não é mágica, é estratégia!
-                </p>
-                <a href="#" class="stretched-link text-decoration-none fw-semibold text-primary">Ler mais →</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card 2 -->
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-              <img src="https://via.placeholder.com/400x250.png?text=SEO" class="card-img-top" alt="SEO">
-              <div class="card-body">
-                <h6 class="fw-bold">Como o SEO te ajuda a vender mais?</h6>
-                <p class="text-muted small">
-                  Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
-                  Spoiler: não é mágica, é estratégia!
-                </p>
-                <a href="#" class="stretched-link text-decoration-none fw-semibold text-primary">Ler mais →</a>
-              </div>
-            </div>
-          </div>
-          <!-- Card 3 -->
-          <div class="col-md-4">
-            <div class="card h-100 border-0 shadow-sm hover-card">
-              <img src="https://via.placeholder.com/400x250.png?text=SEO" class="card-img-top" alt="SEO">
-              <div class="card-body">
-                <h6 class="fw-bold">Como o SEO te ajuda a vender mais?</h6>
-                <p class="text-muted small">
-                  Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
-                  Spoiler: não é mágica, é estratégia!
-                </p>
-                <a href="#" class="stretched-link text-decoration-none fw-semibold text-primary">Ler mais →</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section> --}}
+@if ($blogHighlights->count() > 0)
     <section class="py-5 blog-section">
         <div class="container position-relative">
             <div class="row align-items-center mb-5">
-                <div class="col-lg-4">
+                <div class="col-lg-4" data-aos="fade-right" data-aos-delay="250">
                     <div class="section-title">
                         <h2 class="font-50 rethink-sans-bold title-blog-home">Acesse o nosso <span>Blog</span></h2>
                         <p class="text-color rethink-sans-regular font-16">
                             Aqui escrevemos sobre tecnologia e tudo feito para quem vive ou quer viver o digital de verdade.
                             Conteúdo atualizado semanalmente com as últimas tendências e insights do mercado.
                         </p>
-                        <a href="#" class="btn btn-primary-custom">
+                        <a href="{{route('blog')}}" class="btn btn-primary-custom">
                             Conhecer o Blog <i class="bi bi-arrow-right"></i>
                         </a>
                     </div>
                 </div>
-                <div class="col-lg-8">
+                <div class="col-lg-8" data-aos="fade-left" data-aos-delay="250">
                     <div class="row g-4">
-                        <!-- Card 1 -->
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <div class="card-img-container">
-                                    <span class="card-category">SEO</span>
-                                    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="SEO">
-                                </div>
-                                <div class="card-body-custom">
-                                    <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">Como o SEO te ajuda a vender mais?</h5>
-                                    <p class="text-color rethink-sans-regular font-16">
-                                        Descubra como aparecer no Google pode ser o empurrão que faltava para suas vendas decolarem.
-                                        Spoiler: não é mágica, é estratégia!
-                                    </p>
-                                    <a href="#" class="read-more">
-                                        Ler mais <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Card 2 -->
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <div class="card-img-container">
-                                    <span class="card-category">Marketing</span>
-                                    <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Marketing Digital">
-                                </div>
-                                <div class="card-body-custom">
-                                    <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">Estratégias de Marketing Digital para 2023</h5>
-                                    <p class="text-color rethink-sans-regular font-16">
-                                        Conheça as tendências que estão dominando o mercado e como adaptar sua estratégia 
-                                        para alcançar melhores resultados este ano.
-                                    </p>
-                                    <a href="#" class="read-more">
-                                        Ler mais <i class="bi bi-arrow-right"></i>
-                                    </a>
+                        @foreach ($blogHighlights as $blogHighlight)                            
+                            <div class="col-md-4">
+                                <div class="blog-card">
+                                    <div class="card-img-container">
+                                        <span class="card-category">{{$blogHighlight->category->title}}</span>
+                                        <img src="{{ $blogHighlight->path_image_thumbnail ? asset('storage/'.$blogHighlight->path_image_thumbnail) : 'https://placehold.co/600x400?text=Sem+imagem&font=montserrat' }}"
+                                       alt="{{ $blogHighlight->title ? $blogHighlight->title : 'Sem imagem'}}">
+                                    </div>
+                                    <div class="card-body-custom">
+                                        <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">{{$blogHighlight->title}}</h5>
+                                        <p class="text-color rethink-sans-regular font-16">
+                                            {{substr(strip_tags($blogHighlight->text), 0, 100)}}...
+                                        </p>
+                                        <a href="{{route('blog-inner', ['slug' => $blogHighlight->slug])}}" class="read-more">
+                                            Ler mais <i class="bi bi-arrow-right"></i>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- Card 3 -->
-                        <div class="col-md-4">
-                            <div class="blog-card">
-                                <div class="card-img-container">
-                                    <span class="card-category">Tecnologia</span>
-                                    <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80" alt="Tecnologia">
-                                </div>
-                                <div class="card-body-custom">
-                                    <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">Inteligência Artificial no Dia a Dia</h5>
-                                    <p class="text-color rethink-sans-regular font-16">
-                                        Como a IA está transformando negócios e como você pode implementar soluções 
-                                        inteligentes para otimizar seus processos.
-                                    </p>
-                                    <a href="#" class="read-more">
-                                        Ler mais <i class="bi bi-arrow-right"></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
+                        @endforeach
                     </div>
                 </div>
             </div>
         </div>
     </section>
+@endif
         <style>
         :root {
             --primary-color: #4361ee;
@@ -1026,11 +930,9 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
             z-index: 1;
         }
         
-        .section-title h2 {
+        .section-title .title-blog-home {
             margin-bottom: 1rem;
-            background: linear-gradient(90deg, #10131C, #FF7A1D);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #10131C;
             background-clip: text;
         }
         
@@ -1039,7 +941,7 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
         }
         
         .btn-primary-custom {
-            background: linear-gradient(90deg, #10131C, #FF7A1D);
+            background: #FF7A1D;
             border: none;
             border-radius: 50px;
             padding: 12px 30px;
@@ -1051,8 +953,7 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
         
         .btn-primary-custom:hover {
             transform: translateY(-3px);
-            box-shadow: 0 8px 20px rgba(255, 122, 29, 0.3);
-            color: white;
+            background: #FF7A1D;
         }
         
         .blog-card {
@@ -1153,7 +1054,7 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
                 margin-bottom: 2rem;
             }
             
-            .section-title h2 {
+            .section-title .title-blog-home {
                 font-size: 2rem;
             }
         }

@@ -145,7 +145,9 @@
     <div id="organization" hidden></div>
     <header id="header" class="py-4 py-sm-5 position w-100 d-flex align-items-center justify-content-between flex-row max-width m-auto">
         <div class="logo-img">
-            <img src="{{asset('build/client/images/logo.png')}}" alt="WHI -Web de Alta Inovação" title="WHI -Web de Alta Inovação" class="img-fluid" loading="lazy">
+            <a href="{{route('index')}}">
+                <img src="{{asset('build/client/images/logo.png')}}" alt="WHI -Web de Alta Inovação" title="WHI -Web de Alta Inovação" class="img-fluid" loading="lazy">
+            </a>
         </div>
         <div class="social-links superior d-flex justify-content-center gap-4 text-center">
             <a href="https://www.linkedin.com/company/106948313/admin/dashboard/" aria-label="Visite nosso LinkedIn" target="_blank" class="linkedin rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-linkedin"></i></a>
@@ -360,7 +362,9 @@
         <div class="container py-5">
             <div class="sitemap mt-2 mb-5 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-3 justify-content-between align-items-center">
                 <div class="logo logo-footer">
-                    <img src="{{asset('build/client/images/logo.png')}}" alt="WHI - Web de Alta Inovação" title="WHI - Web de Alta Inovação" loading="lazy">
+                    <a href="{{route('index')}}">
+                        <img src="{{asset('build/client/images/logo.png')}}" alt="WHI - Web de Alta Inovação" title="WHI - Web de Alta Inovação" loading="lazy">
+                    </a>
                 </div>
                 <ul class="list-unstyled text-center">
                     <li class="rethink-sans-semiBold mb-2"><a href="#transformed">Quem Somos</a></li>
