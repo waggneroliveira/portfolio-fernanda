@@ -1,10 +1,20 @@
 @extends('client.core.client')
 @section('content')
-    <style>
-        .announcement{
-            display: none;
-        }
-    </style>
+   <div class="banner-inner email position-relative">
+      <div class="max-width m-auto">
+         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block" data-aos="fade-right" data-aos-delay="100">Confirmação de envio de e-mail</h1>
+         <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4" data-aos="fade-right" data-aos-delay="300">Um e-mail foi enviado para . Por favor, verifique sua caixa de entrada e siga as instruções para prosseguir com a redefinição de sua senha.</p>
+         <ol class="breadcrumb mt-4 align-items-center" data-aos="fade-right" data-aos-delay="500">
+            <li class="breadcrumb-item">
+               <a href="{{route('index')}}">
+                  <i class="fas fa-home me-2"></i>Home
+               </a>
+            </li>
+            <li class="breadcrumb-item active">Envio de E-mail</li>			               			
+         </ol>
+      </div>
+   </div>
+   
     <div class="authentication-bg authentication-bg-pattern">
         <div class="account-pages mt-5 mb-5">
             <div class="container">

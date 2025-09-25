@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
 
-                                <div class="text-p montserrat-medium font-16 mt-4 text-audio">
+                                <div class="text-p rethink-sans-semiBold font-16 mt-4 text-audio">
                                     {!! $blogInner->text !!}
                                 </div>                                
                             </div>                        
@@ -102,8 +102,37 @@
 
                     <!-- Comment Form Start -->
                     <div class="mb-0 mt-5 border p-4">
-                        <div class="section-title mb-0">
-                            <h4 class="m-0 text-uppercase rethink-sans-bold font-25 title-blue">Deixe um comentário</h4>
+                        <div class="section-title mb-0 d-flex flex-wrap justify-content-between align-items-center">
+                            <h4 class="m-0 text-uppercase rethink-sans-bold font-25 title-blue col-12 col-lg-8 mb-3">Deixe um comentário</h4>
+                            <div class="d-flex justify-content-start align-items-center gap-1 col-12 col-lg-4">                        
+                                @if (Auth::guard('client')->check())
+                                    @php
+                                        $user = Auth::guard('client')->user();
+                                        $defaultImage = $user && $user->path_image ? url($user->path_image) : '';
+                                    @endphp
+                                    <div class="image-profile">
+                                        <picture>
+                                            <source srcset="{{ isset($defaultImage) && $defaultImage <> null ?$defaultImage:asset('build/client/images/user.jpg') }}" type="image/svg+xml">
+                                            <img src="{{ isset($defaultImage) && $defaultImage <> null ?$defaultImage:asset('build/client/images/user.jpg') }}"
+                                                alt="Imagem de Login"
+                                                class="img-fluid rounded-circle">
+                                        </picture>
+                                    </div>
+                                    <div class="d-flex flex-column align-items-start gap-1">
+                                        <div class="d-flex justify-content-start align-items-center gap-2" style="line-height: 0;">
+                                            <h2 class="loginOn m-0 rethink-sans-semiBold font-12 text-start text-p">Logado com,</h2>   
+                                            <h3 class="m-0 rethink-sans-semiBold font-12 text-start text-p">{{$names = collect(explode(' ', Auth::guard('client')->user()->name))->slice(0, 1)->implode(' ')}}!</h3>      
+                                            <a class="nav-link waves-effect waves-light" href="#" data-bs-toggle="modal" data-bs-target="#editClientModal-{{Auth::guard('client')->user()->id}}">
+                                                <i class="bi bi-gear font-18 text-p"></i>
+                                            </a>                 
+                                        </div>  
+                                        <a href="{{route('client.user.logout')}}" class="d-flex justify-content-start align-items-center gap-2 text-decoration-none">
+                                            <i class="bi bi-box-arrow-right font-15 text-p"></i>
+                                            <h4 class="rethink-sans-semiBold font-12 m-0 text-p">Sair</h4>
+                                        </a>                                               
+                                    </div>
+                                @endif
+                            </div>
                         </div>
                         <div class="bg-white">
                             <form id="commentForm">
@@ -116,7 +145,7 @@
                                 </div>
                                                                 
                                 <div class="mb-0 text-end">
-                                    <button type="submit" class="btn background-red rounded-3 montserrat-medium text-white font-15">Comentar</button>
+                                    <button type="submit" class="btn background-red rounded-3 rethink-sans-semiBold text-white font-15">Comentar</button>
                                 </div>
                             </form>
                             <div id="commentMessage" class="mt-3 montserrat-regular font-15"></div>

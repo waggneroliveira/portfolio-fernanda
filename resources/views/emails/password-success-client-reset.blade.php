@@ -8,7 +8,7 @@
 
     <script>
         setTimeout(function() {
-            window.location.href = '/noticias';
+            window.location.href = '/home';
         }, 2500);
     </script>
 
