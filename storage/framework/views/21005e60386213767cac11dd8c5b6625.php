@@ -1,0 +1,326 @@
+<?php $__env->startSection('content'); ?>
+<!-- ============================================================== -->
+<!-- Start Page Content here -->
+<!-- ============================================================== -->
+            
+    <!-- start page title -->
+    <div class="row">
+        <div class="col-12">
+            <div class="page-title-box">
+                <div class="page-title-right">
+                    <ol class="breadcrumb m-0">
+                        <li class="breadcrumb-item active"><?php echo e(__('dashboard.title_dashboard')); ?></li>
+                    </ol>
+                </div>
+                <h4 class="page-title"><?php echo e(__('dashboard.title_dashboard')); ?></h4>
+            </div>
+        </div>
+    </div>
+    <!-- end page title -->
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    <?php if(Auth::user()->hasRole('Super') || 
+    Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+    Auth::user()->hasPermissionTo('noticias.visualizar') || 
+    Auth::user()->hasPermissionTo('categorias do noticias.visualizar')): ?>
+        
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <h4 class="page-title "><i class="mdi mdi-newspaper-variant"></i> Notícias</h4>
+                </div>
+            </div>
+            <?php if(Auth::user()->hasRole('Super') || 
+            Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+            Auth::user()->hasPermissionTo('categorias do noticias.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.blogCategory.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="avatar-md mdi mdi-tag-multiple font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted">Categorias das Notícias</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+    
+            <?php if(Auth::user()->hasRole('Super') || 
+            Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+            Auth::user()->hasPermissionTo('noticias.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.blog.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="avatar-md mdi mdi-newspaper-variant font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted">Notícias</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+
+    <?php if(Auth::user()->hasRole('Super') || 
+    Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+    Auth::user()->hasPermissionTo('newsletter.visualizar') || 
+    Auth::user()->hasPermissionTo('contato.visualizar') || 
+    Auth::user()->hasPermissionTo('lead contato.visualizar')): ?> 
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <h4 class="page-title "><i class="mdi mdi-card-account-mail-outline"></i> Contato</h4>
+                </div>
+            </div>
+            
+    
+            <?php if(Auth::user()->hasRole('Super') || 
+            Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+            Auth::user()->hasPermissionTo('lead contato.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.formIndex.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="avatar-md mdi mdi-account-box-outline font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted">Lead Contato</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+            <?php if(Auth::user()->hasRole('Super') || 
+            Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+            Auth::user()->hasPermissionTo('newsletter.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.newsletter.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="avatar-md mdi mdi-email-outline font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted">Newsletter</h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+        </div>
+    <?php endif; ?>
+    <?php if(Auth::user()->hasRole('Super') || 
+    Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
+    Auth::user()->hasPermissionTo('anuncio.visualizar')): ?>
+        <div class="row">
+            <div class="col-12">
+                <div class="page-title-box">
+                    <h4 class="page-title "><i class="mdi mdi-bullhorn-outline"></i> Anuncios</h4>
+                </div>
+            </div>
+            
+            <div class="col-md-5 col-xl-3">
+                <div class="card borda-cx ratio ratio-4x3 border-whi">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="<?php echo e(route('admin.dashboard.announcement.index')); ?>">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                        <i class="avatar-md mdi mdi-bullhorn-outline font-48 text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 col-12 text-center">
+                                <h5 class="text-uppercase text-muted">Anuncios</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- end card-->
+            </div> <!-- end col -->
+
+            <div class="col-md-5 col-xl-3">
+                <div class="card borda-cx ratio ratio-4x3 border-whi">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="<?php echo e(route('admin.dashboard.popUp.index')); ?>">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                        <i class="avatar-md mdi mdi-window-maximize font-48 text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 col-12 text-center">
+                                <h5 class="text-uppercase text-muted">Pop-up</h5>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- end card-->
+            </div> <!-- end col -->
+        </div>
+    <?php endif; ?>
+    
+
+
+        <?php if(Auth::user()->hasRole('Super') || 
+        Auth::user()->can('usuario.tornar usuario master') || 
+        Auth::user()->can('email.visualizar')): ?>
+            <div class="col-12">
+                <div class="page-title-box">
+                    <h4 class="page-title "><i class="mdi mdi-email-edit"></i> <?php echo e(__('dashboard.setting_smtp')); ?></h4>
+                </div>
+            </div>
+            <div class="col-md-5 col-xl-3">
+                <div class="card borda-cx ratio ratio-4x3 border-whi">
+                    <div class="d-flex align-items-center justify-content-center">
+                        <a href="<?php echo e(route('admin.dashboard.settingEmail.index')); ?>">
+                            <div class="row">
+                                <div class="col-12 d-flex align-items-center justify-content-center">
+                                    <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                        <i class="avatar-md mdi mdi-email font-48 text-muted"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-3 col-12 text-center">
+                                <h5 class="text-uppercase text-muted"><?php echo e(__('dashboard.setting_email')); ?></h5>
+                            </div>
+                        </a>
+                    </div>
+                </div> <!-- end card-->
+            </div> <!-- end col -->
+        <?php endif; ?>
+    </div>
+    <div class="row">
+        <?php if(Auth::user()->hasRole('Super') || 
+        Auth::user()->can('usuario.tornar usuario master') || 
+        Auth::user()->can('auditoria.visualizar') || 
+        Auth::user()->can('usuario.visualizar')|| 
+        Auth::user()->can('grupo.visualizar')): ?>
+            <div class="col-12">
+                <div class="page-title-box">
+                    <h4 class="page-title "><i class="mdi mdi-security"></i> <?php echo e(__('dashboard.security_and_access_control')); ?></h4>
+                </div>
+            </div>
+            <?php if(Auth::user()->hasRole('Super') || Auth::user()->can('usuario.tornar usuario master') || Auth::user()->can('auditoria.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.audit.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="avatar-md mdi mdi-clipboard-text font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted"><?php echo e(__('dashboard.audit')); ?></h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+            
+            <?php if(Auth::user()->hasRole('Super') || Auth::user()->can('usuario.tornar usuario master') || Auth::user()->can('grupo.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.group.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="mdi mdi-account-group font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted"><?php echo e(__('dashboard.group_and_permission')); ?></h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+    
+            <?php if(Auth::user()->hasRole('Super') || Auth::user()->can('usuario.tornar usuario master') || Auth::user()->can('usuario.visualizar')): ?>
+                <div class="col-md-5 col-xl-3">
+                    <div class="card borda-cx ratio ratio-4x3 border-whi">
+                        <div class="d-flex align-items-center justify-content-center">
+                            <a href="<?php echo e(route('admin.dashboard.user.index')); ?>">
+                                <div class="row">
+                                    <div class="col-12 d-flex align-items-center justify-content-center">
+                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
+                                            <i class="avatar-md mdi mdi-account-multiple font-48 text-muted"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="mt-3 col-12 text-center">
+                                    <h5 class="text-uppercase text-muted"><?php echo e(__('dashboard.users')); ?></h5>
+                                </div>
+                            </a>
+                        </div>
+                    </div> <!-- end card-->
+                </div> <!-- end col -->
+            <?php endif; ?>
+        <?php endif; ?>
+    </div>
+    <!-- end row -->
+
+    <!-- Footer Start -->
+    <footer class="footer">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-md-6">
+                    <div><a href="https://www.whi.dev.br/" target="_blank" style="color:#94a0ad;"><script>document.write(new Date().getFullYear())</script> © WHI - Web de Alta Inspiração</a></div>
+                </div>
+                <div class="col-md-6">
+                    <div class="d-none d-md-flex gap-4 align-item-center justify-content-md-end footer-links">
+                        <a href="https://www.whi.dev.br/" target="_blank" rel="noopener noreferrer">Sobre a WHI</a>
+                        <a href="https://wa.me/5571992768360" target="_blank" rel="noopener noreferrer">Fale conosco</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <?php echo $__env->make('admin.loadPage.loading', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?>
+    <!-- end Footer -->
+<?php $__env->stopSection(); ?>
+<?php echo $__env->make('admin.core.admin', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH C:\laragon\www\wagner\site-whi-with-blog\resources\views/admin/dashboard.blade.php ENDPATH**/ ?>
