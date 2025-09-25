@@ -1,5 +1,203 @@
 ! function() {
     "use strict";
+    document.addEventListener('DOMContentLoaded', function() {
+        //rating
+        let u = document.getElementById("stars-container");
+        if (u) {
+            for (let i = 0; i < 5; i++) { 
+                let e = document.createElement("img");
+                e.src = "/build/client/images/star.svg"; 
+                e.alt = "Estrela Rating";
+                e.title = "Estrela Rating";
+                u.appendChild(e);
+            }
+        }
+    });
+
+    //Script de audio do blog
+    document.addEventListener('DOMContentLoaded', function() {
+        let isPaused = false;
+        let isReading = false;
+        let progressInterval;
+        let estimatedDuration = 0;
+        let progressPercentage = 0;
+        let synth = window.speechSynthesis;
+        let currentBlockIndex = 0;
+        let utterance;
+        let textBlocks = [];
+        let rate = 1; 
+        let volume = 1; 
+
+        const icon = document.getElementById('audioIcon');
+        const progressBar = document.getElementById('progressBar');
+        const statusText = document.getElementById('audioStatus');
+        const speedLabel = document.getElementById('speedLabel');
+        const increaseSpeedBtn = document.getElementById('increaseSpeed');
+        const decreaseSpeedBtn = document.getElementById('decreaseSpeed');
+
+        // Volume
+        const volumeSlider = document.getElementById('volumeSlider');
+
+        window.addEventListener('beforeunload', function() {
+            if (synth) synth.cancel();
+        });
+
+        function splitTextIntoBlocks(text, wordsPerBlock = 100) {
+            const words = text.split(/\s+/);
+            let blocks = [];
+            for (let i = 0; i < words.length; i += wordsPerBlock) {
+                blocks.push(words.slice(i, i + wordsPerBlock).join(' '));
+            }
+            return blocks;
+        }
+
+        function updateProgressBar(duration) {
+            const intervalTime = 100;
+            const totalTicks = duration / intervalTime;
+            let currentTick = progressPercentage / 100 * totalTicks;
+
+            clearInterval(progressInterval);
+            progressInterval = setInterval(() => {
+                if (currentTick >= totalTicks || isPaused) {
+                    clearInterval(progressInterval);
+                } else {
+                    currentTick++;
+                    progressPercentage = (currentTick / totalTicks) * 100;
+                    progressBar.style.width = progressPercentage + '%';
+                }
+            }, intervalTime);
+        }
+
+        async function speakBlock(block) {
+            if (!('speechSynthesis' in window)) {
+                alert('Seu navegador não suporta texto para fala.');
+                return;
+            }
+
+            statusText.innerText = "Carregando áudio...";
+            icon.classList.add('fa-spin');
+
+            await new Promise(resolve => {
+                const voices = synth.getVoices();
+                if (voices.length === 0) {
+                    synth.onvoiceschanged = resolve;
+                } else {
+                    resolve();
+                }
+            });
+
+            icon.classList.remove('fa-spin');
+            statusText.innerText = "Lendo...";
+
+            utterance = new SpeechSynthesisUtterance(block);
+            const voices = synth.getVoices();
+            utterance.voice = voices.find(v => v.name === 'Google português do Brasil') || voices[0];
+            utterance.lang = 'pt-BR';
+            utterance.rate = rate; 
+            utterance.volume = volume; // aplica volume
+
+            utterance.onend = function() {
+                currentBlockIndex++;
+                if (currentBlockIndex < textBlocks.length && !isPaused) {
+                    speakBlock(textBlocks[currentBlockIndex]);
+                } else {
+                    isReading = false;
+                    isPaused = false;
+                    icon.classList.remove('fa-pause');
+                    icon.classList.add('fa-play');
+                    clearInterval(progressInterval);
+                    progressBar.style.width = '100%';
+                    statusText.innerText = "Clique para ouvir";
+                }
+            };
+
+            synth.speak(utterance);
+            isReading = true;
+            updateProgressBar(estimatedDuration / textBlocks.length);
+        }
+
+        function readAllTextByClass(className) {
+            if (synth) synth.cancel();
+
+            const elements = document.getElementsByClassName(className);
+            let fullText = '';
+            for (let i = 0; i < elements.length; i++) {
+                fullText += elements[i].innerText || elements[i].textContent;
+                fullText += ' ';
+            }
+
+            const wordCount = fullText.split(/\s+/).length;
+            estimatedDuration = (wordCount / 150) * 60 * 1000;
+
+            textBlocks = splitTextIntoBlocks(fullText, 200);
+            currentBlockIndex = 0;
+
+            speakBlock(textBlocks[currentBlockIndex]);
+        }
+
+        window.togglePlayPause = function() {
+            if (isReading && !isPaused) {
+                synth.pause();
+                isPaused = true;
+                icon.classList.remove('fa-pause');
+                icon.classList.add('fa-play');
+                statusText.innerText = "Pausado";
+            } else if (isPaused) {
+                synth.resume();
+                isPaused = false;
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+                statusText.innerText = "Lendo...";
+                updateProgressBar(estimatedDuration * (1 - progressPercentage / 100));
+            } else if (!isReading) {
+                readAllTextByClass('text-audio');
+                icon.classList.remove('fa-play');
+                icon.classList.add('fa-pause');
+                statusText.innerText = "Carregando áudio...";
+            }
+        };
+
+        // Controles de velocidade
+        let speedBtn = document.getElementById('increaseSpeedBtn');
+        
+        if (speedBtn) {
+            increaseSpeedBtn.addEventListener('click', () => {
+                rate = Math.min(rate + 0.1, 3); 
+                speedLabel.innerText = rate.toFixed(1) + 'x';
+                if (isReading) {
+                    synth.cancel();
+                    speakBlock(textBlocks[currentBlockIndex]);
+                }
+            });
+        }
+
+        let decreasespeedBtn = document.getElementById('decreaseSpeed');
+
+        if (decreasespeedBtn) {
+            decreaseSpeedBtn.addEventListener('click', () => {
+                rate = Math.max(rate - 0.1, 0.5); 
+                speedLabel.innerText = rate.toFixed(1) + 'x';
+                if (isReading) {
+                    synth.cancel();
+                    speakBlock(textBlocks[currentBlockIndex]);
+                }
+            });
+        }
+
+        let volumeeSlider = document.getElementById('volumeSlider');
+        if (volumeeSlider) {
+            // Controle de volume via slider
+            volumeSlider.addEventListener('input', () => {
+                volume = parseFloat(volumeSlider.value);
+                if (isReading) {
+                    synth.cancel();
+                    speakBlock(textBlocks[currentBlockIndex]);
+                }
+            });
+        }
+
+    });
+
     let e = document.querySelector("#preloader");
 
     function t() {
@@ -181,35 +379,48 @@
         c = document.getElementById("menu-close"),
         d = document.querySelector(".btn_sidebar"); // botão do menu inferior
 
-    s.addEventListener("click", function () {
-        const e = a.classList.toggle("active");
-        document.body.style.overflow = e ? "hidden" : "";
-    });
+    let sS = document.getElementById('menu-toggle');
 
-    c.addEventListener("click", function () {
-        a.classList.remove("active");
-        document.body.style.overflow = "";
-    });
-
-    d.addEventListener("click", function () {
-        const e = a.classList.toggle("active");
-        document.body.style.overflow = e ? "hidden" : "";
-    });
-
-    a.querySelectorAll("a").forEach(link => {
-        link.addEventListener("click", function(e) {
-            const href = this.getAttribute("href");
-            if (href && href.startsWith("#")) {
-                e.preventDefault();
-                const target = document.querySelector(href);
-                if (target) {
-                    target.scrollIntoView({ behavior: "smooth" });
-                }
-                a.classList.remove("active");
-                document.body.style.overflow = "";
-            }
+    if (sS) {        
+        s.addEventListener("click", function () {
+            const e = a.classList.toggle("active");
+            document.body.style.overflow = e ? "hidden" : "";
         });
-    });
+    }
+
+    let cC = document.getElementById('menu-close');
+    if (cC) {
+        c.addEventListener("click", function () {
+            a.classList.remove("active");
+            document.body.style.overflow = "";
+        });
+    }
+    
+    let dD = document.querySelector('btn_sidebar');
+    if (dD) {
+        d.addEventListener("click", function () {
+            const e = a.classList.toggle("active");
+            document.body.style.overflow = e ? "hidden" : "";
+        });
+    }
+
+    let aA = document.querySelector('menu-mobile');
+    if (aA) {
+        a.querySelectorAll("a").forEach(link => {
+            link.addEventListener("click", function(e) {
+                const href = this.getAttribute("href");
+                if (href && href.startsWith("#")) {
+                    e.preventDefault();
+                    const target = document.querySelector(href);
+                    if (target) {
+                        target.scrollIntoView({ behavior: "smooth" });
+                    }
+                    a.classList.remove("active");
+                    document.body.style.overflow = "";
+                }
+            });
+        });
+    }
 
     //Mascara de telefone
     const phoneInput = document.getElementById("phone");
@@ -257,21 +468,22 @@
         }
     });
 
-    $("body").on("click", ".dropify-clear", function () {
-        var nameInput = $(this).parent().find("input:first").attr("name");
-        $(this).parent().find(`input[name=delete_${nameInput}]`).remove();
-        $(this)
-            .parent()
-            .find(`.preview-image`)
-            .css("background-image", "url()");
-        $(this).parent().find(`.content-area-image-crop`).show();
-        $(this)
-            .parent()
-            .append(
-                `<input type="hidden" name="delete_${nameInput}" value="${nameInput}" />`
-            );
-    });
-
-
+    let dropClear = document.querySelector('dropify-clear');
+    if (dropClear) {
+        $("body").on("click", ".dropify-clear", function () {
+            var nameInput = $(this).parent().find("input:first").attr("name");
+            $(this).parent().find(`input[name=delete_${nameInput}]`).remove();
+            $(this)
+                .parent()
+                .find(`.preview-image`)
+                .css("background-image", "url()");
+            $(this).parent().find(`.content-area-image-crop`).show();
+            $(this)
+                .parent()
+                .append(
+                    `<input type="hidden" name="delete_${nameInput}" value="${nameInput}" />`
+                );
+        });
+    }
 }();
 

@@ -10,8 +10,8 @@
     </div>
     <div class="w-100 d-flex justify-content-center flex-column align-items-center position-absolute description">
         <div class="max-width container">
-            <h1 class="text-white mb-5 rethink-sans-bold">
-                É hora de <span class=emphasis><b>MUDAR</b></span>! Com a gente, seu negócio estará mais do que online, gerando <span class=emphasis><b>resultadoS</b></span> de verdade.
+            <h1 class="text-white mb-5 rethink-sans-bold font-46">
+                É hora de <span class=emphasis><b>MUDAR</b></span>! Com a gente, seu negócio estará mais do que online, gerando <span class=emphasis><b>resultados</b></span> de verdade.
             </h1>
             <p class="text-white mb-5 rethink-sans-regular">Faça já <span class=typed data-typed-items="sua  <b>Consultoria Digital</b>, seu <b>Site dinâmico</b>, sua <b>Logomarca</b>, seu <b>Marketing Digital</b>"></span><span class="typed-cursor typed-cursor--blink" aria-hidden=true></span>
                 <span class="typed-cursor typed-cursor--blink" aria-hidden=true></span>
@@ -137,13 +137,13 @@ Fale com a gente!
     <div class="light-background w-100 py-5 pb-0 position-relative">
         <div class="max-width m-auto content-project d-flex flex-column flex-md-row justify-content-between align-items-baseline position-relative z-1 text-center text-md-start">
             <div class="content-lef col-6" data-aos=fade-left data-aos-delay=300>
-                <h2 class=rethink-sans-semiBold>
+                <h2 class="rethink-sans-semiBold font-55">
                     Um projeto feito para <span class="emphasis bg-mobile">você</span>, do seu jeito. Sem surpresas no <span class="emphasis bg-mobile">orçamento</span>.
                 </h2>
             </div>
             <div class="content-right col-4" data-aos=fade-right data-aos-delay=300>
                 <p class=rethink-sans-regular>
-                    A gente sabe que colocar uma ideia no ar pode parecer complicado e caro. A boa notícia é que não precisa ser.
+                    A gente sabe que colocar uma ideia no ar pode parecer complicado e caro. A boa notícia é que <span class="rethink-sans-semiBold">não precisa ser.</span>
                 </p>
                 <div data-aos=zoom-in-up data-aos-delay=300>
                     <img src="{{asset('build/client/images/laptop.webp')}}" alt="Imagem computador" title="Imagem computador" class="w-100 laptop-parallax" loading=lazy>
@@ -173,11 +173,11 @@ Fale com a gente!
                         },
                         "breakpoints": {
                             "320": {
-                                "slidesPerView": 1.5,
+                                "slidesPerView": 1.8,
                                 "spaceBetween": 5
                             },
-                            "475": {
-                                "slidesPerView": 2,
+                            "414": {
+                                "slidesPerView": 2.1,
                                 "spaceBetween": 5
                             },
                             "631": {
@@ -312,8 +312,12 @@ Fale com a gente!
                                 "slidesPerView": 2,
                                 "spaceBetween": 10
                             },
-                            "475": {
-                                "slidesPerView": 2,
+                            "414": {
+                                "slidesPerView": 1.5,
+                                "spaceBetween": 10
+                            },
+                            "375": {
+                                "slidesPerView": 1.2,
                                 "spaceBetween": 10
                             },
                             "320": {
@@ -390,17 +394,7 @@ Fale com a gente!
             </div>
         </div>
     </div>
-    <script>
-        //rating
-        let u = document.getElementById("stars-container");
-        for (let i = 0; i < 5; i++) { 
-            let e = document.createElement("img");
-            e.src = "build/client/images/star.svg"; 
-            e.alt = "Estrela Rating";
-            e.title = "Estrela Rating";
-            u.appendChild(e);
-        }
-    </script>
+
     <div class="portfolio-bottom-details-slider swiper init-swiper" data-aos=fade-right data-aos-delay=350>
         <script type=application/json class=swiper-config>
             {
@@ -426,8 +420,12 @@ Fale com a gente!
                     "0": {
                         "slidesPerView": 2
                     },
-                    "416": {
-                        "slidesPerView": 4
+                    "375": {
+                        "slidesPerView": 2.5,
+                        "spaceBetween": 10
+                    },
+                    "415": {
+                        "slidesPerView": 3
                     },
                     "769": {
                         "slidesPerView": 5
@@ -436,6 +434,13 @@ Fale com a gente!
             }
         </script>
         <div class="portfolio-bottom swiper-wrapper align-items-center">
+            <div class=swiper-slide>
+                <picture>
+                    <source srcset="{{asset('build/client/images/mckup/sindacs-mobile.webp')}}" media="(max-width: 600px)" type=image/webp>
+                    <source srcset="{{asset('build/client/images/mckup/sindacs.webp')}}" type=image/webp>
+                    <img src="{{asset('build/client/images/mckup/sindacs.webp')}}" alt="Hey Arte" title="Hey Arte" loading=lazy style=width:100%;max-width:300px;height:auto;object-fit:cover;border-radius:35px>
+                </picture>
+            </div>
             <div class=swiper-slide>
                 <picture>
                     <source srcset="{{asset('build/client/images/mckup/hey-arte-mobile.webp')}}" media="(max-width: 600px)" type=image/webp>
@@ -501,28 +506,28 @@ Fale com a gente!
                     <div class="proccess-list-item grey-medium-background p-3">
                         <h2 class="emphasis mt-3 rethink-sans-bold">01</h2>
                         <h3 class="mt-2 rethink-sans-bold">Definição das Necessidades</h3>
-                        <p class="text mt-3">Conversamos sobre cada detalhe do seu negócio e seus objetivos. Ajudamos a definir o que o seu projeto realmente precisa para dar certo.</p>
+                        <p class="font-15 mt-3">Conversamos sobre cada detalhe do seu negócio e seus objetivos. Ajudamos a definir o que o seu projeto realmente precisa para dar certo.</p>
                     </div>
                 </div>
                 <div class=col data-aos=fade-up data-aos-delay=300>
                     <div class="proccess-list-item grey-medium-background p-3">
                         <h2 class="emphasis mt-3 rethink-sans-bold">02</h2>
                         <h3 class="mt-2 rethink-sans-bold">Captação de informações</h3>
-                        <p class="text mt-3">Com base em nossa conversa, coletamos todas as informações cruciais. Essa etapa garante que cada detalhe do seu objetivo seja considerado</p>
+                        <p class="font-15 mt-3">Com base em nossa conversa, coletamos todas as informações cruciais. Essa etapa garante que cada detalhe do seu objetivo seja considerado</p>
                     </div>
                 </div>
                 <div class=col data-aos=fade-up data-aos-delay=450>
                     <div class="proccess-list-item grey-medium-background p-3">
                         <h2 class="emphasis mt-3 rethink-sans-bold">03</h2>
                         <h3 class="mt-2 rethink-sans-bold">Seguimento do Projeto</h3>
-                        <p class="text mt-3">Nossa equipe começa a criar o projeto com base nas informações coletadas, mantendo você atualizado a cada etapa.</p>
+                        <p class="font-15 mt-3">Nossa equipe começa a criar o projeto com base nas informações coletadas, mantendo você atualizado a cada etapa.</p>
                     </div>
                 </div>
                 <div class=col data-aos=fade-up data-aos-delay=600>
                     <div class="proccess-list-item grey-medium-background p-3">
                         <h2 class="emphasis mt-3 rethink-sans-bold">04</h2>
                         <h3 class="mt-2 rethink-sans-bold">Entrega Final do Projeto</h3>
-                        <p class="text mt-3">Uma vez aprovado, seu projeto é finalizado e entregue. Você recebe todos os arquivos e acessos necessários de forma organizada.</p>
+                        <p class="font-15 mt-3">Uma vez aprovado, seu projeto é finalizado e entregue. Você recebe todos os arquivos e acessos necessários de forma organizada.</p>
                     </div>
                 </div>
             </div>
@@ -533,10 +538,10 @@ Fale com a gente!
     <div class="max-width m-auto transformed-padding d-flex flex-column flex-md-row align-items-center">
         <div class="col-12 col-md-8 text-center text-md-start" data-aos=fade-down data-aos-delay=200>
             <h2 class="rethink-sans-bold mb-0">TRANSFORME</h2>
-            <h3 class="rethink-sans-semiBold mt-3 mb-0 text-white">
-                Chegou a hora de ser orientado por quem realmente entende do assunto!
+            <h3 class="rethink-sans-semiBold mt-3 mb-0 text-white col-lg-11 col-12">
+                Chegou a hora contar com quem realmente entende do assunto!
             </h3>
-            <p class="text-white rethink-sans-regular mt-3 col-12 col-md-11">
+            <p class="text-white rethink-sans-regular mt-3 col-12 col-lg-10">
                 São mais de 10 anos de experiência transformando ideias em resultados! Com um atendimento 100% humanizado e dedicado, garantimos que suas necessidades serão ouvidas e atendidas com a máxima qualidade.
             </p>
             <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
@@ -545,7 +550,7 @@ Fale com a gente!
 </a>
         </div>
     </div>
-    <img src="{{asset('build/client/images/firula-transformed.webp')}}" alt=firula-transformed title=firula-transformed class="position-absolute bottom-0 w-auto img-fluid d-none d-md-block" data-aos=fade-up data-aos-delay=200 loading=lazy>
+    <img src="{{asset('build/client/images/firula-transformed.webp')}}" alt=firula-transformed title=firula-transformed class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading=lazy>
 </section>
 <section id=trust-whi class="trust-whi position-relative py-5 trust-whi-background">
     <img src="{{asset('build/client/images/hand.png')}}" alt="image of hand" title="image of hand" class="position-absolute top-0 hand" data-aos=fade-left data-aos-delay=950 loading=lazy>

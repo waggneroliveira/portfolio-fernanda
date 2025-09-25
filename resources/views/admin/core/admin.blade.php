@@ -92,7 +92,7 @@
                     <ul class="menu">
 
                         <li class="menu-title">Listagem</li>
-                        @if (Auth::user()->hasRole('Super') || 
+                        {{-- @if (Auth::user()->hasRole('Super') || 
                         Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
                         Auth::user()->hasPermissionTo('slide.visualizar') || 
                         Auth::user()->hasPermissionTo('parceiros.visualizar') || 
@@ -284,7 +284,7 @@
                                     <span class="menu-text"> Agenda</span>
                                 </a>
                             </li>
-                        @endif
+                        @endif --}}
                         @if (Auth::user()->hasRole('Super') || 
                         Auth::user()->can('usuario.tornar usuario master') || 
                         Auth::user()->can('categorias de noticias.visualizar'))
@@ -325,7 +325,7 @@
                                 </a>
                             </li>
                         @endif
-                        @if (Auth::user()->hasRole('Super') || 
+                        {{-- @if (Auth::user()->hasRole('Super') || 
                         Auth::user()->can('usuario.tornar usuario master') || 
                         Auth::user()->can('contato.visualizar'))
                             <li class="menu-item">
@@ -334,7 +334,7 @@
                                     <span class="menu-text"> Contato </span>
                                 </a>
                             </li>
-                        @endif
+                        @endif --}}
                         @if (Auth::user()->hasRole('Super') || 
                         Auth::user()->can('usuario.tornar usuario master') || 
                         Auth::user()->can('anuncio.visualizar'))
@@ -351,7 +351,7 @@
                                 </a>
                             </li>
                         @endif
-                        @if (Auth::user()->hasRole('Super') || 
+                        {{-- @if (Auth::user()->hasRole('Super') || 
                         Auth::user()->can('usuario.tornar usuario master') || 
                         Auth::user()->can('editais.visualizar'))
                             <li class="menu-item">
@@ -360,7 +360,7 @@
                                     <span class="menu-text"> Editais </span>
                                 </a>
                             </li>
-                        @endif
+                        @endif --}}
                         @if (Auth::user()->hasRole('Super') || 
                         Auth::user()->can('usuario.tornar usuario master') || 
                         Auth::user()->can('auditoria.visualizar'))

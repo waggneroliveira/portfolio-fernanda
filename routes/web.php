@@ -69,29 +69,29 @@ Route::middleware([AuthClientMiddleware::class])->group(function () {
     Route::get('logout', [AuthClientController::class, 'logout'])->name('client.user.logout');
 });
 
-Route::get('contato', [ContactPageController::class, 'index'])
-->name('contact');
-Route::post('send-contact', [FormIndexController::class, 'store'])->name('send-contact');
-Route::get('editais', [NoticiesPageController::class, 'index'])
-->name('noticies');
-Route::get('noticias/interna/{slug}', [BlogPageController::class, 'blogInner'])
+// Route::get('contato', [ContactPageController::class, 'index'])
+// ->name('contact');
+// Route::post('send-contact', [FormIndexController::class, 'store'])->name('send-contact');
+// Route::get('editais', [NoticiesPageController::class, 'index'])
+// ->name('noticies');
+Route::get('blog/interna/{slug}', [BlogPageController::class, 'blogInner'])
 ->name('blog-inner');
-Route::get('noticias/{category?}', [BlogPageController::class, 'index'])->name('blog');
-Route::post('noticias/search', [BlogPageController::class, 'index'])->name('blog-search');
+Route::get('blog/{category?}', [BlogPageController::class, 'index'])->name('blog');
+Route::post('blog/search', [BlogPageController::class, 'index'])->name('blog-search');
 Route::post('send-newsletter', [NewsletterController::class, 'store'])->name('send-newsletter');
 
 Route::post('cliente/cadastro', [ClientController::class, 'store'])->name('register-client');
 Route::get('home', [HomePageController::class, 'index'])->name('index');
-Route::get('sobre', [AboutPageController::class, 'index'])->name('about');
-Route::get('servicos-aos-sindicalizados', [BenefitPageController::class, 'index'])->name('unionized');
-Route::get('juridico', [JuridicoPageController::class, 'index'])->name('juridico');
-Route::get('juridico/search', [JuridicoPageController::class, 'searchJuridico'])->name('search-juridico');
-Route::get('regionais', [RegionPageController::class, 'index'])->name('regional');
-Route::match(['get', 'post'], 'regionais/filter-municipalities', [RegionPageController::class, 'filterMunicipalities'])
-->name('client.filter.municipalities');
+// Route::get('sobre', [AboutPageController::class, 'index'])->name('about');
+// Route::get('servicos-aos-sindicalizados', [BenefitPageController::class, 'index'])->name('unionized');
+// Route::get('juridico', [JuridicoPageController::class, 'index'])->name('juridico');
+// Route::get('juridico/search', [JuridicoPageController::class, 'searchJuridico'])->name('search-juridico');
+// Route::get('regionais', [RegionPageController::class, 'index'])->name('regional');
+// Route::match(['get', 'post'], 'regionais/filter-municipalities', [RegionPageController::class, 'filterMunicipalities'])
+// ->name('client.filter.municipalities');
 
 
-Route::get('agenda', [EventPageController::class, 'index'])->name('client.event');
+// Route::get('agenda', [EventPageController::class, 'index'])->name('client.event');
 Route::get('home/blog/filter/{category?}', [HomePageController::class, 'filterByCategory'])
     ->name('blog.filter');
 

@@ -18,7 +18,7 @@
         </div>
     </div>
     <!-- end page title -->
-    @if (Auth::user()->hasRole('Super') || 
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('slide.visualizar') || 
     Auth::user()->hasPermissionTo('parceiros.visualizar') || 
@@ -122,9 +122,9 @@
                 </div> <!-- end col -->
             @endif
         </div>
-    @endif
+    @endif --}}
 
-    @if (Auth::user()->hasRole('Super') || 
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('sobre nos.visualizar') || 
     Auth::user()->hasPermissionTo('a direcao.visualizar') || 
@@ -203,9 +203,9 @@
                 </div> <!-- end col -->
             @endif
         </div>
-    @endif
+    @endif --}}
 
-    @if (Auth::user()->hasRole('Super') || 
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('sindicalize-se.visualizar') || 
     Auth::user()->hasPermissionTo('beneficios.visualizar') || 
@@ -310,9 +310,9 @@
                 </div> <!-- end col -->
             @endif
         </div>
-    @endif
+    @endif --}}
 
-    @if (Auth::user()->hasRole('Super') || 
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('juridico.visualizar'))
         <div class="row">
@@ -341,8 +341,9 @@
                 </div> <!-- end card-->
             </div> <!-- end col -->
         </div>
-    @endif
-    @if (Auth::user()->hasRole('Super') || 
+    @endif --}}
+
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('regionais.visualizar') || 
     Auth::user()->hasPermissionTo('municipios.visualizar'))
@@ -397,9 +398,9 @@
                 </div> <!-- end col -->
             @endif
         </div>
-    @endif
+    @endif --}}
 
-    @if (Auth::user()->hasRole('Super') || 
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('agenda.visualizar'))
         <div class="row">
@@ -427,7 +428,8 @@
                 </div> <!-- end card-->
             </div> <!-- end col -->
         </div>
-    @endif
+    @endif --}}
+
     @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('noticias.visualizar') || 
@@ -498,7 +500,7 @@
                     <h4 class="page-title "><i class="mdi mdi-card-account-mail-outline"></i> Contato</h4>
                 </div>
             </div>
-            @if (Auth::user()->hasRole('Super') || 
+            {{-- @if (Auth::user()->hasRole('Super') || 
             Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
             Auth::user()->hasPermissionTo('contato.visualizar'))
                 <div class="col-md-5 col-xl-3">
@@ -519,7 +521,7 @@
                         </div>
                     </div> <!-- end card-->
                 </div> <!-- end col -->
-            @endif
+            @endif --}}
     
             @if (Auth::user()->hasRole('Super') || 
             Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
@@ -616,7 +618,7 @@
             </div> <!-- end col -->
         </div>
     @endif
-    @if (Auth::user()->hasRole('Super') || 
+    {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('editais.visualizar'))
         <div class="row">
@@ -645,7 +647,7 @@
                 </div> <!-- end card-->
             </div> <!-- end col -->
         </div>
-    @endif
+    @endif --}}
 
 
         @if (Auth::user()->hasRole('Super') || 

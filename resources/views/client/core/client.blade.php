@@ -25,26 +25,27 @@
     @else
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:type" content="website">
-        <meta property="og:title" content="Sindacs Bahia - Sindicato dos ACS e ACE da Bahia">
-        <meta property="og:description" content="O Sindacs Bahia representa os Agentes Comunitários de Saúde (ACS) e Agentes de Combate às Endemias (ACE) da Bahia, lutando por direitos e valorização.">
+        <meta property="og:title" content="WHI | Agência de Marketing Digital e Criação de Sites em Salvador">
+        <meta property="og:description" content="Soluções digitais completas em Salvador: sites profissionais, marketing de performance, identidade visual e presença online com a WHI.">
         <meta property="og:image" content="{{asset('build/client/images/compartilhamento.png')}}">
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="{{ url()->current() }}">
-        <meta name="twitter:title" content="Sindacs Bahia - Sindicato dos ACS e ACE da Bahia">
-        <meta name="twitter:description" content="O Sindacs Bahia representa os Agentes Comunitários de Saúde (ACS) e Agentes de Combate às Endemias (ACE) da Bahia, lutando por direitos e valorização.">
+        <meta name="twitter:title" content="WHI | Agência de Marketing Digital e Criação de Sites em Salvador">
+        <meta name="twitter:description" content="Soluções digitais completas em Salvador: sites profissionais, marketing de performance, identidade visual e presença online com a WHI.">
         <meta name="twitter:image" content="{{asset('build/client/images/compartilhamento.png')}}">
     @endif
     <link rel="canonical" href="{{ url()->current() }}">
     <meta name="copyright" content="Direitos reservados WHI">
     <meta name="author" content="WHI">
     <link rel="shortcut icon" href="{{ asset('build/admin/images/favicon.png') }}">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" onload="this.onload=null,this.rel='stylesheet'">
+    <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" onload="this.onload=null,this.rel='stylesheet'">
     <noscript>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap">
-</noscript>
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap" rel="stylesheet">
+    </noscript>
     <link rel="preload" as="image" href="{{asset('build/client/images/banner.webp')}}">
     <link rel="preload" as="image" href="{{asset('build/client/images/banner-mob.webp')}}">
 
@@ -60,11 +61,11 @@
     <noscript><link href="{{ asset('build/admin/js/libs/dropzone/min/dropzone.min.css') }}" rel="stylesheet" type="text/css"></noscript>
     <link rel="preload" href="{{ asset('build/admin/js/libs/dropify/css/dropify.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link href="{{ asset('build/admin/js/libs/dropify/css/dropify.min.css') }}" rel="stylesheet" type="text/css"></noscript>
-    <link href="{{ asset('build/client/lgpd/style.css') }}" rel="stylesheet" type="text/css" />
-
     <link href="{{ asset('build/client/css/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />
     <link rel="preload" href="{{ asset('build/client/css/bootstrap-icons/bootstrap-icons.css') }}" as="style" onload="this.rel='stylesheet'">
     <link href="{{ asset('build/client/css/style.css') }}" rel="stylesheet" type="text/css" />
+    <link href="{{ asset('build/client/lgpd/style.css') }}" rel="stylesheet" type="text/css" />
+
         
     <script defer src="https://cdn.userway.org/widget.js" data-account="qSpdtrySSt"></script>
     <link rel="preconnect" href="https://vlibras.gov.br" crossorigin>
@@ -88,7 +89,7 @@
             "description": "Agência de desenvolvimento web e marketing digital em Salvador - Criação de sites, lojas virtuais e estratégias digitais personalizadas.",
             "foundingDate": "2023",
             "email": "contato@whi.dev.br",
-            "telephone": "+55-71-99648-3853",
+            "telephone": "+55-71-99276-8360",
             "sameAs": [
                 "https://www.instagram.com/agenciawhi",
                 "https://www.linkedin.com/company/106948313"
@@ -103,7 +104,7 @@
             },
             "contactPoint": {
                 "@type": "ContactPoint",
-                "telephone": "+55-71-99648-3853",
+                "telephone": "+55-71-9276-8360",
                 "contactType": "customer service",
                 "email": "contato@whi.dev.br",
                 "areaServed": "BR",
@@ -150,10 +151,12 @@
         <div class="social-links superior d-flex justify-content-center gap-4 text-center">
             <a href="https://www.linkedin.com/company/106948313/admin/dashboard/" aria-label="Visite nosso LinkedIn" target="_blank" class="linkedin rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-linkedin"></i></a>
             <a href="https://www.instagram.com/agenciawhi" aria-label="Visite nosso Instagram" target="_blank" class="instagram rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-instagram"></i></a>
-            <a href="https://wa.me/5571996483853" aria-label="Converse no WhatsApp" target="_blank" class="whatsapp rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-whatsapp"></i></a>
+            <a href="https://wa.me/5571992768360" aria-label="Converse no WhatsApp" target="_blank" class="whatsapp rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-whatsapp"></i></a>
         </div>
     </header>
+
     @include('client/includes/lgpd/lgpd')
+
     <!-- Modal de Login -->
     <div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
         <div class="modal-dialog modal-dialog-centered">
@@ -378,15 +381,18 @@
                     <div class="social-links d-flex justify-content-end gap-4 text-center">
                         <a href="https://www.linkedin.com/company/106948313/admin/dashboard/" aria-label="Visite nosso LinkedIn" target="_blank" class="linkedin rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-linkedin"></i></a>
                         <a href="https://www.instagram.com/agenciawhi" aria-label="Visite nosso Instagram" target="_blank" class="instagram rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-instagram"></i></a>
-                        <a href="https://wa.me/5571996483853" target="_blank" aria-label="Converse no WhatsApp" class="whatsapp rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-whatsapp"></i></a>
+                        <a href="https://wa.me/5571992768360" target="_blank" aria-label="Converse no WhatsApp" class="whatsapp rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-whatsapp"></i></a>
                     </div>
-                    <a href="https://wa.me/5571996483853" target="_blank" rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-5 pe-0 text-p call-to-action d-flex justify-content-between align-items-center">
-Fale com a gente!
-<i class="bi bi-whatsapp rounded-circle d-flex justify-content-center text-white align-items-center"></i>
-</a>
+                    <a href="https://wa.me/5571992768360" target="_blank" rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-5 pe-0 text-p call-to-action d-flex justify-content-between align-items-center">
+                    Fale com a gente!
+                    <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center text-white align-items-center"></i>
+                    </a>
                 </div>
             </div>
             <div class="d-flex justify-content-between align-items-center mt-5">
+                <div class="privacy-politic">
+                    <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener noreferrer" class="text-white">Política de Privacidade</a>
+                </div>
                 <div class="copyright text-center">
                     <p id="footer-text"></p>
                     <script defer>
