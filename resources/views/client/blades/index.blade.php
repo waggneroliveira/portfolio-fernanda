@@ -381,7 +381,7 @@ Fale com a gente!
                 <span class="rethink-sans-medium"><img src="{{asset('build/client/images/somar.png')}}" alt="Icone mais" class="me-2 w-100" loading=lazy> Satisfação</span>
                 <div class="clients d-flex flex-wrap mt-3">
                     <div class=client-img>
-                        <img src="{{asset('build/client/images/client-group.png')}}" alt="Logo de clientes" title="Logo de clientes" class=w-100 loading=lazy>
+                        <img src="{{asset('build/client/images/client-group.webp')}}" alt="Logo de clientes" title="Logo de clientes" class=w-100 loading=lazy>
                     </div>
                 </div>
                 <div class="count-star d-flex flex-column justify-content-center align-items-start col-12 gap-3">
@@ -550,9 +550,8 @@ Fale com a gente!
 </a>
         </div>
     </div>
-    {{-- <img src="{{asset('build/client/images/firula-transformed.webp')}}" alt=firula-transformed title=firula-transformed class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading=lazy> --}}
     <picture>
-        <source srcset="{{asset('build/client/images/firula-transformed.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading="lazy" media="(max-width: 600px)" type=image/webp>
+        <source srcset="{{asset('build/client/images/firula-transformed-mobile.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading="lazy" media="(max-width: 600px)" type=image/webp>
         <source srcset="{{asset('build/client/images/firula-transformed.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading="lazy" type=image/webp>
         <img src="{{asset('build/client/images/firula-transformed.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading=lazy alt=transformed title=transformed loading="lazy">
     </picture>
