@@ -1,12 +1,11 @@
 ! function() {
     "use strict";
     document.addEventListener('DOMContentLoaded', function() {
-        //rating
         let u = document.getElementById("stars-container");
         if (u) {
             for (let i = 0; i < 5; i++) { 
                 let e = document.createElement("img");
-                e.src = "/build/client/images/star.svg"; 
+                e.src = starUrl; // pega a variável global definida no Blade
                 e.alt = "Estrela Rating";
                 e.title = "Estrela Rating";
                 u.appendChild(e);

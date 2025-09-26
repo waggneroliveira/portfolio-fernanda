@@ -420,6 +420,9 @@
     <script src="{{ asset('build/client/css/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('build/client/css/typed.js/typed.umd.js') }}"></script>
     <script src="{{ asset('build/client/lgpd/script.js') }}"></script>
+    <script>
+        const starUrl = "{{ asset('build/client/images/star.svg') }}";
+    </script>
     <script src="{{ asset('build/client/js/default.js') }}"></script>
 
 
