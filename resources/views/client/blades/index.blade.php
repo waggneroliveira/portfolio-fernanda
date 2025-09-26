@@ -738,7 +738,8 @@ Fale com a gente!
                     Tenha acesso a nossa disponibilidade e agende uma vídeo conferência com o nosso time 
                     que entenderá a fundo sobre a sua necessidade
                 </p>
-                <a href="#agenda" class="btn btn-lg rethink-sans-semiBold text-p text-uppercase call-to-action d-flex justify-content-center align-items-center ">
+                <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ314UlBP0vKZFJm6SIrz-GrMY4D8U3mjWihIKcN9PrL0msuuZ2WnFum5cO3eTMISHOB9csIzmeH" 
+                target="_blank" class="btn btn-lg rethink-sans-semiBold text-p text-uppercase call-to-action d-flex justify-content-center align-items-center" rel="noopener noreferrer">
                     Adendar agora
                 </a>
             </div>
@@ -751,31 +752,9 @@ Fale com a gente!
             </div>
 
         </div>
-        <div class="calendar-container">
-            <iframe 
-                class="calendar-iframe"
-                title="Agenda WHI"
-                src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ314UlBP0vKZFJm6SIrz-GrMY4D8U3mjWihIKcN9PrL0msuuZ2WnFum5cO3eTMISHOB9csIzmeH"
-                frameborder="0">
-            </iframe>
-        </div>
     </div>
 </section>
-<style>
-    .calendar-container {
-    width: 100%;
-    height: 100vh;
-    max-height: 100vh;
-    overflow: hidden;
-}
 
-.calendar-iframe {
-    width: 100%;
-    height: 100%;
-    border: none;
-}
-
-</style>
 <section id=faq class="faq blue-background">
     <div class=me-5>
         <div class="d-flex flex-wrap">
