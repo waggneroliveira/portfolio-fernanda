@@ -66,7 +66,7 @@
                                     </div>
                                 </div>
 
-                                <div class="text-p rethink-sans-semiBold font-16 mt-4 text-audio">
+                                <div class="text-p rethink-sans-semiBold font-16 mt-4 text-audio text-blog-inner">
                                     {!! $blogInner->text !!}
                                 </div>                                
                             </div>                        

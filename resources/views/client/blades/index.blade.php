@@ -173,7 +173,7 @@ Fale com a gente!
                         },
                         "breakpoints": {
                             "320": {
-                                "slidesPerView": 1.8,
+                                "slidesPerView": 1.3,
                                 "spaceBetween": 5
                             },
                             "414": {
