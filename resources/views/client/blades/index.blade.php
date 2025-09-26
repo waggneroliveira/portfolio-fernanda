@@ -1,12 +1,12 @@
 @extends('client.core.client')
 @section('content')
 <section id=hero class="hero position-relative d-flex flex-column section dark-background overflow-hidden">
-    <img id=profileImage src="{{asset('build/client/images/bann-1.png')}}" alt="Banner Hero" title="Banner Hero" class="image-hero">
+    <img id=profileImage src="{{asset('build/client/images/bann-1.webp')}}" alt="Banner Hero" title="Banner Hero" class="image-hero">
     <div class="group-firula">
         <div class="asteristico" data-aos="fade-up" data-aos-delay="600">
-            <img src="{{asset('build/client/images/asterisco.png')}}" alt="Firula Banner Hero Asteristico" title="Firula Banner Hero Asteristico" class="firula-image-hero-asteristico">
+            <img src="{{asset('build/client/images/asterisco.webp')}}" alt="Firula Banner Hero Asteristico" title="Firula Banner Hero Asteristico" class="firula-image-hero-asteristico">
         </div>
-        <img src="{{asset('build/client/images/five-senses.png')}}" alt="Firula Banner Hero Asteristico" title="Firula Banner Hero Asteristico" class="firula-image-hero" data-aos="fade-up" data-aos-delay="200">
+        <img src="{{asset('build/client/images/five-senses.webp')}}" alt="Firula Banner Hero Asteristico" title="Firula Banner Hero Asteristico" class="firula-image-hero" data-aos="fade-up" data-aos-delay="200">
     </div>
     <div class="w-100 d-flex justify-content-center flex-column align-items-center position-absolute description">
         <div class="max-width container">
@@ -550,7 +550,12 @@ Fale com a gente!
 </a>
         </div>
     </div>
-    <img src="{{asset('build/client/images/firula-transformed.webp')}}" alt=firula-transformed title=firula-transformed class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading=lazy>
+    {{-- <img src="{{asset('build/client/images/firula-transformed.webp')}}" alt=firula-transformed title=firula-transformed class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading=lazy> --}}
+    <picture>
+        <source srcset="{{asset('build/client/images/firula-transformed.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading="lazy" media="(max-width: 600px)" type=image/webp>
+        <source srcset="{{asset('build/client/images/firula-transformed.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading="lazy" type=image/webp>
+        <img src="{{asset('build/client/images/firula-transformed.webp')}}" class="position-absolute bottom-0 w-auto img-fluid d-block" data-aos=fade-up data-aos-delay=200 loading=lazy alt=transformed title=transformed loading="lazy">
+    </picture>
 </section>
 <section id=trust-whi class="trust-whi position-relative py-5 trust-whi-background">
     <img src="{{asset('build/client/images/hand.png')}}" alt="image of hand" title="image of hand" class="position-absolute top-0 hand" data-aos=fade-left data-aos-delay=950 loading=lazy>
