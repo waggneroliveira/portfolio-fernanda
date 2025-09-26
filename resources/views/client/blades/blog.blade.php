@@ -69,7 +69,7 @@
             <div class="col-lg-12 mb-4" data-aos="fade-up" data-aos-delay="750">
                @if ($blogAll->count())                     
                   <div class="mb-5 rounded-top-left">
-                     <h3 class="m-0 text-uppercase rethink-sans-bold font-22 title-blue">Notícias</h3>
+                     <h2 class="m-0 text-uppercase rethink-sans-bold font-22 title-blue">Notícias</h2>
                   </div>
 
                   <div class="col-12">
@@ -137,9 +137,9 @@
                                           </p>
                                        </div>
                                        <a href="{{route('blog-inner', ['slug' => $blog->slug])}}" class="underline">
-                                          <h2 class="h4 d-block mb-3 text-uppercase rethink-sans-semiBold font-20 title-blue">
+                                          <h3 class="h4 d-block mb-3 text-uppercase rethink-sans-semiBold font-20 title-blue">
                                              {{$blog->title}}
-                                          </h2>
+                                          </h3>
                                        </a>
                                        <p class="m-0 text-color rethink-sans-regular font-16">
                                           {!! substr(strip_tags($blog->text), 0, 180) !!}...

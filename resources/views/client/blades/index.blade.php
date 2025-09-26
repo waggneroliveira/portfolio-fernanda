@@ -664,7 +664,7 @@ Fale com a gente!
         <div class="content-lef col-12 col-md-4 text-center text-md-end">
             <h2 class=rethink-sans-semiBold> <span>WHI</span>, a escolha perfeita para empresas que precisam:</h2>
             <div class="position-relative d-flex justify-content-center flex-column align-items-center">
-                <img src="{{asset('build/client/images/robot-hand.png')}}" alt="Mão de robô com lâmpada" title="Mão de robô com lâmpada" class="w-100 robot-lamp m-auto me-md-5 d-none d-md-block" loading=lazy>
+                <img src="{{asset('build/client/images/robot-hand.png')}}" alt="Mão de robô com lâmpada" title="Mão de robô com lâmpada" class="w-100 robot-lamp m-auto me-md-5 d-none d-md-block" loading="lazy">
                 <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
                 Fale com a gente!
                 <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
@@ -754,6 +754,7 @@ Fale com a gente!
         <div class="calendar-container">
             <iframe 
                 class="calendar-iframe"
+                title="Agenda WHI"
                 src="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ314UlBP0vKZFJm6SIrz-GrMY4D8U3mjWihIKcN9PrL0msuuZ2WnFum5cO3eTMISHOB9csIzmeH"
                 frameborder="0">
             </iframe>
@@ -893,10 +894,10 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
                                     <div class="card-img-container">
                                         <span class="card-category">{{$blogHighlight->category->title}}</span>
                                         <img src="{{ $blogHighlight->path_image_thumbnail ? asset('storage/'.$blogHighlight->path_image_thumbnail) : 'https://placehold.co/600x400?text=Sem+imagem&font=montserrat' }}"
-                                       alt="{{ $blogHighlight->title ? $blogHighlight->title : 'Sem imagem'}}">
+                                       alt="{{ $blogHighlight->title ? $blogHighlight->title : 'Sem imagem'}}" loading="lazy">
                                     </div>
                                     <div class="card-body-custom">
-                                        <h5 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">{{$blogHighlight->title}}</h5>
+                                        <h3 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">{{$blogHighlight->title}}</h3>
                                         <p class="text-color rethink-sans-regular font-16">
                                             {{substr(strip_tags($blogHighlight->text), 0, 100)}}...
                                         </p>

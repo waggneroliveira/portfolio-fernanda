@@ -33,7 +33,7 @@
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3">
                         <article>
-                            <h1 class="mb-3 title-blue rethink-sans-bold font-32 text-uppercase">{{$blogInner->title}}</h1>
+                            <h2 class="mb-3 title-blue rethink-sans-bold font-32 text-uppercase">{{$blogInner->title}}</h2>
                             <div class="mb-3 d-flex justify-content-start align-items-center gap-1 flex-wrap">
                                 <span class="badge background-red rethink-sans-semiBold font-12 text-uppercase py-2 px-2 me-2">{{$blogInner->category->title}}</span>
                                 <p class="text-color mb-0 montserrat-regular font-15">{{$dataFormatada}}</p>
@@ -41,7 +41,7 @@
                             <img class="border img-fluid w-100 rounded-3 image-inner d-flex justify-content-center align-items-center"
                               src="{{ $blogInner->path_image_thumbnail ? asset('storage/'.$blogInner->path_image_thumbnail) : 'https://placehold.co/600x400?text=Sem+imagem&font=montserrat' }}"
                               alt="{{ $blogInner->title ? $blogInner->title : 'Sem imagem'}}"
-                              style="aspect-ratio:1.91/1;object-fit: contain;">
+                              style="aspect-ratio:1.91/1;object-fit: contain;" loading="lazy">
                             <div class="py-4">
                                 <div class="barra-de-progresso mt-2 d-flex align-items-center gap-2">
                                     <i id="audioIcon" class="fa fa-play d-flex justify-content-center align-items-center dark-background rounded-5 font-12" onclick="togglePlayPause()"></i>
@@ -115,7 +115,7 @@
                                             <source srcset="{{ isset($defaultImage) && $defaultImage <> null ?$defaultImage:asset('build/client/images/user.jpg') }}" type="image/svg+xml">
                                             <img src="{{ isset($defaultImage) && $defaultImage <> null ?$defaultImage:asset('build/client/images/user.jpg') }}"
                                                 alt="Imagem de Login"
-                                                class="img-fluid rounded-circle">
+                                                class="img-fluid rounded-circle" loading="lazy">
                                         </picture>
                                     </div>
                                     <div class="d-flex flex-column align-items-start gap-1">
@@ -173,7 +173,7 @@
                                                 <img src="{{ $client->path_image_thumbnail ? url($client->path_image_thumbnail) : asset('build/client/images/user.jpg') }}"
                                                     alt="Imagem do cliente"
                                                     class="img-fluid mr-3 mt-1 rounded-circle"
-                                                    style="width: 50px; height: 50px; object-fit: cover;">
+                                                    style="width: 50px; height: 50px; object-fit: cover;" loading="lazy">
                                                 <div class="d-flex flex-column col-10 comment">
                                                     <h6 class="title-blue rethink-sans-bold font-15 mb-0">{{ $client->name }}</h6>
                                                     <small class="title-blue mb-0 montserrat-regular font-12">
@@ -226,7 +226,7 @@
                                         <div class="d-flex align-items-center bg-white mb-3 overflow-hidden" style="height: 110px;">
                                             <img loading="lazy" class="img-fluid"
                                             src="{{ $relacionado->path_image_thumbnail ? asset('storage/'.$relacionado->path_image_thumbnail) : 'https://placehold.co/600x400?text=Sem+imagem&font=montserrat' }}"
-                                            alt="{{ $relacionado->title ? $blogInner->title : 'Sem imagem'}}">
+                                            alt="{{ $relacionado->title ? $blogInner->title : 'Sem imagem'}}" loading="lazy">
                                             <div class="w-100 h-100 px-3 d-flex flex-column justify-content-center border border-left-0">
                                                 <div class="mb-2 d-flex justify-content-start align-items-center gap-1 flex-wrap">
                                                     <span class="badge badge-primary rethink-sans-semiBold font-10 text-uppercase py-1 px-2 mr-2 background-red">{{$relacionado->category->title}}</span>
