@@ -415,8 +415,15 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="{{ asset('build/admin/js/libs/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('build/admin/js/libs/dropzone/min/dropzone.min.js') }}"></script>
-    <script src="{{ asset('build/admin/js/libs/dropify/js/dropify.min.js') }}"></script>
-    <script src="{{ asset('build/admin/js/pages/form-fileuploads.init.js') }}"></script>
+    @if($temDropify ?? false)
+        <script src="{{ asset('build/admin/js/libs/dropify/js/dropify.min.js') }}"></script>
+        <script src="{{ asset('build/admin/js/pages/form-fileuploads.init.js') }}"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", function () {
+                $(".dropify").dropify();
+            });
+        </script>
+    @endif
     <script src="{{ asset('build/client/css/bootstrap/js/bootstrap.bundle.js') }}"></script>
     <script src="{{ asset('build/client/css/typed.js/typed.umd.js') }}"></script>
     <script src="{{ asset('build/client/lgpd/script.js') }}"></script>
