@@ -14,13 +14,13 @@
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:type" content="article">
         <meta property="og:title" content="{{ $blogInner->title }}">
-        <meta property="og:description" content="{{ Str::limit(strip_tags($blogInner->content), 150) }}">
+        <meta property="og:description" content="{{ Str::limit(strip_tags($blogInner->text), 150) }}">
         <meta property="og:image" content="{{ asset('storage/' . $blogInner->path_image_thumbnail) }}">
 
         <meta name="twitter:card" content="summary_large_image">
         <meta name="twitter:url" content="{{ url()->current() }}">
         <meta name="twitter:title" content="{{ $blogInner->title }}">
-        <meta name="twitter:description" content="{{ Str::limit(strip_tags($blogInner->content), 150) }}">
+        <meta name="twitter:description" content="{{ Str::limit(strip_tags($blogInner->text), 150) }}">
         <meta name="twitter:image" content="{{ asset('storage/' . $blogInner->path_image_thumbnail) }}">
     @else
         <meta property="og:url" content="{{ url()->current() }}">
@@ -368,15 +368,41 @@
                     </a>
                 </div>
                 <ul class="list-unstyled text-center">
-                    <li class="rethink-sans-semiBold mb-2"><a href="#transformed">Quem Somos</a></li>
-                    <li class="rethink-sans-semiBold mb-2"><a href="#what-we-do">O que fazemos</a></li>
-                    <li class="rethink-sans-semiBold mb-2"><a href="#portfolio">Cases</a></li>
+                    <li class="rethink-sans-semiBold mb-2">
+                        <a href="{{ request()->routeIs('index') ? '#transformed' : route('index') . '#transformed' }}">
+                            Quem Somos
+                        </a>
+                    </li>
+                    <li class="rethink-sans-semiBold mb-2">
+                        <a href="{{ request()->routeIs('index') ? '#what-we-do' : route('index') . '#what-we-do' }}">
+                            O que fazemos
+                        </a>
+                    </li>
+                    <li class="rethink-sans-semiBold mb-2">
+                        <a href="{{ request()->routeIs('index') ? '#portfolio' : route('index') . '#portfolio' }}">
+                            Cases
+                        </a>
+                    </li>
                 </ul>
+
                 <ul class="list-unstyled text-center">
-                    <li class="rethink-sans-semiBold mb-2"><a href="#proccess">Etapas</a></li>
-                    <li class="rethink-sans-semiBold mb-2"><a href="#trust-whi">Depoimentos</a></li>
-                    <li class="rethink-sans-semiBold mb-2"><a href="#faq">Perguntas Frequentes</a></li>
+                    <li class="rethink-sans-semiBold mb-2">
+                        <a href="{{ request()->routeIs('index') ? '#proccess' : route('index') . '#proccess' }}">
+                            Etapas
+                        </a>
+                    </li>
+                    <li class="rethink-sans-semiBold mb-2">
+                        <a href="{{ request()->routeIs('index') ? '#trust-whi' : route('index') . '#trust-whi' }}">
+                            Depoimentos
+                        </a>
+                    </li>
+                    <li class="rethink-sans-semiBold mb-2">
+                        <a href="{{ request()->routeIs('index') ? '#faq' : route('index') . '#faq' }}">
+                            Perguntas Frequentes
+                        </a>
+                    </li>
                 </ul>
+
                 <div class="d-flex justify-content-end flex-column w-auto">
                     <div class="social-links d-flex justify-content-end gap-4 text-center">
                         <a href="https://www.linkedin.com/company/106948313/admin/dashboard/" aria-label="Visite nosso LinkedIn" target="_blank" class="linkedin rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-linkedin"></i></a>
