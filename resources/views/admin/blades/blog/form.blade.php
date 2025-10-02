@@ -41,16 +41,16 @@
                 You must agree before submitting.
             </div>
         </div>
-        <div class="form-check">
+        {{-- <div class="form-check">
             <input name="super_highlight" {{ isset($blog->super_highlight) && $blog->super_highlight == 1 ? 'checked' : '' }} type="checkbox" class="form-check-input" id="invalidCheck2{{isset($blog->id)?$blog->id:''}}" />
             <label class="form-check-label" for="invalidCheck2{{isset($blog->id)?$blog->id:''}}">Super destaque?</label>
             <div class="invalid-feedback">
                 You must agree before submitting.
             </div>
-        </div>
+        </div> --}}
         <div class="form-check">
             <input name="highlight" {{ isset($blog->highlight) && $blog->highlight == 1 ? 'checked' : '' }} type="checkbox" class="form-check-input" id="invalidCheck3{{isset($blog->id)?$blog->id:''}}" />
-            <label class="form-check-label" for="invalidCheck3{{isset($blog->id)?$blog->id:''}}">Destaque?</label>
+            <label class="form-check-label" for="invalidCheck3{{isset($blog->id)?$blog->id:''}}">Destacar na Home?</label>
             <div class="invalid-feedback">
                 You must agree before submitting.
             </div>
