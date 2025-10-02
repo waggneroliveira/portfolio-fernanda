@@ -198,6 +198,12 @@
                 <div class="col-lg-4" data-aos="fade-left" data-aos-delay="750">
                   <aside>
                     <style>
+                        .comment-text p{
+                            font-size: 0.938rem;
+                            font-family: "Sora";
+                            font-weight: 400;
+                            color: #10131C;
+                        }
                         @media (max-width: 576px) {
                             .cat-mt {
                                 margin-top: 15px;

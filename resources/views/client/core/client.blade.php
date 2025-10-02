@@ -469,7 +469,7 @@
                         <a href="https://www.instagram.com/agenciawhi" aria-label="Visite nosso Instagram" target="_blank" class="instagram rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-instagram"></i></a>
                         <a href="https://wa.me/5571992768360" target="_blank" aria-label="Converse no WhatsApp" class="whatsapp rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-whatsapp"></i></a>
                     </div>
-                    <a href="https://wa.me/5571992768360" target="_blank" rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-5 pe-0 text-p call-to-action d-flex justify-content-between align-items-center">
+                    <a href="https://wa.me/5571992768360" target="_blank" rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-4 pe-0 text-p call-to-action d-flex justify-content-between align-items-center">
                     Fale com a gente!
                     <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center text-white align-items-center"></i>
                     </a>

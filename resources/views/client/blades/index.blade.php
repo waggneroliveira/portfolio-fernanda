@@ -16,10 +16,10 @@
             <p class="text-white mb-5 rethink-sans-regular">Faça já <span class=typed data-typed-items="sua  <b>Consultoria Digital</b>, seu <b>Site dinâmico</b>, sua <b>Logomarca</b>, seu <b>Marketing Digital</b>"></span><span class="typed-cursor typed-cursor--blink" aria-hidden=true></span>
                 <span class="typed-cursor typed-cursor--blink" aria-hidden=true></span>
             </p>
-            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
-Fale com a gente!
-<i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
-</a>
+            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="rethink-sans-regular ps-4 text-white call-to-action d-flex justify-content-center gap-4 align-items-center">
+                Fale com a gente!
+                <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
+            </a>
         </div>
     </div>
 </section>
@@ -495,7 +495,7 @@ Fale com a gente!
                 <h3 class="rethink-sans-semiBold emphasis mb-0"> O Processo</h3>
             </div>
             <p class="rethink-sans-regular col-12 col-md-4">A gente te guia em um processo claro e objetivo. Com ele, transformamos sua visão em um projeto que gere resultados de verdade para o seu negócio</p>
-            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
+            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="rethink-sans-regular ps-4 text-white call-to-action d-flex justify-content-center gap-4 align-items-center">
 Fale com a gente!
 <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
 </a>
@@ -544,10 +544,10 @@ Fale com a gente!
             <p class="text-white rethink-sans-regular mt-3 col-12 col-lg-10">
                 São mais de 10 anos de experiência transformando ideias em resultados! Com um atendimento 100% humanizado e dedicado, garantimos que suas necessidades serão ouvidas e atendidas com a máxima qualidade.
             </p>
-            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
-Fale com a gente!
-<i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
-</a>
+            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-4 text-white call-to-action d-flex justify-content-between align-items-center">
+                Fale com a gente!
+                <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
+            </a>
         </div>
     </div>
     <picture>
@@ -563,7 +563,7 @@ Fale com a gente!
             <span>AS PESSOAS</span> <br> que confiam na WHI como parceira de crescimento
         </h2>
         <div class="col-12 col-md-4 d-flex justify-content-center justify-content-md-end align-items-center mt-3 mt-md-0">
-            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
+            <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-4 text-white call-to-action d-flex justify-content-center gap-4 align-items-center">
             Fale com a gente!
             <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
             </a>
@@ -669,7 +669,7 @@ Fale com a gente!
             <h2 class=rethink-sans-semiBold> <span>WHI</span>, a escolha perfeita para empresas que precisam:</h2>
             <div class="position-relative d-flex justify-content-center flex-column align-items-center">
                 <img src="{{asset('build/client/images/robot-hand.png')}}" alt="Mão de robô com lâmpada" title="Mão de robô com lâmpada" class="w-100 robot-lamp m-auto me-md-5 d-none d-md-block" loading="lazy">
-                <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-5 text-white call-to-action d-flex justify-content-between align-items-center">
+                <a href=https://wa.me/5571996483853 target=_blank rel="noopener noreferrer" class="mt-0 rethink-sans-regular ps-4 text-white call-to-action d-flex justify-content-center gap-4 align-items-center">
                 Fale com a gente!
                 <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center align-items-center"></i>
                 </a>
@@ -882,7 +882,7 @@ Quais os benefícios de trabalhar com a WHI em vez de outras agências?
                                     <div class="card-body-custom">
                                         <h3 class="d-block text-uppercase rethink-sans-bold font-16 title-blue">{{$blogHighlight->title}}</h3>
                                         <p class="text-color rethink-sans-regular font-16">
-                                            {{substr(strip_tags($blogHighlight->text), 0, 100)}}...
+                                            {!! substr(strip_tags($blogHighlight->text), 0, 100)!!}...
                                         </p>
                                         <a href="{{route('blog-inner', ['slug' => $blogHighlight->slug])}}" class="read-more">
                                             Ler mais <i class="bi bi-arrow-right"></i>
