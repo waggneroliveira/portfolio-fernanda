@@ -2,7 +2,7 @@
 @section('content')
    <div class="banner-inner position-relative">
       <div class="max-width m-auto">
-         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-50 d-block" data-aos="fade-right" data-aos-delay="100">{{$blogInner->title}}</h1>
+         <h1 class="h2 m-0 text-white text-uppercase rethink-sans-bold font-38 d-block" data-aos="fade-right" data-aos-delay="100">{{$blogInner->title}}</h1>
          <p class="text-white mb-0 rethink-sans-regular font-20 col-12 col-lg-12 mt-4" data-aos="fade-right" data-aos-delay="300">Confira uma área repleta de informações sobre o universo digital. Aqui escrevermos sobre tecnologia e tudo  feito pra quem vive — ou quer viver — o digital de verdade.</p>
          <ol class="breadcrumb mt-4 align-items-center" data-aos="fade-right" data-aos-delay="500">
             <li class="breadcrumb-item">
@@ -33,7 +33,7 @@
                     <!-- News Detail Start -->
                     <div class="position-relative mb-3">
                         <article>
-                            <h2 class="mb-3 title-blue rethink-sans-bold font-32 text-uppercase">{{$blogInner->title}}</h2>
+                            <h2 class="mb-3 title-blue rethink-sans-bold font-28 text-uppercase">{{$blogInner->title}}</h2>
                             <div class="mb-3 d-flex justify-content-start align-items-center gap-1 flex-wrap">
                                 <span class="badge background-red rethink-sans-semiBold font-12 text-uppercase py-2 px-2 me-2">{{$blogInner->category->title}}</span>
                                 <p class="text-color mb-0 montserrat-regular font-15">{{$dataFormatada}}</p>
