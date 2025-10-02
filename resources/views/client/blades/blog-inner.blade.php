@@ -155,11 +155,11 @@
 
                     <!-- Comment List Start -->
                     @if (isset($blogInner->comments) && $blogInner->comments->count() > 0)                        
-                        <div class="mb-3 mt-3 comments">
-                            <div class="section-title mb-0 title-blue">
+                        <div class="mb-3 mt-4 comments">
+                            <div class="section-title mb-3 title-blue">
                                 <h4 class="m-0 text-uppercase rethink-sans-bold font-25 title-blue">{{$blogInner->comments->count()}} Comentários</h4>
                             </div>
-                            <div class="bg-white border border-top-0 p-4 comment-scroll">
+                            <div class="bg-white border p-4 comment-scroll">
                                 @foreach ($blogInner->comments as $comment)
                                     @php
                                         \Carbon\Carbon::setLocale('pt_BR');
@@ -170,7 +170,7 @@
                                     @if ($client)
                                         <div class="d-flex gap-2 flex-column mb-4">
                                             <div class="d-flex mb-0 gap-3">
-                                                <img src="{{ $client->path_image_thumbnail ? url($client->path_image_thumbnail) : asset('build/client/images/user.jpg') }}"
+                                                <img src="{{ $client->path_image ? url($client->path_image) : asset('build/client/images/user.jpg') }}"
                                                     alt="Imagem do cliente"
                                                     class="img-fluid mr-3 mt-1 rounded-circle"
                                                     style="width: 50px; height: 50px; object-fit: cover;" loading="lazy">
