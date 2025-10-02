@@ -744,7 +744,7 @@ Fale com a gente!
                 </p>
                 <a href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ314UlBP0vKZFJm6SIrz-GrMY4D8U3mjWihIKcN9PrL0msuuZ2WnFum5cO3eTMISHOB9csIzmeH" 
                 target="_blank" class="btn btn-lg rethink-sans-semiBold text-p text-uppercase call-to-action d-flex justify-content-center align-items-center" rel="noopener noreferrer">
-                    Adendar agora
+                    Agendar agora
                 </a>
             </div>
 
