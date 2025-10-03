@@ -29,6 +29,6 @@ class NoticiesPageController extends Controller
         });
 
         // dd($groupedNoticies);
-        return view('client.blades.notices', compact('groupedNoticies', 'announcements'));
+        return view('client.blades.project', compact('groupedNoticies', 'announcements'));
     }
 }

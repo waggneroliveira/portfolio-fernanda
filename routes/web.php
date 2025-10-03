@@ -72,8 +72,8 @@ Route::middleware([AuthClientMiddleware::class])->group(function () {
 // Route::get('contato', [ContactPageController::class, 'index'])
 // ->name('contact');
 // Route::post('send-contact', [FormIndexController::class, 'store'])->name('send-contact');
-// Route::get('editais', [NoticiesPageController::class, 'index'])
-// ->name('noticies');
+Route::get('projeto', [NoticiesPageController::class, 'index'])
+->name('project');
 Route::get('blog/interna/{slug}', [BlogPageController::class, 'blogInner'])
 ->name('blog-inner');
 Route::get('blog/{category?}', [BlogPageController::class, 'index'])->name('blog');
@@ -82,9 +82,9 @@ Route::post('send-newsletter', [NewsletterController::class, 'store'])->name('se
 
 Route::post('cliente/cadastro', [ClientController::class, 'store'])->name('register-client');
 Route::get('home', [HomePageController::class, 'index'])->name('index');
-// Route::get('sobre', [AboutPageController::class, 'index'])->name('about');
+Route::get('sobre', [AboutPageController::class, 'index'])->name('about');
 // Route::get('servicos-aos-sindicalizados', [BenefitPageController::class, 'index'])->name('unionized');
-// Route::get('juridico', [JuridicoPageController::class, 'index'])->name('juridico');
+Route::get('portfolio', [JuridicoPageController::class, 'index'])->name('portfolio');
 // Route::get('juridico/search', [JuridicoPageController::class, 'searchJuridico'])->name('search-juridico');
 // Route::get('regionais', [RegionPageController::class, 'index'])->name('regional');
 // Route::match(['get', 'post'], 'regionais/filter-municipalities', [RegionPageController::class, 'filterMunicipalities'])

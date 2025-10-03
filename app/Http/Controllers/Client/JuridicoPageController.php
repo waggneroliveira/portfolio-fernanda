@@ -13,7 +13,7 @@ class JuridicoPageController extends Controller
         $juridicos = Juridico::active()->sorting()->get();
         $report = Report::active()->first();
 
-        return view('client.blades.juridico', compact('report', 'juridicos'));
+        return view('client.blades.portfolio', compact('report', 'juridicos'));
     }
 
     public function searchJuridico(Request $request)
