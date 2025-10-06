@@ -291,8 +291,8 @@ a, a:hover {
     text-transform: uppercase;
     font-weight: 600;
     letter-spacing: 2px;
-    color: #e1e1e1;
-    border: solid 2px #e1e1e1;
+    color: #C27D0B;
+    border: solid 2px #C27D0B;
     background-color: transparent;
     transition: 0.4s ease-in-out;
     outline: none !important;
@@ -1525,7 +1525,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 }
 
 .mry-form input, .mry-form textarea {
-	border: solid 2px #e6e6e6;
+	border: solid 2px #304E66;
 	width: 100%;
 	color: #e6e6e6;
 	background-color: transparent;

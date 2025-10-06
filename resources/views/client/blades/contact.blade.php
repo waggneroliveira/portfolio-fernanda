@@ -1,240 +1,186 @@
 @extends('client.core.client')
 @section('content')
-    <section class="contact mb-0 mt-4">
-        @if (isset($contact) && $contact->name_section != null)
-            <div class="d-flex justify-content-start gap-2 align-items-start flex-nowrap">
-                <span class="firula-contact mt-2"></span>
-                <div class="description">
-                    <h3 class="montserrat-bold font-30 mb-0 title-blue">{{$contact->name_section}}</h3>
-                    <p class="mb-0 text-color montserrat-regular font-15">{{$contact->text}}</p>
+		<div  class="transition-fade">
+			<div class="mry-content-frame" id="scroll">
+				<canvas class="mry-dots" style="display: none"></canvas>
+
+                <div class="mry-head-bg">
+                    <img src="{{asset('build/client/images/about.png')}}" alt="background">
+                    <div class="mry-bg-overlay"></div>
                 </div>
-            </div>
-        @endif
-        <div class="container py-5">
-            <!-- Filiais -->
-            <div class="row g-3 mb-4">
-                @if (isset($contact) && $contact->name_one != null ||
-                isset($contact) && $contact->address_one != null || isset($contact) && $contact->opening_hours_one != null
-                || isset($contact) && $contact->phone_one != null) 
-                    <!-- Filial 1 -->
-                    <div class="col-md-4">
-                        <div class="border rounded p-3 h-100 bg-box-contact">
-                            @if (isset($contact) && $contact->name_one != null)                            
-                                <div class="d-flex gap-2 justify-content-start align-items-center">
-                                    <svg width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.5 0C6.94326 0 0 7.125 0 15.9057C0 32.4493 14.8784 37.8507 15.0239 37.9186C15.1826 37.9729 15.3281 38 15.5 38C15.6587 38 15.8174 37.9729 15.9629 37.9186C16.1216 37.8643 31 32.4629 31 15.9057C31 7.125 24.0435 0 15.5 0ZM15.5 24.2521C10.9637 24.2521 7.28712 20.4657 7.28712 15.8379C7.28712 11.1829 10.977 7.41 15.5 7.41C20.023 7.41 23.6997 11.1964 23.6997 15.8379C23.6997 20.4657 20.023 24.2521 15.5 24.2521Z" fill="#2F368B"/>
-                                    </svg>
-                                    <h6 class="montserrat-semiBold font-18 mb-2 title-blue">
-                                        {{$contact->name_one}}
-                                    </h6>
-                                </div>
-                            @endif
-                            @if (isset($contact) && $contact->address_one != null)                            
-                                <div class="my-2 text-address">
-                                    {!!$contact->address_one!!}
-                                </div>
-                            @endif
-                            <div class="d-flex justify-content-between flex-wrap">
-                                @if (isset($contact) && $contact->opening_hours_one != null)  
-                                    <p class="mb-1 text-color montserrat-regular font-14 small col-12 col-lg-5">{{$contact->opening_hours_one}}</p>
-                                @endif
-                                @if (isset($contact) && $contact->phone_one != null)                                
-                                    <p class="mb-0 text-color montserrat-regular font-14 small">
-                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 17H2V3H11M6.5 21C6.10218 21 5.72064 20.842 5.43934 20.5607C5.15804 20.2794 5 19.8978 5 19.5C5 19.1022 5.15804 18.7206 5.43934 18.4393C5.72064 18.158 6.10218 18 6.5 18C6.89782 18 7.27936 18.158 7.56066 18.4393C7.84196 18.7206 8 19.1022 8 19.5C8 19.8978 7.84196 20.2794 7.56066 20.5607C7.27936 20.842 6.89782 21 6.5 21ZM10.5 0H2.5C1.83696 0 1.20107 0.263392 0.732233 0.732233C0.263392 1.20107 0 1.83696 0 2.5V19.5C0 20.163 0.263392 20.7989 0.732233 21.2678C1.20107 21.7366 1.83696 22 2.5 22H10.5C11.163 22 11.7989 21.7366 12.2678 21.2678C12.7366 20.7989 13 20.163 13 19.5V2.5C13 1.83696 12.7366 1.20107 12.2678 0.732233C11.7989 0.263392 11.163 0 10.5 0Z" fill="#2F368B"/>
-                                        </svg>
-            
-                                        {{$contact->phone_one}}
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                @endif
-                @if (isset($contact) && $contact->name_two != null ||
-                isset($contact) && $contact->address_two != null || isset($contact) && $contact->opening_hours_two != null
-                || isset($contact) && $contact->phone_two != null) 
-                    <!-- Filial 2 -->
-                    <div class="col-md-4">
-                        <div class="border rounded p-3 h-100 bg-box-contact">
-                            @if (isset($contact) && $contact->name_two != null)                            
-                                <div class="d-flex gap-2 justify-content-start align-items-center">
-                                    <svg width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.5 0C6.94326 0 0 7.125 0 15.9057C0 32.4493 14.8784 37.8507 15.0239 37.9186C15.1826 37.9729 15.3281 38 15.5 38C15.6587 38 15.8174 37.9729 15.9629 37.9186C16.1216 37.8643 31 32.4629 31 15.9057C31 7.125 24.0435 0 15.5 0ZM15.5 24.2521C10.9637 24.2521 7.28712 20.4657 7.28712 15.8379C7.28712 11.1829 10.977 7.41 15.5 7.41C20.023 7.41 23.6997 11.1964 23.6997 15.8379C23.6997 20.4657 20.023 24.2521 15.5 24.2521Z" fill="#2F368B"/>
-                                    </svg>
-                                    <h6 class="montserrat-semiBold font-18 mb-2 title-blue">
-                                        {{$contact->name_two}}
-                                    </h6>
-                                </div>
-                            @endif
-                            @if (isset($contact) && $contact->address_two != null)                            
-                                <div class="my-2 text-address">
-                                    {!!$contact->address_two!!}
-                                </div>
-                            @endif
-                            <div class="d-flex justify-content-between flex-wrap">
-                                @if (isset($contact) && $contact->opening_hours_one != null)  
-                                    <p class="mb-1 text-color montserrat-regular font-14 small col-12 col-lg-5">{{$contact->opening_hours_two}}</p>
-                                @endif
-                                @if (isset($contact) && $contact->phone_two != null)                                
-                                    <p class="mb-0 text-color montserrat-regular font-14 small">
-                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 17H2V3H11M6.5 21C6.10218 21 5.72064 20.842 5.43934 20.5607C5.15804 20.2794 5 19.8978 5 19.5C5 19.1022 5.15804 18.7206 5.43934 18.4393C5.72064 18.158 6.10218 18 6.5 18C6.89782 18 7.27936 18.158 7.56066 18.4393C7.84196 18.7206 8 19.1022 8 19.5C8 19.8978 7.84196 20.2794 7.56066 20.5607C7.27936 20.842 6.89782 21 6.5 21ZM10.5 0H2.5C1.83696 0 1.20107 0.263392 0.732233 0.732233C0.263392 1.20107 0 1.83696 0 2.5V19.5C0 20.163 0.263392 20.7989 0.732233 21.2678C1.20107 21.7366 1.83696 22 2.5 22H10.5C11.163 22 11.7989 21.7366 12.2678 21.2678C12.7366 20.7989 13 20.163 13 19.5V2.5C13 1.83696 12.7366 1.20107 12.2678 0.732233C11.7989 0.263392 11.163 0 10.5 0Z" fill="#2F368B"/>
-                                        </svg>
-            
-                                        {{$contact->phone_two}}
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                @endif
-                @if (isset($contact) && $contact->name_three != null ||
-                isset($contact) && $contact->address_three != null || isset($contact) && $contact->opening_hours_three != null
-                || isset($contact) && $contact->phone_three != null) 
-                    <!-- Filial 3 -->
-                    <div class="col-md-4">
-                        <div class="border rounded p-3 h-100 bg-box-contact">
-                            @if (isset($contact) && $contact->name_three != null)                            
-                                <div class="d-flex gap-2 justify-content-start align-items-center">
-                                    <svg width="31" height="38" viewBox="0 0 31 38" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15.5 0C6.94326 0 0 7.125 0 15.9057C0 32.4493 14.8784 37.8507 15.0239 37.9186C15.1826 37.9729 15.3281 38 15.5 38C15.6587 38 15.8174 37.9729 15.9629 37.9186C16.1216 37.8643 31 32.4629 31 15.9057C31 7.125 24.0435 0 15.5 0ZM15.5 24.2521C10.9637 24.2521 7.28712 20.4657 7.28712 15.8379C7.28712 11.1829 10.977 7.41 15.5 7.41C20.023 7.41 23.6997 11.1964 23.6997 15.8379C23.6997 20.4657 20.023 24.2521 15.5 24.2521Z" fill="#2F368B"/>
-                                    </svg>
-                                    <h6 class="montserrat-semiBold font-18 mb-2 title-blue">
-                                        {{$contact->name_three}}
-                                    </h6>
-                                </div>
-                            @endif
-                            @if (isset($contact) && $contact->address_three != null)                            
-                                <div class="my-2 text-address">
-                                    {!!$contact->address_three!!}
-                                </div>
-                            @endif
-                            <div class="d-flex justify-content-between flex-wrap">
-                                @if (isset($contact) && $contact->opening_hours_one != null)  
-                                    <p class="mb-1 text-color montserrat-regular font-14 small col-12 col-lg-5">{{$contact->opening_hours_three}}</p>
-                                @endif
-                                @if (isset($contact) && $contact->phone_three != null)                                
-                                    <p class="mb-0 text-color montserrat-regular font-14 small">
-                                        <svg width="13" height="22" viewBox="0 0 13 22" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                        <path d="M11 17H2V3H11M6.5 21C6.10218 21 5.72064 20.842 5.43934 20.5607C5.15804 20.2794 5 19.8978 5 19.5C5 19.1022 5.15804 18.7206 5.43934 18.4393C5.72064 18.158 6.10218 18 6.5 18C6.89782 18 7.27936 18.158 7.56066 18.4393C7.84196 18.7206 8 19.1022 8 19.5C8 19.8978 7.84196 20.2794 7.56066 20.5607C7.27936 20.842 6.89782 21 6.5 21ZM10.5 0H2.5C1.83696 0 1.20107 0.263392 0.732233 0.732233C0.263392 1.20107 0 1.83696 0 2.5V19.5C0 20.163 0.263392 20.7989 0.732233 21.2678C1.20107 21.7366 1.83696 22 2.5 22H10.5C11.163 22 11.7989 21.7366 12.2678 21.2678C12.7366 20.7989 13 20.163 13 19.5V2.5C13 1.83696 12.7366 1.20107 12.2678 0.732233C11.7989 0.263392 11.163 0 10.5 0Z" fill="#2F368B"/>
-                                        </svg>
-            
-                                        {{$contact->phone_three}}
-                                    </p>
-                                @endif
-                            </div>
-                        </div>
-                    </div>
-                @endif
-            </div>
-            <!-- Formulário e Mapa -->
-            <div class="row g-4 mt-4">
-                <div class="col-lg-8">
-                    <form id="contactForm">
-                        @csrf
-                        <div class="row g-3">
-                            <div class="col-md-12">
-                                <input type="text" required id="nome" name="name" class="montserrat-regular font-15 text-color form-control" placeholder="Nome Completo">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="email" required id="email" name="email" class="montserrat-regular font-15 text-color form-control" placeholder="E-mail">
-                            </div>
-                            <div class="col-md-6">
-                                <input type="text" required id="phone" name="phone" class="montserrat-regular font-15 text-color form-control" placeholder="Whatsapp para contato">
-                            </div>
-                            <div class="col-md-12">
-                                <input type="text" required id="subject" name="subject" class="montserrat-regular font-15 text-color form-control" placeholder="Assunto">
-                            </div>
-                            <div class="col-md-12">
-                                <textarea id="text" required name="text" class="form-control montserrat-regular font-15 text-color" rows="4" placeholder="Digite aqui...."></textarea>
-                            </div>
-                            <div class="col-12 d-flex align-items-center flex-wrap">
-                                <div class="form-check me-3">
-                                    <input class="form-check-input" required id="term_privacy" name="term_privacy" type="checkbox" value="1">
-                                    <label class="form-check-label small montserrat-regular font-14 text-color" for="privacyCheck">
-                                        Aceito os termos descritos na Política de Privacidade
-                                    </label>
-                                </div>
-                                <button type="submit" class="montserrat-semiBold font-15 btn btn-danger rounded-3 ms-auto px-4">Enviar</button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-                @if (isset($contact->maps) && $contact->maps != null)                    
-                    <div class="col-lg-4">
-                        <div class="ratio ratio-1x1 rounded border overflow-hidden">
-                            <iframe
-                            src="{{$contact->maps}}"
-                            width="100%"
-                            height="100%"
-                            style="border:0;"
-                            allowfullscreen=""
-                            loading="lazy">
-                            </iframe>                        
-                        </div>
-                    </div>
-                @endif
-            </div>
-        </div>
 
-        @include('client.includes.social')
+				<div class="mry-banner mry-p-140-0">
+					<div class="container">
+						<div class="mry-main-title mry-title-center">
+							<div class="mry-subtitle mry-mb-20 mry-fo">Contact</div>
+							<h1 class="mry-mb-20 mry-fo">Do you have any questions?<br><span class="mry-border-text">Write us a message.</span><span class="mry-animation-el"></span></h1>
+							<div class="mry-text mry-fo text-white">Lorem ipsum dolor sit amet, consectetur.<br>Adipisicing elit suscipit, at.</div>
+							<div class="mry-scroll-hint-frame">
+								<a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link mry-fo" href="#mry-anchor">
+									<span class="mry-magnetic-object"></span>
+								</a>
+								<div class="mry-label mry-fo">Scroll Down</div>
+							</div>
+						</div>
+					</div>
+				</div>
 
-    </section>
+				<!-- contact -->
+				<div class="mry-about mry-p-100-0">
+					<div class="container">
+						<div class="row justify-content-center">
+							<div class="col-lg-8">
 
-<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-<script>
-    $(document).ready(function() {
-        $('#contactForm').on('submit', function(e) {
-            e.preventDefault();
+								<div class="row">
+									<div class="col-lg-6">
 
-            const formData = $(this).serialize();
+										<div class="mry-mb-100 mry-text-center">
+											<div class="mry-numbering mry-fo">
+												<div class="mry-border-text">01</div>
+												<div class="mry-subtitle">Location</div>
+											</div>
+											<div class="mry-fade-object mry-mb-100">
+												<h4 class="mry-mb-20 mry-fo">Welcome to visit</h4>
+												<p class="mry-text mry-mb-20 mry-fo">Canada, Toronto,<br>HTGS 4456 North Av.</p>
+											</div>
+										</div>
 
-            $.ajax({
-                url: '{{ route("send-contact") }}',
-                type: 'POST',
-                data: formData,
-                success: function(response) {
-                    if (typeof Swal !== 'undefined') {
-                        Swal.fire({
-                            title: 'Sucesso!',
-                            text: response.message,
-                            icon: 'success',
-                            timer: 2000,
-                            showConfirmButton: false
-                        });
-                    }
-                    $('#contactForm')[0].reset();
-                },
-                error: function(xhr) {
-                    if (xhr.status === 422) {
-                        const errors = xhr.responseJSON.errors;
-                        let errorMessages = '';
-                        for (let field in errors) {
-                            errorMessages += errors[field][0] + '\n';
-                        }
+									</div>
+									<div class="col-lg-6">
 
-                        if (typeof Swal !== 'undefined') {
-                            Swal.fire({
-                                title: 'Erro',
-                                text: errorMessages,
-                                icon: 'error',
-                                confirmButtonText: 'OK'
-                            });
-                        }
-                    } else {
-                        if (typeof Swal !== 'undefined') {
-                            Swal.fire({
-                                title: 'Erro',
-                                text: 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.',
-                                icon: 'error',
-                                confirmButtonText: 'OK'
-                            });
-                        }
-                    }
-                }
-            });
-        });
-    });
-</script>
+										<div class="mry-mb-100 mry-text-center">
+											<div class="mry-numbering mry-fo">
+												<div class="mry-border-text">02</div>
+												<div class="mry-subtitle">Contact</div>
+											</div>
+											<div class="mry-fade-object mry-mb-100">
+												<h4 class="mry-mb-20 mry-fo">Shall we talk?</h4>
+												<p class="mry-text mry-fo">Email: mireya.inbox@mail.com <br>Phone: +4 9(054) 996 84 25</p>
+											</div>
+										</div>
+
+									</div>
+								</div>
+
+							</div>
+
+							<div class="col-lg-12">
+
+								<div class="mry-main-title mry-title-center mry-p-0-40">
+									<div class="mry-numbering mry-fo">
+										<div class="mry-border-text">03</div>
+										<div class="mry-subtitle">Contact form</div>
+									</div>
+									<h2 class="mry-mb-20 mry-fo">Write us a message</h2>
+								</div>
+
+							</div>
+
+							<div class="col-lg-8">
+
+								<form method="POST" id="form" class="mry-form mry-mb-100" action="send.php">
+
+									<div class="row">
+										<div class="col-lg-6">
+											<label class="mry-label mry-fo" for="firstName">First Name</label>
+											<div class="mry-fo"><input id="firstName" name="firstName" placeholder="John" class="mry-default-link" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required>
+											</div>
+										</div>
+										<div class="col-lg-6">
+											<label class="mry-label mry-fo" for="lastName">Last Name</label>
+											<div class="mry-fo"><input id="lastName" name="lastName" placeholder="Johnsone" class="mry-default-link" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required>
+											</div>
+										</div>
+									</div>
+
+									<div class="row">
+										<div class="col-lg-6">
+											<label class="mry-label mry-fo" for="email">Email</label>
+											<div class="mry-fo"><input id="email" name="email" placeholder="type.your.mail@here" class="mry-default-link" type="email" required></div>
+										</div>
+										<div class="col-lg-6">
+											<label class="mry-label mry-fo" for="phone">Phone</label>
+											<div class="mry-fo"><input id="phone" name="phone" placeholder="+0 (000) 000 00 00" class="mry-default-link" type="text" data-parsley-pattern="^\+{1}[0-9]+$"></div>
+										</div>
+									</div>
+
+									<div class="mry-fade-object">
+										<label class="mry-label mry-fo" for="message">Message</label>
+										<div class="mry-fo">
+											<textarea id="message" name="message" rows="8" cols="80" placeholder="Type your message here" class="mry-default-link" type="text"
+												data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$" required></textarea>
+										</div>
+									</div>
+									<div class="row align-items-center">
+										<div class="col-lg-4">
+											<div class="mry-fo"><button type="submit" class="mry-btn mry-default-link">Send message</button></div>
+										</div>
+										<div class="col-lg-8">
+											<p class="mry-text mry-simple-text mry-contact-hint mry-fo"><span class="mry-color-text">*</span> We promise not to share your personal information with
+												third parties.</p>
+										</div>
+									</div>
+								</form>
+
+							</div>
+
+							<div class="col-lg-12">
+
+								<div class="mry-main-title mry-title-center mry-p-0-40">
+									<div class="mry-numbering mry-fo">
+										<div class="mry-border-text">04</div>
+										<div class="mry-subtitle">Map</div>
+									</div>
+									<h2 class="mry-mb-20 mry-fo">Welcome to visit</h2>
+								</div>
+
+							</div>
+
+							<div class="col-lg-10">
+
+								<div class="mry-map-frame mry-mb-100 mry-fo">
+									<div id='map-light' class="mry-map mry-map-light"></div>
+									<div class="mry-lock mry-magnetic-link"><i class="fas fa-lock mry-magnetic-object"></i></div>
+									<div class="mry-curtain"></div>
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+				</div>
+				<!-- contact end -->
+
+				<!-- footer -->
+				<footer class="mry-footer">
+					<div class="bg-footer">
+						<div class="container">
+							<div class="mry-main-title mry-title-center">
+								<div class="mry-subtitle mry-mb-20 mry-fo">Fale comigo</div>
+								<h2 class="mry-h1 mry-mb-20 mry-fo">Precisa <span class="mry-border-text">de um projeto alto padrão?</span></h2>
+								<div class="mry-text mry-mb-30  mry-fo text-white">Entre em contato com quem realmente entende e receba orientações inéditas, como nunca antes.</div>
+								<div class="mry-fo">
+									<a href="contact.html" class="mry-anima-link mry-btn mry-btn-color mry-default-link">Let's discuss</a>
+									<a href="portfolio-grid-1.html" class="mry-anima-link  mry-btn-text mry-default-link">Portfolio</a>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="mry-footer-copy">
+						<div class="container">
+							<div>Fernanda Giacomini © early 2021</div>
+							<ul class="mry-social">
+								<li><a href="#."><i class="fab fa-facebook-f"></i></a></li>
+								<li><a href="#."><i class="fab fa-instagram"></i></a></li>
+								<li><a href="#."><i class="fab fa-behance"></i></a></li>
+								<li><a href="#."><i class="fab fa-dribbble"></i></a></li>
+							</ul>
+							<div>By: <a href="https://themeforest.net/user/ultimatewebsolutions/" class="mry-default-link" target="_blank">UWS</a></div>
+						</div>
+					</div>
+				</footer>
+				<!-- footer end -->
+
+			</div>
+		</div>
 @endsection

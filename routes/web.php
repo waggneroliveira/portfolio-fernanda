@@ -69,9 +69,9 @@ Route::middleware([AuthClientMiddleware::class])->group(function () {
     Route::get('logout', [AuthClientController::class, 'logout'])->name('client.user.logout');
 });
 
-// Route::get('contato', [ContactPageController::class, 'index'])
-// ->name('contact');
-// Route::post('send-contact', [FormIndexController::class, 'store'])->name('send-contact');
+Route::get('contato', [ContactPageController::class, 'index'])
+->name('contact');
+Route::post('send-contact', [FormIndexController::class, 'store'])->name('send-contact');
 Route::get('projeto', [NoticiesPageController::class, 'index'])
 ->name('project');
 Route::get('blog/interna/{slug}', [BlogPageController::class, 'blogInner'])
