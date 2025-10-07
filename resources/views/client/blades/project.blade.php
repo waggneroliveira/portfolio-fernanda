@@ -15,7 +15,7 @@
 							<div class="mry-main-title mry-title-center">
 								<div class="mry-subtitle mry-mb-20 mry-fo">Newsletter</div>
 								<h1 class="mry-mb-20 mry-fo">Greenwell Yards<br><span class="mry-border-text">Country house</span><span class="mry-animation-el"></span></h1>
-								<div class="mry-text mry-fo">Architecture, Interior Design</div>
+								<div class="mry-text mry-fo text-white">Architecture, Interior Design</div>
 								<div class="mry-scroll-hint-frame">
 									<a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link mry-fo" href="#mry-anchor">
 										<span class="mry-magnetic-object"></span>
@@ -33,7 +33,7 @@
 					<div class="container">
 						<div class="row justify-content-center">
 
-							<div class="col-lg-8">
+							<div class="col-lg-12">
 
 								<div class="mry-mb-100 mry-text-center">
 									<div class="mry-numbering mry-fo">
@@ -151,21 +151,6 @@
 										</div>
 									</div>
 								</div>
-							</div>
-							<div class="col-lg-8">
-
-								<div class="mry-mb-100 mry-text-center">
-									<div class="mry-numbering mry-fo">
-										<div class="mry-border-text">03</div>
-										<div class="mry-subtitle">Result</div>
-									</div>
-									<h3 class="mry-mb-40 mry-fo">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores, id!</h3>
-									<p class="mry-text mry-fo">We has expertise in branding and brand strategy, website design, social media management, content marketing, pay-per-click advertising
-										(PPC) and search engine optimization (SEO). As a leading
-										website design company in Toronto we have expertise in WordPress design and development, e-commerce website design and development, Shopify website design and
-										development and cater <br>to SMB and enterprise clients.</p>
-								</div>
-
 							</div>
 							<div class="col-lg-12">
 

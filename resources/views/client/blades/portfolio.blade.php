@@ -32,198 +32,40 @@
             <!-- portfolio -->
             <div class="mry-portfolio mry-p-100-100">
                 <div class="container">
-
-                    <div class="mry-filter mry-mb-40 mry-fo">
-                        <a href="#" data-filter="*" class="mry-card-category mry-default-link mry-current">All Categories</a>
-                        <a href="#" data-filter=".architecture" class="mry-card-category mry-default-link">Architecture</a>
-                        <a href="#" data-filter=".interior" class="mry-card-category mry-default-link">Interior Design</a>
-                        <a href="#" data-filter=".repair" class="mry-card-category mry-default-link">Repair</a>
-                    </div>
+                    @if (isset($projectCategories) && $projectCategories->count() > 0)                        
+                        <div class="mry-filter mry-mb-40 mry-fo">
+                            <a href="#" data-filter="*" class="mry-card-category mry-default-link mry-current">All Categories</a>
+                            @foreach ($projectCategories as $projectCategory)                            
+                                <a href="#" data-filter=".{{$projectCategory->slug}}" class="mry-card-category mry-default-link">{{$projectCategory->title}}</a>
+                            @endforeach
+                        </div>
+                    @endif
 
                     <div class="mry-portfolio-frame">
                         <div class="mry-masonry-grid mry-3-col">
                             <div class="mry-grid-sizer"></div>
+                            @foreach ($projects as $project)                                
+                                <div class="mry-masonry-grid-item mry-masonry-grid-item-33 mry-masonry-grid-item-h-x-2 {{$project->category->slug}}">
 
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 mry-masonry-grid-item-h-x-2 interior">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">interior</div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-1/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-cover-overlay"></div>
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-1/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
+                                    <div class="mry-card-item">
+                                        <div class="mry-card-cover-frame mry-mb-20 mry-fo">
+                                            <div class="mry-badge">{{$project->category->title}}</div>
+                                            <img src="{{asset('storage/' . $project->path_image)}}" alt="project" >
+                                            <div class="mry-cover-overlay"></div>
+                                            <div class="mry-hover-links">
+                                                <a href="{{asset('storage/' . $project->path_image)}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
+                                                            class="fas fa-expand"></i></span></a>
+                                                <a href="{{route('project')}}" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
+                                            </div>
+                                        </div>
+                                        <div class="mry-item-descr mry-fo">
+                                            <h4 class="mry-mb-10" style="color: #304E66;"><a href="{{route('project')}}">{{$project->name_project}}</a></h4>
+                                            <div class="mry-text">{!! substr(strip_tags($project->text), 0, 60) !!}...</div>
                                         </div>
                                     </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Little Cottage</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
+
                                 </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 architecture">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">architecture</div>
-                                        <div class="mry-cover-overlay"></div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Compact House</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 mry-masonry-grid-item-h-x-2 interior">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">interior</div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-3/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-cover-overlay"></div>
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-3/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Greenwell Yards</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 mry-masonry-grid-item-h-x-2 repair">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">repair</div>
-                                        <div class="mry-cover-overlay"></div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-1/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-1/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Little Cottage</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 interior repair">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">repair</div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-cover-overlay"></div>
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Compact House</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 architecture repair">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">architecture repair</div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-3/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-cover-overlay"></div>
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-3/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Greenwell Yards</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 interior architecture">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">architecture interior</div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-cover-overlay"></div>
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Little Cottage</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 architecture">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">architecture</div>
-                                        <div class="mry-cover-overlay"></div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Compact House</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
-                            <div class="mry-masonry-grid-item mry-masonry-grid-item-33 interior architecture">
-
-                                <div class="mry-card-item">
-                                    <div class="mry-card-cover-frame mry-mb-20 mry-fo">
-                                        <div class="mry-badge">architecture interior</div>
-                                        <img src="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" alt="project" >
-                                        <div class="mry-cover-overlay"></div>
-                                        <div class="mry-hover-links">
-                                            <a href="{{asset('build/client/images/dark/projects/prjct-2/fs/1.jpg')}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
-                                                        class="fas fa-expand"></i></span></a>
-                                            <a href="project.html" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
-                                        </div>
-                                    </div>
-                                    <div class="mry-item-descr mry-fo">
-                                        <h4 class="mry-mb-10"><a href="project.html">Greenwell Yards</a></h4>
-                                        <div class="mry-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
-                                    </div>
-                                </div>
-
-                            </div>
+                            @endforeach
                         </div>
                     </div>
                 </div>

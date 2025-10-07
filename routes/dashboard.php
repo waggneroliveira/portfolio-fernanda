@@ -42,6 +42,7 @@ use App\Http\Controllers\MunicipalityController;
 use App\Http\Controllers\SettingEmailController;
 use App\Http\Controllers\SettingThemeController;
 use App\Http\Controllers\AuditActivityController;
+use App\Http\Controllers\ProjectCategoryController;
 use App\Http\Controllers\StackSessionTitleController;
 use App\Http\Controllers\Auth\PasswordEmailController;
 use App\Http\Controllers\Auth\ResetPasswordController;
@@ -158,6 +159,24 @@ Route::prefix('painel/')->group(function () {
         ->name('admin.dashboard.blogCategory.destroySelected');
         Route::post('categoria-do-blog/sorting', [BlogCategoryController::class, 'sorting'])
         ->name('admin.dashboard.blogCategory.sorting');
+        //PROJECT
+        Route::resource('projetos', ProjectController::class)
+        ->parameters(['projetos' => 'project'])
+        ->names('admin.dashboard.project');
+        Route::post('projetos/delete', [ProjectController::class, 'destroySelected'])
+        ->name('admin.dashboard.project.destroySelected');
+        Route::post('projetos/sorting', [ProjectController::class, 'sorting'])
+        ->name('admin.dashboard.project.sorting');
+        Route::post('projetos/uploadImageCkeditor', [ProjectController::class, 'uploadImageCkeditor'])
+        ->name('admin.dashboard.project.uploadImageCkeditor');
+        //CATEGORIA PROJECT
+        Route::resource('categoria-do-projeto', ProjectCategoryController::class)
+        ->parameters(['categoria-do-projeto' => 'projectCategory'])
+        ->names('admin.dashboard.projectCategory');
+        Route::post('categoria-do-projeto/delete', [ProjectCategoryController::class, 'destroySelected'])
+        ->name('admin.dashboard.projectCategory.destroySelected');
+        Route::post('categoria-do-projeto/sorting', [ProjectCategoryController::class, 'sorting'])
+        ->name('admin.dashboard.projectCategory.sorting');
         //REGIONAIS
         Route::resource('regionais', RegionalController::class)
         ->parameters(['regionais' => 'regional'])

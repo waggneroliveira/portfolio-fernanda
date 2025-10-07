@@ -25,6 +25,7 @@ use App\Http\Controllers\Client\EventPageController;
 use App\Http\Controllers\Client\RegionPageController;
 use App\Http\Controllers\Client\BenefitPageController;
 use App\Http\Controllers\Client\ContactPageController;
+use App\Http\Controllers\Client\ProjectPageController;
 use App\Http\Controllers\Client\JuridicoPageController;
 use App\Http\Controllers\Client\NoticiesPageController;
 use App\Http\Controllers\Auth\PasswordEmailClientController;
@@ -84,7 +85,7 @@ Route::post('cliente/cadastro', [ClientController::class, 'store'])->name('regis
 Route::get('home', [HomePageController::class, 'index'])->name('index');
 Route::get('sobre', [AboutPageController::class, 'index'])->name('about');
 // Route::get('servicos-aos-sindicalizados', [BenefitPageController::class, 'index'])->name('unionized');
-Route::get('portfolio', [JuridicoPageController::class, 'index'])->name('portfolio');
+Route::get('portfolio', [ProjectPageController::class, 'index'])->name('portfolio');
 // Route::get('juridico/search', [JuridicoPageController::class, 'searchJuridico'])->name('search-juridico');
 // Route::get('regionais', [RegionPageController::class, 'index'])->name('regional');
 // Route::match(['get', 'post'], 'regionais/filter-municipalities', [RegionPageController::class, 'filterMunicipalities'])
