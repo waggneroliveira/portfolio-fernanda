@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Client;
 
 use App\Models\About;
+use App\Models\Topic;
+use App\Models\Video;
 use App\Models\Contact;
 use App\Models\Partner;
 use App\Models\Statute;
@@ -13,12 +15,32 @@ use App\Http\Controllers\Controller;
 class AboutPageController extends Controller
 {
     public function index(){
-        $abouts = About::active()->sorting()->get();
-        $partners = Partner::active()->sorting()->get();
-        $contact = Contact::first();
-        $statute = Statute::active()->first();
-        $directions = Direction::active()->sorting()->get();
+        $abouts = About::select(
+        'title',
+        'subtitle',
+        'text',
+        'sorting',
+        'active',
+        'path_image',
+        )->active()->sorting()->get();
 
-        return view('client.blades.about', compact('directions', 'statute', 'contact', 'partners', 'abouts'));
+        $topics = Topic::select(
+            'id',
+            'title',
+            'description',
+            'active',
+            'color',
+            'sorting',
+            'path_image',
+        )->sorting()->get();
+
+        $video = Video::select(
+            'link',
+            'active',
+        )
+        ->active()->first();
+
+        
+        return view('client.blades.about', compact('abouts', 'topics', 'video'));
     }
 }

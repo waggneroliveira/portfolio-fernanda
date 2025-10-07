@@ -18,7 +18,7 @@
         </div>
     </div>
     <!-- end page title -->
-    {{-- @if (Auth::user()->hasRole('Super') || 
+    @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('slide.visualizar') || 
     Auth::user()->hasPermissionTo('parceiros.visualizar') || 
@@ -122,9 +122,9 @@
                 </div> <!-- end col -->
             @endif
         </div>
-    @endif --}}
+    @endif
 
-    {{-- @if (Auth::user()->hasRole('Super') || 
+    @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
     Auth::user()->hasPermissionTo('sobre nos.visualizar') || 
     Auth::user()->hasPermissionTo('a direcao.visualizar') || 
@@ -203,7 +203,7 @@
                 </div> <!-- end col -->
             @endif
         </div>
-    @endif --}}
+    @endif
 
     {{-- @if (Auth::user()->hasRole('Super') || 
     Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 

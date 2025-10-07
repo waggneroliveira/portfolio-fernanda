@@ -30,6 +30,7 @@ class TopicController extends Controller
         $topics = Topic::select(
             'id',
             'title',
+            'description',
             'active',
             'color',
             'sorting',
@@ -93,7 +94,7 @@ class TopicController extends Controller
         $request->validate([
             'path_image' => ['nullable', 'file', 'image', 'max:2048', 'mimes:jpg,jpeg,png,gif']
         ]);
-
+        
         if ($request->hasFile('path_image')) {
             $file = $request->file('path_image');
             $mime = $file->getMimeType();

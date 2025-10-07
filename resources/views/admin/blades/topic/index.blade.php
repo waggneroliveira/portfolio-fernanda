@@ -39,9 +39,7 @@
                                             Auth::user()->can('topicos.criar') ||
                                             Auth::user()->can('usuario.tornar usuario master') || 
                                             Auth::user()->hasRole('Super'))
-                                                @if (isset($topics) && $topics->count() < 5)                                                    
-                                                    <button type="button" class="btn btn-primary text-black waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#topic-create"><i class="mdi mdi-plus-circle me-1"></i> {{__('dashboard.btn_create')}}</button>
-                                                @endif
+                                                <button type="button" class="btn btn-primary text-black waves-effect waves-light" data-bs-toggle="modal" data-bs-target="#topic-create"><i class="mdi mdi-plus-circle me-1"></i> {{__('dashboard.btn_create')}}</button>
                                                 <!-- Modal -->
                                                 <div class="modal fade" id="topic-create" tabindex="-1" role="dialog" aria-hidden="true">
                                                     <div class="modal-dialog modal-dialog-centered">

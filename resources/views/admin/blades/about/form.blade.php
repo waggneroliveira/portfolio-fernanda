@@ -1,7 +1,11 @@
 <div class="col-12 col-lg-6">    
     <div class="mb-3 col-12">
         <label for="title" class="form-label">Título</label>
-        <input type="text" name="title" class="form-control" id="title{{isset($about->id)?$about->id:''}}" value="{{isset($about)?$about->title:''}}" placeholder="Digite seu nome">
+        <input type="text" name="title" class="form-control" id="title{{isset($about->id)?$about->id:''}}" value="{{isset($about)?$about->title:''}}" placeholder="Título">
+    </div>
+    <div class="mb-3 col-12">
+        <label for="subtitle" class="form-label">Subtitulo</label>
+        <input type="text" name="subtitle" class="form-control" id="subtitle{{isset($about->id)?$about->id:''}}" value="{{isset($about)?$about->subtitle:''}}" placeholder="Subtitulo">
     </div>
     
     <div class="mb-3 col-12 d-flex align-items-start flex-column">

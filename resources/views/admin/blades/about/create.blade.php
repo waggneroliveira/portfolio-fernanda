@@ -29,7 +29,10 @@
                                 <label for="title" class="form-label">Título</label>
                                 <input type="text" name="title" class="form-control" id="title" placeholder="Digite seu nome">
                             </div>
-                            
+                            <div class="mb-3 col-12">
+                                <label for="subtitle" class="form-label">Subtitulo</label>
+                                <input type="text" name="subtitle" class="form-control" id="subtitle"placeholder="Subtitulo">
+                            </div>
                             <div class="mb-3 col-12 d-flex align-items-start flex-column">
                                 <label for="textarea-create" class="form-label">Texto</label>
                                 <textarea name="text" class="form-control col-12" id="textarea-create" rows="5"></textarea>

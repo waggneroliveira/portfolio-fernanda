@@ -16,6 +16,8 @@ class Slide extends Model
     
     protected $fillable = [
         'title',
+        'subtitle',
+        'type_project',
         'btn_title',
         'link',
         'description',

@@ -921,6 +921,9 @@ html.is-animating .transition-fade .mry-loading-curtain {
 .mry-about{
 	overflow: hidden;
 }
+.about-box:nth-of-type(even) .about-content {
+	flex-direction: row-reverse;
+}
 .fernanda-about-image{
 	max-width: 360px;
 	object-fit: contain;
@@ -1341,7 +1344,10 @@ html.is-animating .transition-fade .mry-loading-curtain {
 .mry-arrows .mry-label {
 	color: rgba(215, 215, 215, 0.8);
 }
-
+.mry-text.mry-mb-20.mry-fo p{
+	color: #304E66;
+	font-size: 0.938rem;
+}
 /* Video */
 .mry-about .mry-mb-40.mry-fo, .mry-about .mry-mb-20.mry-fo {
 	color: #304E66;

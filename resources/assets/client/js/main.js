@@ -234,11 +234,10 @@
 	var progressbar = $(".mry-slider-progress-bar");
 
 	var swiper = new Swiper(".mry-main-slider", {
-		autoplay: false,
-		// autoplay: {
-		// 	delay: 10000,
-		// 	disableOnInteraction: false
-		// },
+		autoplay: {
+			delay: 10000,
+			disableOnInteraction: false
+		},
 		loop: false,
 		parallax: true,
 		mousewheel: true,
@@ -592,11 +591,10 @@
 		var progressbar = $(".mry-slider-progress-bar");
 
 		var swiper = new Swiper(".mry-main-slider", {
-			autoplay: false,
-			// autoplay: {
-			// 	delay: 10000,
-			// 	disableOnInteraction: false
-			// },
+			autoplay: {
+				delay: 10000,
+				disableOnInteraction: false
+			},
 			spaceBetween: 0,
 			loop: false,
 			parallax: true,

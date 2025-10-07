@@ -50,21 +50,13 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>    
     <link href="{{ asset('build/client/css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />    
-    <link href="{{ asset('build/client/css/bootstrap/font-awesome.min.css') }}" rel="stylesheet" type="text/css" />
+    {{-- <link href="{{ asset('build/client/css/bootstrap/font-awesome.min.css') }}" rel="stylesheet" type="text/css" /> --}}
+    <link href="{{ asset('build/client/css/bootstrap/fancybox.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('build/client/css/bootstrap/swiper.min.css') }}" rel="stylesheet" type="text/css" />    
     <link href="{{ asset('build/client/css/bootstrap/mapbox-style.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('build/client/css/style.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('build/client/lgpd/style.css') }}" rel="stylesheet" type="text/css" />
         
-    <script defer src="https://cdn.userway.org/widget.js" data-account="qSpdtrySSt"></script>
-    <link rel="preconnect" href="https://vlibras.gov.br" crossorigin>
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-6RXZ6TZT0V"></script>
-    <script defer>
-        function gtag() {
-            dataLayer.push(arguments)
-        }
-        window.dataLayer = window.dataLayer || [], gtag("js", new Date), gtag("config", "G-6RXZ6TZT0V")
-    </script>
     <script type="application/ld+json">
         {
             "@context": "https://schema.org",
@@ -408,19 +400,5 @@
     <script src="{{ asset('build/client/js/main.js') }}"></script>  
     <script src="{{ asset('build/client/lgpd/script.js') }}"></script>
 
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script>
-        document.addEventListener("DOMContentLoaded", (function() {
-            const o = document.createElement("script");
-            o.src = "https://vlibras.gov.br/app/vlibras-plugin.js", o.onload = function() {
-                window.VLibras && window.VLibras.Widget ? (new window.VLibras.Widget("https://vlibras.gov.br/app")) : console.warn("VLibras não foi carregado corretamente.")
-            }, document.body.appendChild(o)
-        }))
-    </script>
 </body>
 </html>

@@ -14,6 +14,16 @@
         </div>
         
         <div class="mb-3">
+            <label for="subtitle" class="form-label">Subtitulo </label>
+            <input type="text" name="subtitle" class="form-control" id="subtitle{{isset($slide->id)?$slide->id:''}}" value="{{isset($slide)?$slide->subtitle:''}}" placeholder="Subtitulo">
+        </div>
+
+        <div class="mb-3">
+            <label for="type_project" class="form-label">Tipo do projeto </label>
+            <input type="text" name="type_project" class="form-control" id="type_project{{isset($slide->id)?$slide->id:''}}" value="{{isset($slide)?$slide->type_project:''}}" placeholder="Tipo do projeto">
+        </div>
+
+        <div class="mb-3">
             <label for="link" class="form-label">Link </label>
             <input type="text" name="link" class="form-control" id="link{{isset($slide->id)?$slide->id:''}}" value="{{isset($slide)?$slide->link:''}}" placeholder="Link">
         </div>
@@ -41,14 +51,14 @@
     <div class="row col-lg-6">
         <div class="col-lg-12">
             <div class="mt-3">
-                <label for="title" class="form-label">Imagem desktop </label>
+                <label for="title" class="form-label">Imagem de um projeto </label>
                 <input type="file" name="path_image" data-plugins="dropify" data-default-file="{{isset($slide)?$slide->path_image<>''?url('storage/'.$slide->path_image):'':''}}"  />
                 <p class="text-muted text-center mt-2 mb-0">{{__('dashboard.text_img_size')}} <b class="text-danger">2 MB</b>.</p>
             </div>
         </div>
         <div class="col-lg-12">
             <div class="mt-3">
-                <label for="title" class="form-label">Imagem mobile </label>
+                <label for="title" class="form-label">Imagem do centro</label>
                 <input type="file" name="path_image_mobile" data-plugins="dropify" data-default-file="{{isset($slide)?$slide->path_image_mobile<>''?url('storage/'.$slide->path_image_mobile):'':''}}"  />
                 <p class="text-muted text-center mt-2 mb-0">{{__('dashboard.text_img_size')}} <b class="text-danger">2 MB</b>.</p>
             </div>

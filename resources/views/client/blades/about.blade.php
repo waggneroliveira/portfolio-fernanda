@@ -1,7 +1,9 @@
 @extends('client.core.client')
 
 @section('content')
-    <div  class="transition-fade">
+    @php $counter = 1; @endphp
+
+    <section  class="transition-fade">
         <div class="mry-content-frame" id="scroll">
             <div class="banner-inner position-relative">
                 <canvas class="mry-dots" style="display: none"></canvas>
@@ -29,155 +31,110 @@
             </div>
 
             <!-- about -->
-            <section class="mry-about mry-p-100-100">
+            <div class="mry-about mry-p-100-100">
                 <div class="container-fluid">
                     <div class="row justify-content-center">
                         <div class="container">
-                            <div class="col-lg-11 col-12">
-                                <div class="mry-mb-100 mry-text-center">
-                                    <div class="d-flex justify-content-between align-items-start w-100 flex-wrap">
-                                        <div class="image col-lg-4 col-12">
-                                            <img src="{{asset('build/client/images/fernanda.png')}}" alt="Fernanda" class="fernanda-about-image w-100">
-                                        </div>
-                                        <div class="description text-left col-lg-7 col-12">
-                                            <div class="mry-numbering mry-fo text-left about-one">
-                                                <div class="mry-border-text">01</div>
-                                                <div class="mry-subtitle">Me conheça!</div>
+                            @foreach ($abouts as $about)                                
+                                <div class="about-box col-lg-11 col-12">
+                                    <div class="mry-mb-100 mry-text-center">
+                                        <div class="d-flex justify-content-between align-items-start w-100 flex-wrap">
+                                            @php
+                                                $hasImage = !empty($about->path_image);
+                                            @endphp
+
+                                            <div class="about-content row align-items-center justify-content-between {{ $hasImage ? 'has-image' : 'no-image' }}">
+                                                @if ($hasImage)
+                                                    <div class="col-lg-4 col-12 p-0">
+                                                        <img src="{{ asset('storage/' . $about->path_image) }}" 
+                                                            alt="{{ $about->title }}" 
+                                                            class="fernanda-about-image w-100">
+                                                    </div>
+                                                @endif
+
+                                                <div class="{{ $hasImage ? 'col-lg-7 text-left' : 'col-12 text-center' }} p-0">
+                                                    <div class="mry-numbering mry-fo about-one {{ $hasImage ? 'text-left' : 'text-center' }}">
+                                                        <div class="mry-border-text">
+                                                            {{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}
+                                                        </div>
+                                                        <div class="mry-subtitle">{{ $about->subtitle }}</div>
+                                                    </div>
+                                                    <h3 class="mry-mb-20 mry-fo">{{ $about->title }}</h3>
+                                                    <div class="mry-text mry-fo">
+                                                        {!! $about->text !!}
+                                                    </div>
+                                                </div>
                                             </div>
-                                            <h3 class="mry-mb-20 mry-fo">Quem sou eu?</h3>
-                                            <p class="mry-text mry-fo">
-                                                Sou Fernanda, tenho 29 anos, formada pela Unifacs - Universidade Salvador há 5 anos. Especializada em arquitetura para ambientes pequenos. O que me move é criar projetos que abraçam quem você realmente é, tornando a arquitetura acessível e personalizada. Quero não apenas atender às suas necessidades, mas refletir a sua essência em qualquer ambiente. Sou apaixonada por desafios, então a sua satisfação será a minha maior conquista.
-                                            </p>
+
+                                            <style>
+                                                .has-image .about-one.mry-numbering .mry-subtitle::before {
+                                                    transform: inherit !important;
+                                                    left: 0 !important;
+                                                }
+
+                                                .no-image .about-one.mry-numbering .mry-subtitle::before {
+                                                    transform: translateX(-50%) !important;
+                                                    left: 50% !important;
+                                                }
+
+                                                .no-image .description,
+                                                .no-image .description .mry-numbering {
+                                                    width: 100% !important;
+                                                    max-width: 100% !important;
+                                                    flex: 100% !important;
+                                                    text-align: center !important;
+                                                }
+                                            </style>
+
+
+                                    
                                         </div>
                                     </div>
                                 </div>
-
-                            </div>
-
-                            <div class="col-lg-12">
-                                <div class="mry-mb-100 mry-text-center">
-                                    <div class="mry-numbering mry-fo">
-                                        <div class="mry-border-text">02</div>
-                                        <div class="mry-subtitle">Por que arquitetura?</div>
+                            @endforeach
+                        </div>
+                        @if (isset($video))                            
+                            <div class="col-lg-12 p-0 position-relative">
+                                <div class="mry-about-video mry-fo">
+                                    <div class="mry-video-cover-frame">
+                                        <img class="mry-video-cover" src="{{asset('build/client/images/dark/content/video.jpg')}}" alt="banner">
+                                        <div class="mry-cover-overlay"></div>
+                                        <div class="mry-play-button mry-magnetic-link">
+                                            <a class="mry-magnetic-object" data-fancybox href="{{$video->link}}"><i class="fas fa-play"></i></a>
+                                        </div>
+                                        <div class="mry-curtain"></div>
                                     </div>
-                                    <h3 class="mry-mb-40 mry-fo">Aqui, o meu relacionamento com você vem antes de tudo.</h3>
-                                    <p class="mry-text mry-fo">
-                                         Foco em manter um relacionamento sólido com cada cliente. Isso é o mais importante. Um projeto não é só sobre um contrato assinado, é sobre a confiança que podemos construir juntos. Minha missão é te orientar em cada passo desse processo, com paciência, transparência e conversas claras. Vamos tomar um café para conversarmos juntos sobre todos os detalhes?
-                                    </p>
-
                                 </div>
                             </div>
-                        </div>
+                        @endif
 
-                        <div class="col-lg-12 p-0 position-relative">
-                            <div class="mry-about-video mry-fo">
-                                <div class="mry-video-cover-frame">
-                                    <img class="mry-video-cover" src="{{asset('build/client/images/dark/content/video.jpg')}}" alt="banner">
-                                    <div class="mry-cover-overlay"></div>
-                                    <div class="mry-play-button mry-magnetic-link">
-                                        <a class="mry-magnetic-object" data-fancybox href="https://www.youtube.com/watch?v=Ru9QU1ENgog"><i class="fas fa-play"></i></a>
-                                    </div>
-                                    <div class="mry-curtain"></div>
-                                </div>
-                            </div>
-
-                        </div>
                         <div class="container mt-5">
                             <div class="col-lg-12">
 
                                 <div class="mry-numbering mry-fo">
-                                    <div class="mry-border-text">03</div>
+                                    <div class="mry-border-text">{{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}</div>
                                     <div class="mry-subtitle">O que eu faço?</div>
                                 </div>
 
                                 <div class="row">
-                                    <div class="col-lg-4">
-
-                                        <div class="mry-text-center box-do">
-                                            <h4 class="mry-mb-20 mry-fo">Design de Interiores</h4>
-                                            <p class="mry-text mry-mb-20 mry-fo">
-                                                Consigo criar espaços que funcionam para o seu dia a dia e trazem a sua personalidade à tona. Resumo praticidade, estética e, acima de tudo, essência.
-                                            </p>
-                                            
+                                    @foreach ($topics as $topic)                                        
+                                        <div class="col-lg-4">
+                                            <div class="mry-text-center box-do">
+                                                <h4 class="mry-mb-20 mry-fo">{{$topic->title}}</h4>
+                                                <div class="mry-text mry-mb-20 mry-fo">
+                                                   {!!$topic->description!!}
+                                                </div>                                            
+                                            </div>
                                         </div>
-
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                        <div class="mry-text-center box-do">
-                                            <h4 class="mry-mb-20 mry-fo">Projeto 3D</h4>
-                                            <p class="mry-text mry-fo">Enxergue seu projeto antes dele sair do papel. Através da visualização em 3D, você pode ver e analisar cada detalhe, fazendo as escolhas certas e garantindo um resultado final mais assertivo!</p>
-                                            
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                        <div class="mry-text-center box-do">
-                                            <h4 class="mry-mb-20 mry-fo">Marcenaria</h4>
-                                            <p class="mry-text mry-fo">
-                                                Crio móveis sob medida que unem beleza e funcionalidade. A marcenaria é a chave para otimizar espaços e ter peças únicas, pensadas e desenhadas de forma exclusiva.
-                                            </p>
-                                            
-                                        </div>
-
-
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                        <div class="mry-text-center box-do">
-                                            <h4 class="mry-mb-20 mry-fo">Vistoria de Imóvel</h4>
-                                            <p class="mry-text mry-fo">
-                                                Faço a vistoria completa do seu imóvel, do começo ao fim. Com um olhar técnico e cuidadoso, te ajudo a identificar pontos de atenção e garantir a segurança do seu investimento.
-                                            </p>
-                                            
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                        <div class="mry-text-center box-do">
-                                            <h4 class="mry-mb-20 mry-fo">Acompanhamento da obra</h4>
-                                            <p class="mry-text mry-fo">
-                                                Faço a vistoria completa do seu imóvel, do começo ao fim. Com um olhar técnico e cuidadoso, te ajudo a identificar pontos de atenção e garantir a segurança do seu investimento.
-                                            </p>
-                                            
-                                        </div>
-
-                                    </div>
-                                    <div class="col-lg-4">
-
-                                        <div class="mry-text-center box-do">
-                                            <h4 class="mry-mb-20 mry-fo">Regularização de imóveis</h4>
-                                            <p class="mry-text mry-fo">
-                                                    Eu cuido da parte burocrática para você. A regularização do seu imóvel é um passo importante para evitar problemas futuros, e eu te ajudo a fazer todo o processo de forma simples e segura.
-                                            </p>
-                                            
-                                        </div>
-
-                                    </div>
+                                    @endforeach
                                 </div>
                             </div>
 
-                            <div class="col-lg-12 mt-5">
-
-                                <div class="mry-text-center">
-                                    <div class="mry-numbering mry-fo">
-                                        <div class="mry-border-text">04</div>
-                                        <div class="mry-subtitle">Vamos projetar juntos</div>
-                                    </div>
-                                    <h3 class="mry-mb-40 mry-fo">Foque em imaginar o seu projeto, que eu faço acontecer</h3>
-                                    <p class="mry-text mry-fo">
-                                        Deixe a parte técnica e os detalhes comigo. Podemos transformar seus desejos e necessidades em um projeto incrível, porque a sua única preocupação deve ser a de sonhar com o seu novo espaço.
-                                    </p>
-                                </div>
-
-                            </div>
                             <div class="col-lg-12 mt-5">
 
                                 <div class="mry-main-title mry-title-center mry-p-0-40">
                                     <div class="mry-numbering mry-fo">
-                                        <div class="mry-border-text">05</div>
+                                        <div class="mry-border-text">{{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}</div>
                                         <div class="mry-subtitle">Depoimentos</div>
                                     </div>
                                     <h3 class="mry-mb-20 mry-fo">O que os clientes dizem sobre mim</h3>
@@ -261,7 +218,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </div>
             <!-- about end -->
 
             <!-- footer -->
@@ -295,5 +252,5 @@
             <!-- footer end -->
         </div>
 
-    </div>
+    </section>
 @endsection
