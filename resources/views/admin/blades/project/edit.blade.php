@@ -22,6 +22,32 @@
             <!-- end row -->
 
             <div class="row">
+                <div class="col-12 text-end">
+                    <button type="button" class="btn btn-primary text-black waves-effect waves-light col-lg-2 col-12" data-bs-toggle="modal" data-bs-target="#gallery-create">
+                        <i class="mdi mdi-plus-circle me-1"></i> Cadastrar galeria
+                    </button>
+                </div>
+                <!-- Modal -->
+                <div class="modal fade" id="gallery-create" tabindex="-1" role="dialog" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" style="max-width: 980px;">
+                        <div class="modal-content">
+                            <div class="modal-header bg-light">
+                                <h4 class="modal-title" id="myCenterModalLabel">{{__('dashboard.btn_create')}}</h4>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
+                            </div>
+                            <div class="modal-body p-2 px-3 px-md-4">
+                                {{-- {{route('admin.dashboard.companion.galleryFile.store')}} --}}
+                                <form action="{{route('admin.dashboard.projectGallery.store')}}" method="post" enctype="multipart/form-data">
+                                    @csrf
+                                    @method('post')
+
+                                    @include('admin.blades.projectGallery.form')  
+                                </form>
+                            </div>
+
+                        </div><!-- /.modal-content -->
+                    </div><!-- /.modal-dialog -->
+                </div><!-- /.modal -->
                 <form action="{{ route('admin.dashboard.project.update', ['project' => $project->id]) }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     @method('PUT')

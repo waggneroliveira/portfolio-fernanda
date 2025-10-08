@@ -37,7 +37,7 @@
 															<img src="{{asset('storage/' . $slide->path_image_mobile)}}" alt="Imagem Fernanda" class="image-persona">
 														@endif
 														<div class="mry-text text-white">{!!$slide->description!!}</div>
-														<a class="mry-btn mry-default-link mry-anima-link text-white border mt-3" href="{{route('project')}}">o que faço</a>
+														<a class="mry-btn mry-default-link mry-anima-link text-white border mt-3" href="{{route('portfolio')}}">o que faço</a>
 														<a class="mry-btn-text mry-default-link mry-anima-link text-white border mt-3" href="portfolio-grid-1.html">FALAR COMIGO</a>
 													</div>
 												</div>

@@ -9,34 +9,23 @@ use Illuminate\Notifications\Notifiable;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class Project extends Model
+class ProjectGallery extends Model
 {
     use Notifiable, HasFactory, LogsActivity;
     
     protected $fillable = [
-        'project_category_id',
-        'name_project',
-        'title',
-        'text',
-        'slug',
+        'project_id',
         'path_image',
-        'active',
         'sorting',
     ];
 
-    public function category(){
-        return $this->belongsTo(ProjectCategory::class, 'project_category_id');
-    }
-    public function gallery(){
-        return $this->belongsTo(ProjectGallery::class, 'project_id');
+    public function project(){
+        return $this->hasMany(Project::class, 'project_id');
     }
 
-    public function scopeActive($query){
-        return $query->where('active', 1);
-    }
 
     public function scopeSorting($query){
-        return $query->orderBy('created_at', 'DESC')->orderby('sorting', 'DESC');
+        return $query->orderby('sorting', 'ASC');
     }
 
     public function getActivitylogOptions(): LogOptions

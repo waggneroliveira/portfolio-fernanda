@@ -307,7 +307,7 @@
 	var swiper = new Swiper(".mry-blog-slider", {
 		slidesPerView: 3,
 		spaceBetween: 60,
-		loop: true,
+		loop: false,
 		navigation: {
 			nextEl: '.mry-button-blog-next',
 			prevEl: '.mry-button-blog-prev',
@@ -665,7 +665,7 @@
 		var swiper = new Swiper(".mry-blog-slider", {
 			slidesPerView: 3,
 			spaceBetween: 60,
-			loop: true,
+			loop: false,
 			navigation: {
 				nextEl: '.mry-button-blog-next',
 				prevEl: '.mry-button-blog-prev',

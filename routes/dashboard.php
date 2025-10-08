@@ -42,6 +42,7 @@ use App\Http\Controllers\MunicipalityController;
 use App\Http\Controllers\SettingEmailController;
 use App\Http\Controllers\SettingThemeController;
 use App\Http\Controllers\AuditActivityController;
+use App\Http\Controllers\ProjectGalleryController;
 use App\Http\Controllers\ProjectCategoryController;
 use App\Http\Controllers\StackSessionTitleController;
 use App\Http\Controllers\Auth\PasswordEmailController;
@@ -177,6 +178,10 @@ Route::prefix('painel/')->group(function () {
         ->name('admin.dashboard.projectCategory.destroySelected');
         Route::post('categoria-do-projeto/sorting', [ProjectCategoryController::class, 'sorting'])
         ->name('admin.dashboard.projectCategory.sorting');
+        //PROJECT GALLERY
+        Route::resource('galeria', ProjectGalleryController::class)
+        ->parameters(['galeria' => 'projectGallery'])
+        ->names('admin.dashboard.projectGallery');
         //REGIONAIS
         Route::resource('regionais', RegionalController::class)
         ->parameters(['regionais' => 'regional'])

@@ -108,7 +108,7 @@ class ProjectController extends Controller
     {
         $data = $request->all();
         $data['active'] = $request->active ? 1 : 0;
-        $data['slug'] = Str::slug($request->title);
+        $data['slug'] = Str::slug($request->name_project);
 
         $manager = new ImageManager(new GdDriver());
 
@@ -143,7 +143,6 @@ class ProjectController extends Controller
             session()->flash('success', __('dashboard.response_item_create'));
             return redirect()->route('admin.dashboard.project.index');
         } catch (\Exception $e) {
-            dd($e);
             DB::rollback();
             Alert::error('error', __('dashboard.response_item_error_create'));
             return redirect()->back();
@@ -197,7 +196,7 @@ class ProjectController extends Controller
     {
         $data = $request->all();
         $data['active'] = $request->active ? 1 : 0;
-        $data['slug'] = Str::slug($request->title);
+        $data['slug'] = Str::slug($request->name_project);
 
         $manager = new ImageManager(new GdDriver());
 
@@ -234,10 +233,9 @@ class ProjectController extends Controller
             }
             $data['path_image'] = null;
         }
-
         try {
             DB::beginTransaction();
-                $project->fill($data)->save();
+            $project->fill($data)->save();
             DB::commit();
 
             session()->flash('success', __('dashboard.response_item_update'));

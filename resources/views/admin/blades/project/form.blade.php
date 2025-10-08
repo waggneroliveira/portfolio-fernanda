@@ -5,7 +5,7 @@
             <input type="text" name="name_project" class="form-control" id="name_project{{isset($project->id)?$project->id:''}}" value="{{isset($project)?$project->name_project:''}}" required placeholder="Digite seu nome">
         </div>
 
-        <div class="mb-3 col-12 col-lg-6 d-flex align-items-start flex-column">
+        <div class="mb-3 col-12 col-lg-12 d-flex align-items-start flex-column">
             <label for="category-select" class="form-label">Categoria(s) <span class="text-danger">*</span></label>
             @php
                 $currentCategory = isset($project) ? $project->project_category_id : null;
@@ -23,8 +23,8 @@
     </div>
     
     <div class="mb-3 col-12">
-        <label for="title" class="form-label">Título <span class="text-danger">*</span></label>
-        <input type="text" name="title" class="form-control" id="title{{isset($project->id)?$project->id:''}}" value="{{isset($project)?$project->title:''}}" required placeholder="Digite seu nome">
+        <label for="title" class="form-label">Título</label>
+        <input type="text" name="title" class="form-control" id="title{{isset($project->id)?$project->id:''}}" value="{{isset($project)?$project->title:''}}" placeholder="Digite seu nome">
     </div>
     
     <div class="mb-3 col-12 d-flex align-items-start flex-column">

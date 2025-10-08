@@ -55,11 +55,11 @@
                                             <div class="mry-hover-links">
                                                 <a href="{{asset('storage/' . $project->path_image)}}" data-fancybox="works" class="mry-zoom mry-magnetic-link"><span class="mry-magnetic-object"><i
                                                             class="fas fa-expand"></i></span></a>
-                                                <a href="{{route('project')}}" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
+                                                <a href="{{route('project', $project->slug)}}" class="mry-more mry-magnetic-link mry-anima-link"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></a>
                                             </div>
                                         </div>
                                         <div class="mry-item-descr mry-fo">
-                                            <h4 class="mry-mb-10" style="color: #304E66;"><a href="{{route('project')}}">{{$project->name_project}}</a></h4>
+                                            <h4 class="mry-mb-10" style="color: #304E66;"><a href="{{route('project', $project->slug)}}">{{$project->name_project}}</a></h4>
                                             <div class="mry-text">{!! substr(strip_tags($project->text), 0, 60) !!}...</div>
                                         </div>
                                     </div>

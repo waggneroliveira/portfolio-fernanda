@@ -73,7 +73,7 @@ Route::middleware([AuthClientMiddleware::class])->group(function () {
 Route::get('contato', [ContactPageController::class, 'index'])
 ->name('contact');
 Route::post('send-contact', [FormIndexController::class, 'store'])->name('send-contact');
-Route::get('projeto', [NoticiesPageController::class, 'index'])
+Route::get('projeto/{slug}', [ProjectPageController::class, 'project'])
 ->name('project');
 Route::get('blog/interna/{slug}', [BlogPageController::class, 'blogInner'])
 ->name('blog-inner');
@@ -85,7 +85,7 @@ Route::post('cliente/cadastro', [ClientController::class, 'store'])->name('regis
 Route::get('home', [HomePageController::class, 'index'])->name('index');
 Route::get('sobre', [AboutPageController::class, 'index'])->name('about');
 // Route::get('servicos-aos-sindicalizados', [BenefitPageController::class, 'index'])->name('unionized');
-Route::get('portfolio', [ProjectPageController::class, 'index'])->name('portfolio');
+Route::get('portfolio', [ProjectPageController::class, 'portfolio'])->name('portfolio');
 // Route::get('juridico/search', [JuridicoPageController::class, 'searchJuridico'])->name('search-juridico');
 // Route::get('regionais', [RegionPageController::class, 'index'])->name('regional');
 // Route::match(['get', 'post'], 'regionais/filter-municipalities', [RegionPageController::class, 'filterMunicipalities'])

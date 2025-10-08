@@ -28,7 +28,7 @@ class ProjectRequestUpdate extends FormRequest
     {
         return [
             'name_project' => ['required', 'string', 'max:255'],
-            'title' => ['required', 'string', 'max:255'],
+            'title' => ['nullable', 'string', 'max:255'],
             'text' => ['nullable', 'string'],
             'path_image' => ['nullable', 'file', 'image', 'max:2048', 'mimes:jpg,jpeg,png,gif'],
             'active' => 'boolean',
@@ -39,7 +39,7 @@ class ProjectRequestUpdate extends FormRequest
     public function messages()
     {
         return [
-            'title.required' => 'O campo Título é obrigatório.',
+            'name_project.required' => 'O campo Título é obrigatório.',
         ];
     }
 }

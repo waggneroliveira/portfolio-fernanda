@@ -819,8 +819,11 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	z-index: -2;
 	top: 0;
 	left: 0;
-	height: 550px;
+	height: 100%;
 	width: 100%;
+}
+.banner-inner{
+	height: 550px;
 }
 
 .mry-head-bg img {
@@ -835,7 +838,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	top: 0;
 	left: 0;
 	width: 100%;
-	height: 555px;
+	height: 550px;
 	background: rgba(0, 0, 0, 0.5);
 }
 
@@ -1337,7 +1340,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 }
 
 .mry-arrows .mry-sl-nav .mry-next.swiper-button-disabled, .mry-arrows .mry-sl-nav .mry-prev.swiper-button-disabled {
-	opacity: 0.3;
+	opacity: 1;
 	pointer-events: none;
 }
 

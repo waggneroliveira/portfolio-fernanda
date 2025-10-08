@@ -49,8 +49,8 @@
                             </div>
         
                             <div class="mb-3">
-                                <label for="title" class="form-label">Título <span class="text-danger">*</span></label>
-                                <input type="text" name="title" class="form-control" id="title" placeholder="Digite seu nome" required>
+                                <label for="title" class="form-label">Título</label>
+                                <input type="text" name="title" class="form-control" id="title" placeholder="Digite seu nome">
                             </div>
                             
                             <div class="mb-3 col-12 d-flex align-items-start flex-column">
