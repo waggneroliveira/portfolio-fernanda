@@ -36,7 +36,7 @@
                     <div class="row justify-content-center">
                         <div class="container">
                             @foreach ($abouts as $about)                                
-                                <div class="about-box col-lg-11 col-12">
+                                <div class="about-box col-12">
                                     <div class="mry-mb-100 mry-text-center">
                                         <div class="d-flex justify-content-between align-items-start w-100 flex-wrap">
                                             @php
@@ -108,27 +108,29 @@
                             </div>
                         @endif
 
-                        <div class="container mt-5">
-                            <div class="col-lg-12">
+                        <div class="container">
+                            @if ($topics->count() > 0)                                
+                                <div class="col-lg-12">
 
-                                <div class="mry-numbering mry-fo">
-                                    <div class="mry-border-text">{{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}</div>
-                                    <div class="mry-subtitle">O que eu faço?</div>
-                                </div>
+                                    <div class="mry-numbering mry-fo">
+                                        <div class="mry-border-text">{{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}</div>
+                                        <div class="mry-subtitle">O que eu faço?</div>
+                                    </div>
 
-                                <div class="row">
-                                    @foreach ($topics as $topic)                                        
-                                        <div class="col-lg-4">
-                                            <div class="mry-text-center box-do">
-                                                <h4 class="mry-mb-20 mry-fo">{{$topic->title}}</h4>
-                                                <div class="mry-text mry-mb-20 mry-fo">
-                                                   {!!$topic->description!!}
-                                                </div>                                            
+                                    <div class="row">
+                                        @foreach ($topics as $topic)                                        
+                                            <div class="col-lg-4">
+                                                <div class="mry-text-center box-do">
+                                                    <h4 class="mry-mb-20 mry-fo">{{$topic->title}}</h4>
+                                                    <div class="mry-text mry-mb-20 mry-fo">
+                                                    {!!$topic->description!!}
+                                                    </div>                                            
+                                                </div>
                                             </div>
-                                        </div>
-                                    @endforeach
+                                        @endforeach
+                                    </div>
                                 </div>
-                            </div>
+                            @endif
 
                             <div class="col-lg-12 mt-5">
 
