@@ -17,6 +17,7 @@ use App\Http\Requests\ProjectRequestStore;
 use App\Http\Requests\ProjectRequestUpdate;
 use App\Repositories\SettingThemeRepository;
 use App\Http\Controllers\Helpers\HelperArchive;
+use App\Models\ProjectGallery;
 use Intervention\Image\Drivers\Gd\Driver as GdDriver;
 
 class ProjectController extends Controller
@@ -98,10 +99,12 @@ class ProjectController extends Controller
         $categories = ProjectCategory::active()->sorting()->get();
         $projectCategory = [];
 
+        $galleryInages = ProjectGallery::where('project_id', $project->id)->get();
+        
         foreach ($categories as $category) {
             $projectCategory[$category->id] = $category->title;
         }
-        return view('admin.blades.project.edit', compact('project', 'categories', 'projectCategory'));
+        return view('admin.blades.project.edit', compact('project', 'categories', 'projectCategory', 'galleryInages'));
     }
 
     public function store(ProjectRequestStore $request)

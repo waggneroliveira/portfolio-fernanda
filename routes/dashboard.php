@@ -182,6 +182,10 @@ Route::prefix('painel/')->group(function () {
         Route::resource('galeria', ProjectGalleryController::class)
         ->parameters(['galeria' => 'projectGallery'])
         ->names('admin.dashboard.projectGallery');
+        Route::post('galeria/delete', [ProjectGalleryController::class, 'destroySelected'])
+        ->name('admin.dashboard.projectGallery.destroySelected');
+        Route::post('galeria/sorting', [ProjectGalleryController::class, 'sorting'])
+        ->name('admin.dashboard.projectGallery.sorting');
         //REGIONAIS
         Route::resource('regionais', RegionalController::class)
         ->parameters(['regionais' => 'regional'])

@@ -24,7 +24,7 @@ class ProjectGalleryController extends Controller
             if (!$files || !is_array($files)) {
                 throw new \Exception('Nenhum arquivo foi enviado.');
             }
-
+            
             foreach ($files as $file) {
                 $mimeType = $file->getMimeType();
                 $fileName = time() . '_' . uniqid() . '_' . $file->getClientOriginalName();
@@ -44,9 +44,8 @@ class ProjectGalleryController extends Controller
 
                 // Cria o registro na galeria
                 ProjectGallery::create([
-                    'project_id' => $request->gallery_id,
+                    'project_id' => $request->project_id,
                     'path_image' => $path,
-                    'active' => 0,
                 ]);
             }
 

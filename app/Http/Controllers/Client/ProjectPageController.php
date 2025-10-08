@@ -4,6 +4,7 @@ namespace App\Http\Controllers\Client;
 
 use App\Models\Project;
 use Illuminate\Http\Request;
+use App\Models\ProjectGallery;
 use App\Models\ProjectCategory;
 use App\Http\Controllers\Controller;
 
@@ -24,6 +25,8 @@ class ProjectPageController extends Controller
                 $query->where('active', 1);
             })->where('slug', $slug)->active()->first();
 
+            $galleryInages = ProjectGallery::where('project_id', $project->id)->get();
+
             $relatedProjects = Project::whereHas('category', function($query){
                 $query->where('active', 1);
             })->where('project_category_id', $project->project_category_id)
@@ -32,6 +35,6 @@ class ProjectPageController extends Controller
             
         }
         
-        return view('client.blades.project', compact('project','relatedProjects'));
+        return view('client.blades.project', compact('project','relatedProjects', 'galleryInages'));
     }
 }

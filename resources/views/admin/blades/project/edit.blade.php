@@ -36,13 +36,56 @@
                                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-hidden="true"></button>
                             </div>
                             <div class="modal-body p-2 px-3 px-md-4">
-                                {{-- {{route('admin.dashboard.companion.galleryFile.store')}} --}}
                                 <form action="{{route('admin.dashboard.projectGallery.store')}}" method="post" enctype="multipart/form-data">
                                     @csrf
                                     @method('post')
 
                                     @include('admin.blades.projectGallery.form')  
                                 </form>
+
+                                <div class="col-12 mt-3">
+                                    <button id="btSubmitDelete" data-route="{{route('admin.dashboard.projectGallery.destroySelected')}}" type="button" class="btSubmitDelete btn btn-danger" style="display: none;">{{__('dashboard.btn_delete_all')}}</button>
+    
+                                    @if ($galleryInages->count() > 0)                                    
+                                        <div class="table-responsive col-12">
+                                            <table class="table-sortable table table-centered table-nowrap table-striped">
+                                                <thead>
+                                                    <tr>
+                                                        <th></th>
+                                                        <th class="bs-checkbox">
+                                                            <label><input name="btnSelectAll" type="checkbox"></label>
+                                                        </th>
+                                                        <th>Imagem</th>
+                                                        <th style="width: 85px;">Ações</th>
+                                                    </tr>
+                                                </thead>
+            
+                                                <tbody data-route="{{route('admin.dashboard.projectGallery.sorting')}}">
+                                                    @foreach ($galleryInages as $key => $gellery)
+                                                        <tr data-code="{{$gellery->id}}">
+                                                            <td><span class="btnDrag mdi mdi-drag-horizontal font-22"></span></td>
+                                                            <td class="bs-checkbox">
+                                                                <label><input data-index="{{$key}}" name="btnSelectItem" class="btnSelectItem" type="checkbox" value="{{$gellery->id}}"></label>
+                                                            </td>
+                                                            <td class="table-user text-center">
+                                                                @if ($gellery->path_image)
+                                                                    <img src="{{ asset('storage/'.$gellery->path_image) }}" name="path_image" alt="table-user" class="me-2 rounded-circle">
+                                                                @endif
+                                                            </td>
+                                                            <td class="d-flex gap-lg-1 justify-center">
+                                                                <form action="{{route('admin.dashboard.projectGallery.destroy',['projectGallery' => $gellery->id])}}" style="width: 30px" method="POST">
+                                                                    @method('DELETE') @csrf        
+                                                                    
+                                                                    <button type="button" style="width: 30px"class="demo-delete-row btn btn-danger btn-xs btn-icon btSubmitDeleteItem"><i class="fa fa-times"></i></button>
+                                                                </form>  
+                                                            </td>
+                                                        </tr>
+                                                    @endforeach
+                                                </tbody>
+                                            </table>
+                                        </div>
+                                    @endif
+                                </div>
                             </div>
 
                         </div><!-- /.modal-content -->
