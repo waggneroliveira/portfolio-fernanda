@@ -72,35 +72,7 @@
             </div>
             <!-- portfolio end -->
 
-            <!-- footer -->
-            <footer class="mry-footer">
-                <div class="bg-footer">
-                    <div class="container">
-                        <div class="mry-main-title mry-title-center">
-                            <div class="mry-subtitle mry-mb-20 mry-fo">Fale comigo</div>
-                            <h2 class="mry-h1 mry-mb-20 mry-fo">Precisa <span class="mry-border-text">de um projeto alto padrão?</span></h2>
-                            <div class="mry-text mry-mb-30  mry-fo text-white">Entre em contato com quem realmente entende e receba orientações inéditas, como nunca antes.</div>
-                            <div class="mry-fo">
-                                <a href="contact.html" class="mry-anima-link mry-btn mry-btn-color mry-default-link">Let's discuss</a>
-                                <a href="portfolio-grid-1.html" class="mry-anima-link  mry-btn-text mry-default-link">Portfolio</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="mry-footer-copy">
-                    <div class="container">
-                        <div>Fernanda Giacomini © early 2021</div>
-                        <ul class="mry-social">
-                            <li><a href="#."><i class="fab fa-facebook-f"></i></a></li>
-                            <li><a href="#."><i class="fab fa-instagram"></i></a></li>
-                            <li><a href="#."><i class="fab fa-behance"></i></a></li>
-                            <li><a href="#."><i class="fab fa-dribbble"></i></a></li>
-                        </ul>
-                        <div>By: <a href="https://themeforest.net/user/ultimatewebsolutions/" class="mry-default-link" target="_blank">UWS</a></div>
-                    </div>
-                </div>
-            </footer>
-            <!-- footer end -->
+            @include('client.includes.footer')
 
         </div>
     </div>

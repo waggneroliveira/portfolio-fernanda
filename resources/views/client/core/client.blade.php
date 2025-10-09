@@ -155,7 +155,7 @@
             <!-- top panel -->
             <div class="mry-top-panel">
                 <div class="mry-logo-frame">
-                    <a href="index.html" class="mry-default-link mry-anima-link">
+                    <a href="{{route("index")}}" class="mry-default-link mry-anima-link">
                         <img class="mry-logo" src="{{asset('build/client/images/dark/logo.svg')}}" alt="Fernanda Giacomini">
                     </a>
                 </div>
@@ -180,29 +180,10 @@
                         <div class="col-md-4">
                             <nav id="mry-dynamic-menu">
                                 <ul>
-                                    <li class="menu-item menu-item-has-children current-menu-item"><a href="#." class="mry-default-link">Home</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="index.html" class="mry-anima-link mry-default-link">Half slider</a></li>
-                                            <li class="menu-item"><a href="fs-slider.html" class="mry-anima-link mry-default-link">Full width slider</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item"><a href="about.html" class="mry-anima-link mry-default-link">About</a></li>
-                                    <li class="menu-item menu-item-has-children"><a href="#." class="mry-default-link">Works</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="portfolio-grid-1.html" class="mry-anima-link mry-default-link">Portfolio grid 1</a></li>
-                                            <li class="menu-item"><a href="portfolio-grid-2.html" class="mry-anima-link mry-default-link">Portfolio grid 2</a></li>
-                                            <li class="menu-item"><a href="portfolio-box-1.html" class="mry-anima-link mry-default-link">Portfolio boxed 1</a></li>
-                                            <li class="menu-item"><a href="portfolio-box-2.html" class="mry-anima-link mry-default-link">Portfolio boxed 2</a></li>
-                                            <li class="menu-item"><a href="project.html" class="mry-anima-link mry-default-link">Single project</a></li>
-                                        </ul>
-                                    </li>
-                                    <li class="menu-item"><a href="contact.html" class="mry-anima-link mry-default-link">Contact</a></li>
-                                    <li class="menu-item menu-item-has-children"><a href="#." class="mry-default-link">Blog</a>
-                                        <ul class="sub-menu">
-                                            <li class="menu-item"><a href="blog.html" class="mry-anima-link mry-default-link">Blog list</a></li>
-                                            <li class="menu-item"><a href="publication.html" class="mry-anima-link mry-default-link">Publication</a></li>
-                                        </ul>
-                                    </li>
+                                    <li class="menu-item"><a href="{{route('index')}}" class="mry-anima-link mry-default-link">Home</a></li>
+                                    <li class="menu-item"><a href="{{route('about')}}" class="mry-anima-link mry-default-link">Sobre</a></li>
+                                    <li class="menu-item"><a href="{{route('portfolio')}}" class="mry-anima-link mry-default-link">Portfólio</a></li>
+                                    <li class="menu-item"><a href="{{route('contact')}}" class="mry-anima-link mry-default-link">Contato</a></li>
                                 </ul>
                             </nav>
     
