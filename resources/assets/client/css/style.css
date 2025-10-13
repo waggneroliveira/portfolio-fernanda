@@ -1376,6 +1376,28 @@ html.is-animating .transition-fade .mry-loading-curtain {
 /* Slider Navigation after 590px */
 
 @media (max-width: 590px) {
+	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title{
+		padding: 25px;
+	}
+	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title h1,
+	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title span {
+    	line-height: 28px;
+		font-size: 24px;
+	}
+	.image-persona{
+		max-width: 250px;
+		left: inherit;
+		right: 0;
+		transform: translateX(118px);
+		top: 12%;
+	}
+	.mry-app .mry-top-panel .mry-logo-frame{
+		padding: 0 20px;
+		height: auto;
+	}
+	.mry-app .mry-top-panel .mry-logo-frame .mry-logo{
+		width: 95px;
+	}
 	.mry-slider-nav-panel {
 		height: 80px;
 	}
