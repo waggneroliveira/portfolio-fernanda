@@ -1,9 +1,6 @@
 @extends('client.core.client')
 @section('content')
 	<div class="mry-app">
-
-
-
 		<div  class="transition-fade">
 			<div class="mry-content-frame" id="scroll">
 				<canvas class="mry-dots"></canvas>

@@ -7,8 +7,8 @@
                 <h2 class="mry-h1 mry-mb-20 mry-fo">Precisa <span class="mry-border-text">de um projeto alto padrão?</span></h2>
                 <div class="mry-text mry-mb-30  mry-fo text-white">Entre em contato com quem realmente entende e receba orientações inéditas, como nunca antes.</div>
                 <div class="mry-fo">
-                    <a href="contact.html" class="mry-anima-link mry-btn mry-btn-color mry-default-link">Let's discuss</a>
-                    <a href="portfolio-grid-1.html" class="mry-anima-link  mry-btn-text mry-default-link">Portfolio</a>
+                    <a href="{{route('contact')}}" class="mry-anima-link mry-btn mry-btn-color mry-default-link">Let's discuss</a>
+                    <a href="{{route('portfolio')}}" class="mry-anima-link  mry-btn-text mry-default-link">Portfolio</a>
                 </div>
             </div>
         </div>
