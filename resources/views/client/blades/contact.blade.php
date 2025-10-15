@@ -79,37 +79,37 @@
 
 					<div class="col-lg-8">
 
-						<form method="POST" id="form" class="mry-form mry-mb-100" action="send.php">
-
+						<form method="POST" id="contactForm" class="mry-form mry-mb-100" >
+							@csrf
 							<div class="row">
 								<div class="col-lg-6">
-									<label class="mry-label mry-fo" for="firstName">First Name</label>
-									<div class="mry-fo"><input id="firstName" name="firstName" placeholder="John" class="mry-default-link" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required>
+									<label class="mry-label mry-fo" for="firstName">Nome</label>
+									<div class="mry-fo"><input required id="nome" name="name" placeholder="Nome" class="mry-default-link" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$">
 									</div>
 								</div>
 								<div class="col-lg-6">
-									<label class="mry-label mry-fo" for="lastName">Last Name</label>
-									<div class="mry-fo"><input id="lastName" name="lastName" placeholder="Johnsone" class="mry-default-link" type="text" data-parsley-pattern="^[a-zA-Z\s.]+$" required>
+									<label class="mry-label mry-fo" for="lastName">E-mail</label>
+									<div class="mry-fo"><input required id="email" name="email" placeholder="E-mail" class="mry-default-link" type="email" data-parsley-pattern="^[a-zA-Z\s.]+$">
 									</div>
 								</div>
 							</div>
 
 							<div class="row">
 								<div class="col-lg-6">
-									<label class="mry-label mry-fo" for="email">Email</label>
-									<div class="mry-fo"><input id="email" name="email" placeholder="type.your.mail@here" class="mry-default-link" type="email" required></div>
+									<label class="mry-label mry-fo" for="assunto">Assunto</label>
+									<div class="mry-fo"><input id="subject" name="subject" placeholder="Assunto" class="mry-default-link" type="text" required></div>
 								</div>
 								<div class="col-lg-6">
 									<label class="mry-label mry-fo" for="phone">Phone</label>
-									<div class="mry-fo"><input id="phone" name="phone" placeholder="+0 (000) 000 00 00" class="mry-default-link" type="text" data-parsley-pattern="^\+{1}[0-9]+$"></div>
+									<div class="mry-fo"><input id="phone" name="phone" placeholder="Celular" class="mry-default-link" type="text" data-parsley-pattern="^\+{1}[0-9]+$"></div>
 								</div>
 							</div>
 
 							<div class="mry-fade-object">
 								<label class="mry-label mry-fo" for="message">Message</label>
 								<div class="mry-fo">
-									<textarea id="message" name="message" rows="8" cols="80" placeholder="Type your message here" class="mry-default-link" type="text"
-										data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$" required></textarea>
+									<textarea id="text" required name="text" rows="8" cols="80" placeholder="Digite aqui...." class="mry-default-link" type="text"
+										data-parsley-pattern="^[a-zA-Z0-9\s.:,!?']+$"></textarea>
 								</div>
 							</div>
 							<div class="row align-items-center">
@@ -130,5 +130,61 @@
 		<!-- contact end -->
 
 		@include('client.includes.footer')
+
+		<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+		<script>
+			$(document).ready(function() {
+				$('#contactForm').on('submit', function(e) {
+					e.preventDefault();
+
+					const formData = $(this).serialize();
+
+					$.ajax({
+						url: '{{ route("send-contact") }}',
+						type: 'POST',
+						data: formData,
+						success: function(response) {
+							if (typeof Swal !== 'undefined') {
+								Swal.fire({
+									title: 'Sucesso!',
+									text: response.message,
+									icon: 'success',
+									timer: 2000,
+									showConfirmButton: false
+								});
+							}
+							$('#contactForm')[0].reset();
+						},
+						error: function(xhr) {
+							if (xhr.status === 422) {
+								const errors = xhr.responseJSON.errors;
+								let errorMessages = '';
+								for (let field in errors) {
+									errorMessages += errors[field][0] + '\n';
+								}
+
+								if (typeof Swal !== 'undefined') {
+									Swal.fire({
+										title: 'Erro',
+										text: errorMessages,
+										icon: 'error',
+										confirmButtonText: 'OK'
+									});
+								}
+							} else {
+								if (typeof Swal !== 'undefined') {
+									Swal.fire({
+										title: 'Erro',
+										text: 'Ocorreu um erro ao enviar a mensagem. Por favor, tente novamente.',
+										icon: 'error',
+										confirmButtonText: 'OK'
+									});
+								}
+							}
+						}
+					});
+				});
+			});
+		</script>
 	</section>
 @endsection

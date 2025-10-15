@@ -50,7 +50,8 @@
     <link rel="preload" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"></noscript>    
     <link href="{{ asset('build/client/css/bootstrap/bootstrap.min.css') }}" rel="stylesheet" type="text/css" />    
-    {{-- <link href="{{ asset('build/client/css/bootstrap/font-awesome.min.css') }}" rel="stylesheet" type="text/css" /> --}}
+    <link rel="preload" href="{{ asset('build/admin/js/libs/sweetalert2/sweetalert2.min.css') }}" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <noscript><link href="{{ asset('build/admin/js/libs/sweetalert2/sweetalert2.min.css') }}" rel="stylesheet" type="text/css"></noscript>
     <link href="{{ asset('build/client/css/bootstrap/fancybox.min.css') }}" rel="stylesheet" type="text/css" />
     <link href="{{ asset('build/client/css/bootstrap/swiper.min.css') }}" rel="stylesheet" type="text/css" />    
     <link href="{{ asset('build/client/css/bootstrap/mapbox-style.css') }}" rel="stylesheet" type="text/css" />
@@ -250,82 +251,6 @@
                 </div>
             </div>
         </main>
-    
-        {{-- <footer id="footer" class="footer position-relative dark-background" data-aos="fade-up" data-aos-delay="150">
-            <div class="container py-5">
-                <div class="sitemap mt-2 mb-5 row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 row-cols-xl-6 g-3 justify-content-between align-items-center">
-                    <div class="logo logo-footer">
-                        <a href="{{route('index')}}">
-                            <img src="{{asset('build/client/images/logo.png')}}" alt="WHI - Web de Alta Inovação" title="WHI - Web de Alta Inovação" loading="lazy">
-                        </a>
-                    </div>
-                    <ul class="list-unstyled text-center">
-                        <li class="rethink-sans-semiBold mb-2">
-                            <a href="{{ request()->routeIs('index') ? '#transformed' : route('index') . '#transformed' }}">
-                                Quem Somos
-                            </a>
-                        </li>
-                        <li class="rethink-sans-semiBold mb-2">
-                            <a href="{{ request()->routeIs('index') ? '#what-we-do' : route('index') . '#what-we-do' }}">
-                                O que fazemos
-                            </a>
-                        </li>
-                        <li class="rethink-sans-semiBold mb-2">
-                            <a href="{{ request()->routeIs('index') ? '#portfolio' : route('index') . '#portfolio' }}">
-                                Cases
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <ul class="list-unstyled text-center">
-                        <li class="rethink-sans-semiBold mb-2">
-                            <a href="{{ request()->routeIs('index') ? '#proccess' : route('index') . '#proccess' }}">
-                                Etapas
-                            </a>
-                        </li>
-                        <li class="rethink-sans-semiBold mb-2">
-                            <a href="{{ request()->routeIs('index') ? '#trust-whi' : route('index') . '#trust-whi' }}">
-                                Depoimentos
-                            </a>
-                        </li>
-                        <li class="rethink-sans-semiBold mb-2">
-                            <a href="{{ request()->routeIs('index') ? '#faq' : route('index') . '#faq' }}">
-                                Perguntas Frequentes
-                            </a>
-                        </li>
-                    </ul>
-    
-                    <div class="d-flex justify-content-end flex-column w-auto">
-                        <div class="social-links d-flex justify-content-end gap-4 text-center">
-                            <a href="https://www.linkedin.com/company/106948313/admin/dashboard/" aria-label="Visite nosso LinkedIn" target="_blank" class="linkedin rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://www.instagram.com/agenciawhi" aria-label="Visite nosso Instagram" target="_blank" class="instagram rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-instagram"></i></a>
-                            <a href="https://wa.me/5571992768360" target="_blank" aria-label="Converse no WhatsApp" class="whatsapp rounded-circle d-flex justify-content-center align-items-center"><i class="bi bi-whatsapp"></i></a>
-                        </div>
-                        <a href="https://wa.me/5571992768360" target="_blank" rel="noopener noreferrer" class="mt-4 rethink-sans-regular ps-4 pe-0 text-p call-to-action d-flex justify-content-between align-items-center">
-                        Fale com a gente!
-                        <i class="bi bi-whatsapp rounded-circle d-flex justify-content-center text-white align-items-center"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="d-flex justify-content-between align-items-center mt-5">
-                    <div class="privacy-politic">
-                        <a href="https://policies.google.com/privacy?hl=pt-BR" target="_blank" rel="noopener noreferrer" class="text-white">Política de Privacidade</a>
-                    </div>
-                    <div class="copyright text-center">
-                        <p id="footer-text"></p>
-                        <script defer>
-                            const currentYear = (new Date).getFullYear();
-                            document.getElementById("footer-text").innerHTML = `WHI© ${currentYear} <span> todos os direitos reservados.</span>`
-                        </script>
-                    </div>
-                    <div class="credits">
-                        <a href="https://whi.dev.br/">
-                        <img src="{{asset('build/client/images/developed.svg')}}"  alt="WHI - Web de Alta Inovação" title="WHI - Web de Alta Inovação" loading="lazy">
-                        </a>
-                    </div>
-                </div>
-            </div>
-        </footer> --}}
     </div>
     
     
@@ -341,8 +266,50 @@
     <script src="{{ asset('build/client/js/plugins/overscroll.min.js') }}"></script>
     <script src="{{ asset('build/client/js/plugins/canvas.js') }}"></script>
     <script src="{{ asset('build/client/js/plugins/parsley.min.js') }}"></script>
+    <script src="{{ asset('build/admin/js/libs/sweetalert2/sweetalert2.min.js') }}"></script>
     <script src="{{ asset('build/client/js/main.js') }}"></script>  
     <script src="{{ asset('build/client/lgpd/script.js') }}"></script>
+    
+    {{-- Modais alert --}}
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            let successMessage = @json(session('success'));
+            let errorMessage = @json(session('error'));
 
+            if (successMessage) {
+                Swal.fire({
+                    title: 'Sucesso!',
+                    text: successMessage,
+                    icon: 'success',
+                    timer: 2000,
+                    showConfirmButton: false
+                });
+            }
+
+            if (errorMessage) {
+                Swal.fire({
+                    title: 'Erro!',
+                    text: errorMessage,
+                    icon: 'error',
+                    timer: 2500,
+                    showConfirmButton: false
+                });
+            }
+        });
+    </script>
+
+    @if ($errors->any())
+        @foreach ($errors->all() as $error)
+            <script>
+                Swal.fire({
+                    title: 'Erro!',
+                    text: @json($error),
+                    icon: 'error',
+                    timer: 2500,
+                    showConfirmButton: false
+                });
+            </script>
+        @endforeach
+    @endif
 </body>
 </html>

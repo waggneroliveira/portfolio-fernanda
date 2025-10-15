@@ -175,9 +175,7 @@
 
 
     @if (Auth::user()->hasRole('Super') || 
-    Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
-    Auth::user()->hasPermissionTo('newsletter.visualizar') || 
-    Auth::user()->hasPermissionTo('contato.visualizar') || 
+    Auth::user()->hasPermissionTo('usuario.tornar usuario master') ||
     Auth::user()->hasPermissionTo('lead contato.visualizar')) 
         <div class="row">
             <div class="col-12">
@@ -185,28 +183,6 @@
                     <h4 class="page-title "><i class="mdi mdi-card-account-mail-outline"></i> Contato</h4>
                 </div>
             </div>
-            {{-- @if (Auth::user()->hasRole('Super') || 
-            Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
-            Auth::user()->hasPermissionTo('contato.visualizar'))
-                <div class="col-md-5 col-xl-3">
-                    <div class="card borda-cx ratio ratio-4x3 border-whi">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <a href="{{route('admin.dashboard.contact.index')}}">
-                                <div class="row">
-                                    <div class="col-12 d-flex align-items-center justify-content-center">
-                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
-                                            <i class="avatar-md mdi mdi-card-account-mail-outline font-48 text-muted"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 col-12 text-center">
-                                    <h5 class="text-uppercase text-muted">Contato</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div> <!-- end card-->
-                </div> <!-- end col -->
-            @endif --}}
     
             @if (Auth::user()->hasRole('Super') || 
             Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
@@ -224,28 +200,6 @@
                                 </div>
                                 <div class="mt-3 col-12 text-center">
                                     <h5 class="text-uppercase text-muted">Lead Contato</h5>
-                                </div>
-                            </a>
-                        </div>
-                    </div> <!-- end card-->
-                </div> <!-- end col -->
-            @endif
-            @if (Auth::user()->hasRole('Super') || 
-            Auth::user()->hasPermissionTo('usuario.tornar usuario master') || 
-            Auth::user()->hasPermissionTo('newsletter.visualizar'))
-                <div class="col-md-5 col-xl-3">
-                    <div class="card borda-cx ratio ratio-4x3 border-whi">
-                        <div class="d-flex align-items-center justify-content-center">
-                            <a href="{{route('admin.dashboard.newsletter.index')}}">
-                                <div class="row">
-                                    <div class="col-12 d-flex align-items-center justify-content-center">
-                                        <div class="avatar-xl bg-hoom rounded-circle text-center">
-                                            <i class="avatar-md mdi mdi-email-outline font-48 text-muted"></i>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="mt-3 col-12 text-center">
-                                    <h5 class="text-uppercase text-muted">Newsletter</h5>
                                 </div>
                             </a>
                         </div>
