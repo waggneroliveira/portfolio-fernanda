@@ -1826,7 +1826,7 @@ html.is-animating .transition-fade .mry-loading-curtain {
 .mry-form input, .mry-form textarea {
 	border: solid 2px #304E66;
 	width: 100%;
-	color: #e6e6e6;
+	color: #304E66;
 	background-color: transparent;
 	padding-left: 20px;
 	margin-bottom: 5px;
