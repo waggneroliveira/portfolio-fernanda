@@ -9,7 +9,7 @@
     <meta name="theme-color" content="#0d0d0d">
     <meta name="description" content="Criação de sites, lojas virtuais e estratégias de marketing digital em Salvador. A WHI desenvolve soluções profissionais e personalizadas para o seu negócio crescer online.">
     <meta name="keywords" content="Agência de marketing Salvador, criação de sites Salvador, marketing digital, desenvolvimento web, loja virtual, SEO local, redes sociais, tráfego pago, Google Ads, branding, identidade visual, WHI">
-    <title>WHI | Agência de Marketing Digital e Criação de Sites em Salvador</title>
+    <title>Fernanda Giacomini | Arquiteta e Urbanista</title>
     @if(isset($blogInner))
         <meta property="og:url" content="{{ url()->current() }}">
         <meta property="og:type" content="article">
@@ -133,7 +133,7 @@
                     <div class="mry-loader-bar">
                         <div class="mry-loader"></div>
                     </div>
-                    <div class="mry-label">Please wait</div>
+                    <div class="mry-label">Carregando</div>
                 </div>
             </div>
             <!-- preloader end -->
@@ -193,24 +193,24 @@
                             <div class="mry-info-box-frame">							
                                 <div class="mry-info-box">
                                     <div class="mry-mb-20">
-                                        <div class="mry-label mry-mb-5">Country:</div>
-                                        <div class="mry-text text-white">Canada</div>
+                                        <div class="mry-label mry-mb-5">País:</div>
+                                        <div class="mry-text text-white">Brasil</div>
                                     </div>
                                     <div class="mry-mb-20">
-                                        <div class="mry-label mry-mb-5">City:</div>
-                                        <div class="mry-text text-white">Toronto</div>
+                                        <div class="mry-label mry-mb-5">Cidade:</div>
+                                        <div class="mry-text text-white">Lauro de Freitas</div>
                                     </div>
                                     <div class="mry-mb-20">
-                                        <div class="mry-label mry-mb-5">Adress:</div>
+                                        <div class="mry-label mry-mb-5">Endereço:</div>
                                         <div class="mry-text text-white">HTGS 4456 North Av.</div>
                                     </div>
                                     <div class="mry-mb-20">
                                         <div class="mry-label mry-mb-5">Email:</div>
-                                        <a class="mry-text text-white" href="mailto:Fernanda Giacomini.inbox@mail.com">Fernanda Giacomini.inbox@mail.com</a>
+                                        <a class="mry-text text-white" href="mailto:gernandagiacomini.inbox@mail.com">gernandagiacomini.inbox@mail.com</a>
                                     </div>
                                     <div class="mry-mb-20">
-                                        <div class="mry-label mry-mb-5">Phone:</div>
-                                        <a class="mry-text text-white" href="#.">+4 9(054) 996 84 25</a>
+                                        <div class="mry-label mry-mb-5">Telefone:</div>
+                                        <a class="mry-text text-white" href="#.">(71) 9 9999-9999</a>
                                     </div>
                                 </div>
                             </div>						

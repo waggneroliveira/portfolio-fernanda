@@ -22,7 +22,7 @@
                             <a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link mry-fo" href="#mry-anchor">
                                 <span class="mry-magnetic-object"></span>
                             </a>
-                            <div class="mry-label mry-fo">Scroll Down</div>
+                            <div class="mry-label mry-fo">Role para baixo</div>
                         </div>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                                         <div class="mry-title-center">
                                             <img src="{{asset('build/client/images/dark/clients/c-1.jpg')}}" alt="client" class="mry-reviewer mry-mb-20 mry-fo">
                                             <h4 class="mry-mb-20 mry-fo">Emma Newman</h4>
-                                            <div class="mry-subtitle mry-mb-20 mry-fo">Creative director</div>
+                                            <div class="mry-subtitle mry-mb-20 mry-fo">Arquiteto(a)</div>
                                             <p class="mry-text mry-fo">We evaluated numerous marketing firms and selected Fernanda Giacomini due to their experience in the solar industry, and the clear
                                                 understanding of our business objectives that they demonstrated during the
                                                 evaluation
@@ -171,7 +171,7 @@
                                         <div class="mry-title-center">
                                             <img src="{{asset('build/client/images/dark/clients/c-2.jpg')}}" alt="client" class="mry-reviewer mry-mb-20 mry-fo">
                                             <h4 class="mry-mb-20 mry-fo">Paul Trueman</h4>
-                                            <div class="mry-subtitle mry-mb-20 mry-fo">Creative director</div>
+                                            <div class="mry-subtitle mry-mb-20 mry-fo">Arquiteto(a)</div>
                                             <p class="mry-text mry-fo">We were very impressed with the progressive campaign and thought it spoke volumes to the reality of businesses. We have been
                                                 working our way into the Toronto area for almost a year now and ready to
                                                 gain
@@ -191,7 +191,7 @@
                                         <div class="mry-title-center">
                                             <img src="{{asset('build/client/images/dark/clients/c-3.jpg')}}" alt="client" class="mry-reviewer mry-mb-20 mry-fo">
                                             <h4 class="mry-mb-20 mry-fo">Viktoria Freeman</h4>
-                                            <div class="mry-subtitle mry-mb-20 mry-fo">Creative director</div>
+                                            <div class="mry-subtitle mry-mb-20 mry-fo">Arquiteto(a)</div>
                                             <p class="mry-text mry-fo">We were very impressed with the progressive campaign and thought it spoke volumes to the reality of businesses. We have been
                                                 working our way into the Toronto area for almost a year now and ready to
                                                 gain

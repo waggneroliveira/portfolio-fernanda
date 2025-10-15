@@ -20,7 +20,7 @@
                             <a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link-image mry-fo no-style" href="#mry-anchor">
                                 <span class="mry-magnetic-object"></span>
                             </a>
-                            <div class="mry-label mry-fo">Scroll Down</div>
+                            <div class="mry-label mry-fo">Role para baixo</div>
                         </div>
                     </div>
                 </div>

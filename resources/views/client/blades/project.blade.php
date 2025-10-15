@@ -21,7 +21,7 @@
 							<a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link-image mry-fo no-style" href="#mry-anchor">
 								<span class="mry-magnetic-object"></span>
 							</a>
-							<div class="mry-label mry-fo">Scroll Down</div>
+							<div class="mry-label mry-fo">Role para baixo</div>
 						</div>
 					</div>
 				</div>
@@ -38,7 +38,7 @@
 							<div class="mry-mb-100 mry-text-center">
 								<div class="mry-numbering mry-fo">
 									<div class="mry-border-text">{{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}</div>
-									<div class="mry-subtitle">Goal</div>
+									<div class="mry-subtitle">Resumo do projeto</div>
 								</div>
 								<h3 class="mry-mb-40 mry-fo">{{$project->title}}</h3>
 								<div class="mry-text mry-fo">
@@ -54,9 +54,9 @@
 							<div class="mry-main-title mry-title-center mry-p-0-40">
 								<div class="mry-numbering mry-fo">
 									<div class="mry-border-text">{{ str_pad($counter++, 2, '0', STR_PAD_LEFT) }}</div>
-									<div class="mry-subtitle">Project</div>
+									<div class="mry-subtitle">Projeto</div>
 								</div>
-								<h3 class="mry-mb-40 mry-fo">Project gallery</h3>
+								<h3 class="mry-mb-40 mry-fo">Galeria</h3>
 							</div>
 
 						</div>
@@ -95,8 +95,8 @@
 						<div class="col-lg-12">
 
 							<div class="mry-main-title mry-title-center mry-p-0-40">
-								<div class="mry-subtitle mry-mb-20 mry-fo">More projects</div>
-								<h2 class="mry-mb-40 mry-fo">Similar projects</h2>
+								<div class="mry-subtitle mry-mb-20 mry-fo">Mais projetos</div>
+								<h2 class="mry-mb-40 mry-fo">Projetos relacioados</h2>
 							</div>
 
 						</div>
@@ -129,7 +129,7 @@
 							</div>
 									
 							<div class="mry-arrows mry-fo mry-mb-20 ">
-								<div class="mry-label mry-fo text-center" style="color: #304E66;">Slider Navigation</div>
+								<div class="mry-label mry-fo text-center" style="color: #304E66;">Navegação</div>
 								<div class="mry-sl-nav d-flex justify-content-center">
 									<div class="mry-prev mry-button-blog-prev w-auto"><span class="mry-magnetic-object"><i class="fas fa-arrow-left"></i></span></div>
 									<div class="mry-next mry-button-blog-next w-auto"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></div>

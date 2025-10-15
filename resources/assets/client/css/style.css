@@ -184,7 +184,7 @@ body {
     top: 57%;
     left: 51%;
     transform: translate(-50%, -50%);
-    z-index: 10;
+    z-index: 0;
     width: 100%;
     object-fit: contain;
     aspect-ratio: 8 / 16;

@@ -36,7 +36,10 @@
 															@endif
 															<div class="mry-text text-white">{!!$slide->description!!}</div>
 															<a class="mry-btn mry-default-link mry-anima-link text-white border mt-3" href="{{route('portfolio')}}">o que faço</a>
-															<a class="mry-btn-text mry-default-link mry-anima-link text-white border mt-3" href="portfolio-grid-1.html">FALAR COMIGO</a>
+															<a class="mry-btn-text mry-default-link mry-anima-link text-white border mt-3" href="https://wa.me/555571992768360?text=Olá! Encontrei seu site e gostaria de conhecer mais sobre os planos disponíveis.%0A" 
+															target="_blank"
+															aria-label="Fale comigo no WhatsApp"
+															rel="noopener noreferrer">FALAR COMIGO</a>
 														</div>
 													</div>
 												</div>

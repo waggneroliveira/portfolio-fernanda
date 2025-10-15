@@ -12,14 +12,14 @@
 			<div class="mry-banner mry-p-140-0">
 				<div class="container">
 					<div class="mry-main-title mry-title-center">
-						<div class="mry-subtitle mry-mb-20 mry-fo">Contact</div>
-						<h1 class="mry-mb-20 mry-fo">Do you have any questions?<br><span class="mry-border-text">Write us a message.</span><span class="mry-animation-el"></span></h1>
+						<div class="mry-subtitle mry-mb-20 mry-fo">Contato</div>
+						<h1 class="mry-mb-20 mry-fo">Você tem alguma dúvida?<br><span class="mry-border-text">Escreva uma mensagem.</span><span class="mry-animation-el"></span></h1>
 						<div class="mry-text mry-fo text-white">Lorem ipsum dolor sit amet, consectetur.<br>Adipisicing elit suscipit, at.</div>
 						<div class="mry-scroll-hint-frame">
 							<a class="mry-scroll-hint mry-smooth-scroll mry-magnetic-link mry-fo" href="#mry-anchor">
 								<span class="mry-magnetic-object"></span>
 							</a>
-							<div class="mry-label mry-fo">Scroll Down</div>
+							<div class="mry-label mry-fo">Role para baixo</div>
 						</div>
 					</div>
 				</div>
@@ -38,11 +38,11 @@
 								<div class="mry-mb-100 mry-text-center">
 									<div class="mry-numbering mry-fo">
 										<div class="mry-border-text">01</div>
-										<div class="mry-subtitle">Location</div>
+										<div class="mry-subtitle">Lacalização</div>
 									</div>
 									<div class="mry-fade-object mry-mb-100">
-										<h4 class="mry-mb-20 mry-fo">Welcome to visit</h4>
-										<p class="mry-text mry-mb-20 mry-fo">Canada, Toronto,<br>HTGS 4456 North Av.</p>
+										<h4 class="mry-mb-20 mry-fo">Bem vindo</h4>
+										<p class="mry-text mry-mb-20 mry-fo">Brasil, Lauro de Freitas,<br>HTGS 4456 North Av.</p>
 									</div>
 								</div>
 
@@ -52,11 +52,11 @@
 								<div class="mry-mb-100 mry-text-center">
 									<div class="mry-numbering mry-fo">
 										<div class="mry-border-text">02</div>
-										<div class="mry-subtitle">Contact</div>
+										<div class="mry-subtitle">Contato</div>
 									</div>
 									<div class="mry-fade-object mry-mb-100">
-										<h4 class="mry-mb-20 mry-fo">Shall we talk?</h4>
-										<p class="mry-text mry-fo">Email: mireya.inbox@mail.com <br>Phone: +4 9(054) 996 84 25</p>
+										<h4 class="mry-mb-20 mry-fo">Vamos conversar?</h4>
+										<p class="mry-text mry-fo">Email: gernandagiacomini.inbox@mail.com<br>Phone: (71) 9 9999-9999</p>
 									</div>
 								</div>
 
@@ -70,9 +70,9 @@
 						<div class="mry-main-title mry-title-center mry-p-0-40">
 							<div class="mry-numbering mry-fo">
 								<div class="mry-border-text">03</div>
-								<div class="mry-subtitle">Contact form</div>
+								<div class="mry-subtitle">Formulário de contato</div>
 							</div>
-							<h2 class="mry-mb-20 mry-fo">Write us a message</h2>
+							<h2 class="mry-mb-20 mry-fo">Escreva uma mensagem</h2>
 						</div>
 
 					</div>
@@ -114,11 +114,10 @@
 							</div>
 							<div class="row align-items-center">
 								<div class="col-lg-4">
-									<div class="mry-fo"><button type="submit" class="mry-btn mry-default-link">Send message</button></div>
+									<div class="mry-fo"><button type="submit" class="mry-btn mry-default-link">Enviar</button></div>
 								</div>
 								<div class="col-lg-8">
-									<p class="mry-text mry-simple-text mry-contact-hint mry-fo"><span class="mry-color-text">*</span> We promise not to share your personal information with
-										third parties.</p>
+									<p class="mry-text mry-simple-text mry-contact-hint mry-fo"><span class="mry-color-text">*</span> Aceito os termos descritos na Política de Privacidade</p>
 								</div>
 							</div>
 						</form>
