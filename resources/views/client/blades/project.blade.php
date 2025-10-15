@@ -128,12 +128,12 @@
 								</div>
 							</div>
 									
-							<div class="mry-arrows mry-fo">
-								<div class="mry-sl-nav">
-									<div class="mry-prev mry-button-blog-prev mry-magnetic-link-image"><span class="mry-magnetic-object"><i class="fas fa-arrow-left"></i></span></div>
-									<div class="mry-next mry-button-blog-next mry-magnetic-link-image"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></div>
+							<div class="mry-arrows mry-fo mry-mb-20 ">
+								<div class="mry-label mry-fo text-center" style="color: #304E66;">Slider Navigation</div>
+								<div class="mry-sl-nav d-flex justify-content-center">
+									<div class="mry-prev mry-button-blog-prev w-auto"><span class="mry-magnetic-object"><i class="fas fa-arrow-left"></i></span></div>
+									<div class="mry-next mry-button-blog-next w-auto"><span class="mry-magnetic-object"><i class="fas fa-arrow-right"></i></span></div>
 								</div>
-								<div class="mry-label mry-mb-20 mry-fo text-center">Slider Navigation</div>
 							</div>
 						</div>
 					@endif

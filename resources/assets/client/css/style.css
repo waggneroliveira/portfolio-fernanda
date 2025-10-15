@@ -4,7 +4,7 @@
 /*Style wpp*/
 	.whatsapp-float{
 		position: fixed;
-		bottom: 38.4%;
+		bottom: 25.4%;
 		right: 10px;
 		transform: translateY(-30%);
 		width: 43px;
@@ -386,9 +386,11 @@ a, a:hover {
 	left: 0;
 	width: 100%;
 	height: 100vh;
-	opacity: 0.2;
+	opacity: 0.5;
 }
-
+.bg-back-slider{
+	background-color: #C27D0B;
+}
 /* Cursor and Trigers */
 
 .mry-magic-cursor {
@@ -406,7 +408,7 @@ a, a:hover {
 	top: -1px;
 	width: 40px;
 	height: 40px;
-	border: 1px solid #e1e1e1;
+	border: 1px solid #FFF;
 	border-radius: 50%;
 	pointer-events: none;
 	opacity: 0.5;
@@ -597,7 +599,7 @@ a, a:hover {
 }
 
 .mry-app .mry-preloader .mry-preloader-content .mry-logo {
-	width: 240px;
+	width: 200px;
 }
 
 .mry-app .mry-preloader .mry-preloader-content .mry-loader-bar {
@@ -607,13 +609,13 @@ a, a:hover {
 	position: relative;
 	overflow: hidden;
 	width: 200px;
-	background-color: #c27d0b;
+	background-color: rgba(225, 225, 225, 0.1);
 }
 
 .mry-app .mry-preloader .mry-preloader-content .mry-loader-bar .mry-loader {
 	height: 100%;
 	width: 0;
-	background-color: rgba(225, 225, 225, 0.1);
+	background-color: #c27d0b;
 	transition-timing-function: ease-in;
 }
 
@@ -986,7 +988,12 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	background-color: #c27d0b;
 	z-index: 1;
 }
-
+	.mry-label.mry-mb-20.mry-fo.text-center{
+		margin-bottom: 35px;
+	}
+	.mry-sl-nav.d-flex.justify-content-center{
+		gap: 20px;
+	}
 /* Content
 ==================================== */
 
@@ -1018,6 +1025,61 @@ html.is-animating .transition-fade .mry-loading-curtain {
 }
 
 @media (max-width: 576px) {
+	.mry-btn, .mry-btn-text{
+		height: 35px;
+		line-height: 35px;
+		font-size: 10px;
+	}
+	.mry-main-title-frame .container .description{
+		width: 89%;
+    	max-width: 320px;
+	}
+	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title span{
+		font-size: 18px !important;
+	}
+	.mry-main-title-frame .container{
+		margin-left: 20px;
+		padding-right: 0;
+	}
+	.mry-project-slider-item .mry-project-frame .mry-main-title-frame .mry-main-title{
+		max-width: 320px;
+	}
+	.mry-slider-arrows.mobile{
+		left: 40px;
+	}
+	.mry-mb-100{
+		margin-bottom: 20px !important;
+	}
+	.mry-p-100-100{
+		padding-top: 35px !important;
+		margin-bottom: 30px !important;
+	}
+	.mry-menu img {
+		height: 310px;
+	}
+	.mry-numbering .mry-border-text {
+		font-size: 48px !important;
+    	line-height: 40px !important;
+	}
+	.mry-main-title .mry-h1.mry-mb-20.mry-fo, .mry-h1 .mry-border-text, .mry-h3, h3 {
+		font-size: 24px !important;
+	}
+	.mry-app .mry-top-panel .mry-logo-frame{
+		height: 75px;
+	}
+	.mry-magnetic-link{
+		width: 65px;
+		height: 75px;
+	}
+	.banner-inner, .mry-head-bg img, .mry-head-bg .mry-bg-overlay{
+		height: 500px !important;
+    	overflow: hidden;
+	}
+	.mry-banner.mry-p-140-0 h1,
+	.mry-banner.mry-p-140-0 span, h2{
+		font-size: 24px;
+    	line-height: 32px;
+	}
     .gallery-grid {
         grid-template-columns: 1fr;
     }
@@ -1221,7 +1283,6 @@ html.is-animating .transition-fade .mry-loading-curtain {
 .mry-project-slider-item .mry-project-frame.mry-project-half {
 	width: 100%;
 	height: 100%;
-	background: #C27D0B;
 }
 
 .mry-project-slider-item .mry-project-frame.mry-project-half .mry-cover-frame {
@@ -1464,7 +1525,6 @@ html.is-animating .transition-fade .mry-loading-curtain {
 	}
 	.mry-app .mry-top-panel .mry-logo-frame{
 		padding: 0 20px;
-		height: auto;
 	}
 	.mry-app .mry-top-panel .mry-logo-frame .mry-logo{
 		width: 95px;
@@ -2154,6 +2214,18 @@ blockquote:after {
 /* Grid after 992px */
 
 @media (max-width: 992px) {
+	.has-image .about-one.mry-numbering .mry-subtitle::before {
+		transform: translateX(-50%) !important;
+		left: 50% !important;
+		margin-left: 48% !important;
+	}
+	.mry-numbering{
+		text-align: center !important;
+	}
+	.about-content .col-lg-7.text-left.p-0{
+		text-align: center !important;
+		margin-top: 25px;
+	}
 	.mry-3-col .mry-grid-sizer, .mry-3-col .mry-masonry-grid-item {
 		width: 50%;
 	}

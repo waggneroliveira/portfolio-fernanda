@@ -4,7 +4,7 @@
         <div class="container">
             <div class="mry-main-title mry-title-center">
                 <div class="mry-subtitle mry-mb-20 mry-fo">Fale comigo</div>
-                <h2 class="mry-h1 mry-mb-20 mry-fo">Precisa <span class="mry-border-text">de um projeto alto padrão?</span></h2>
+                <h2 class="mry-h1 mry-mb-20 mry-fo">Precisa <span class="mry-border-text" style="color: #FFF !important;">de um projeto alto padrão?</span></h2>
                 <div class="mry-text mry-mb-30  mry-fo text-white">Entre em contato com quem realmente entende e receba orientações inéditas, como nunca antes.</div>
                 <div class="mry-fo">
                     <a href="{{route('contact')}}" class="mry-anima-link mry-btn mry-btn-color mry-default-link">Let's discuss</a>
